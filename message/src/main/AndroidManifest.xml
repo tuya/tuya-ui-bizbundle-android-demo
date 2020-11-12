@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tuya.smart.bizbundle.message.demo">
+
+    <application>
+        <activity android:name=".MessageActivity" />
+    </application>
+</manifest>
+

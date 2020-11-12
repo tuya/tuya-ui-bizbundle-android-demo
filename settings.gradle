@@ -1,0 +1,13 @@
+rootProject.name = "TuyaSamartBizubundle"
+include ':app'
+
+include ':panel'
+include ':mall'
+include ':ipc'
+include ':cloudstorage'
+include ':feedback'
+include ':message'
+include ':activator'
+include ':scene'
+
+include ':qqmusic'
