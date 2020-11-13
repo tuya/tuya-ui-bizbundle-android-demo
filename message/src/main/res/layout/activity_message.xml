@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/btn_message_start"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:text="@string/demo_message_through_activity"
+        android:background="@color/color_bdbdbd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_message_route"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:text="@string/demo_message_through_route"
+        android:background="@color/color_bdbdbd"
+        android:layout_below="@+id/btn_message_start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/black"/>
+
+
+</RelativeLayout>

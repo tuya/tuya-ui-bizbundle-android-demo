@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">message</string>
+
+    <string name="demo_message_through_activity">message center (start activity)</string>
+    <string name="demo_message_through_route">message center (route)</string>
+    <string name="demo_feedback_service">feedback(service)</string>
+    <string name="demo_feedback_route">feedback(route)</string>
+</resources>

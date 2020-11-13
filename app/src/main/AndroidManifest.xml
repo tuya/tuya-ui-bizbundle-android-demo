@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tuya.smart.bizubundle.demo">
+
+    <application
+        android:name=".TuyaSmartApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Base_BizBundle_Theme"
+        tools:replace="android:theme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--  demo use only start  -->
+                <action android:name="tuyasmart_demo_main" />
+                <!--  demo use only end  -->
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="TUYA_SMART_APPKEY"
+            android:value="${TUYA_SMART_APPKEY}" />
+
+        <meta-data
+            android:name="TUYA_SMART_SECRET"
+            android:value="${TUYA_SMART_SECRET}" />
+
+        <!-- demo use only start -->
+        <activity
+            android:name="com.tuya.smart.demo_login.base.activity.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- demo use only end -->
+    </application>
+
+</manifest>

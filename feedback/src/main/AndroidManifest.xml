@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tuya.smart.bizbundle.feedback.demo">
+
+    <application>
+        <activity android:name="com.tuya.smart.bizbundle.demo.FeedBackActivity" />
+    </application>
+</manifest>

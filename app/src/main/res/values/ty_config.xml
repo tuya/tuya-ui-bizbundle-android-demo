@@ -1,0 +1,36 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<resources>
+
+    <string name="qqAppKey"></string>
+    <string name="qqMusicAppID">87</string>
+    <string name="qqMusicAppPubilcKey"></string>
+    <string name="qqMusicLocalPrivateKey"></string>
+    <string name="google_maps_key"></string>
+    <string name="amapKey"></string>
+
+    <string name="ap_mode_ssid">SmartLife|SL</string>
+    <bool name="is_need_ble_support">true</bool>
+    <bool name="is_need_blemesh_support">true</bool>
+    <bool name="is_scan_support">true</bool>
+
+    <color name="primary_button_bg_color">#FF5A28</color>
+    <color name="secondary_button_font_color">#FF5A28</color>
+    <color name="home_index_bg_start_color">#FF5A28</color>
+    <color name="list_bg_color">#FFFFFF</color>
+    <color name="list_sub_color">#9B9B9B</color>
+    <color name="list_secondary_color">#9B9B9B</color>
+    <color name="status_font_color">#303030</color>
+    <color name="app_bg_color">#F8F8F8</color>
+    <color name="primary_button_select_color">#E54F00</color>
+    <color name="notice_bg_color">#FFF8D8</color>
+    <color name="primary_button_font_color">#ffffff</color>
+    <color name="navbar_bg_color">#303030</color>
+    <color name="notice_font_color">#FF5A28</color>
+    <color name="status_bg_color">#FFFFFF</color>
+    <color name="secondary_button_bg_color">#FFFFFF</color>
+    <color name="list_line_color">#DBDBDB</color>
+    <color name="navbar_font_color">#FF5A28</color>
+    <color name="secondary_button_select_color">#3EBDEA</color>
+    <color name="list_primary_color">#303030</color>
+
+</resources>

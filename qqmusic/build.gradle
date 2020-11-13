@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('qqmusic-innovation-aidl-api-sdk-1.0.0-SNAPSHOT-release.aar'))

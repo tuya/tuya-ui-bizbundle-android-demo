@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="layout_flexBasisPercent" format="fraction"/>
+    <declare-styleable name="CardView">
+        <!-- Background color for CardView. -->
+        <attr format="color" name="cardBackgroundColor"/>
+        <!-- Corner radius for CardView. -->
+        <attr format="dimension" name="cardCornerRadius"/>
+        <!-- Elevation for CardView. -->
+        <attr format="dimension" name="cardElevation"/>
+        <!-- Maximum Elevation for CardView. -->
+        <attr format="dimension" name="cardMaxElevation"/>
+        <!-- Add padding in API v21+ as well to have the same measurements with previous versions. -->
+        <attr format="boolean" name="cardUseCompatPadding"/>
+        <!-- Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners. -->
+        <attr format="boolean" name="cardPreventCornerOverlap"/>
+        <!-- Inner padding between the edges of the Card and children of the CardView. -->
+        <attr format="dimension" name="contentPadding"/>
+        <!-- Inner padding between the left edge of the Card and children of the CardView. -->
+        <attr format="dimension" name="contentPaddingLeft"/>
+        <!-- Inner padding between the right edge of the Card and children of the CardView. -->
+        <attr format="dimension" name="contentPaddingRight"/>
+        <!-- Inner padding between the top edge of the Card and children of the CardView. -->
+        <attr format="dimension" name="contentPaddingTop"/>
+        <!-- Inner padding between the bottom edge of the Card and children of the CardView. -->
+        <attr format="dimension" name="contentPaddingBottom"/>
+        <!-- Workaround to read user defined minimum width -->
+        <attr name="android:minWidth"/>
+        <!-- Workaround to read user defined minimum height -->
+        <attr name="android:minHeight"/>
+    </declare-styleable>
+</resources>
