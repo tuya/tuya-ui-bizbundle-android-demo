@@ -30,7 +30,8 @@ public class TuyaSmartApp extends Application {
         TuyaWrapper.init(this, new RouteEventListener() {
             @Override
             public void onFaild(int errorCode, UrlBuilder urlBuilder) {
-                Log.e("router not implement", urlBuilder.target);
+                //urlBuilder has all params
+                Log.e("router not implement", urlBuilder.target + urlBuilder.params.toString());
             }
         }, new ServiceEventListener() {
             @Override
