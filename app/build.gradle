@@ -35,12 +35,6 @@ android {
         }
     }
 
-    repositories {
-        flatDir {
-            dirs 'libs'
-        }
-    }
-
     android {
         compileOptions {
             sourceCompatibility 1.8
@@ -55,9 +49,9 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    //bizbundle
-    implementation project(path: ':panel')
+
     implementation project(path: ':mall')
+    implementation project(path: ':panel')
     implementation project(path: ':scene')
     implementation project(path: ':ipc')
     implementation project(path: ':cloudstorage')
