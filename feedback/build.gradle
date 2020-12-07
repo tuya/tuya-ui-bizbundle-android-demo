@@ -28,6 +28,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     api 'com.tuya.smart:tuyasmart-bizbundle-feedback:3.20.0-6'
-    api 'com.tuya.smart:tuyasmart:3.20.0-beta1'
+    api 'com.tuya.smart:tuyasmart:3.20.0'
 
 }
