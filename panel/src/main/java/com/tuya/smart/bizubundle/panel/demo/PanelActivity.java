@@ -59,7 +59,13 @@ public class PanelActivity extends AppCompatActivity {
             @Override
             public void onItemClick(ItemBean bean, int position) {
                 AbsPanelCallerService service = MicroContext.getServiceManager().findServiceByInterface(AbsPanelCallerService.class.getName());
-                service.goPanelWithCheckAndTip(PanelActivity.this, bean.devId);
+                if (bean.getGroupId() != 0) {
+                    boolean isAdmin = null != TuyaHomeSdk.getDataInstance().getHomeBean(getService().getCurrentHomeId())
+                            && TuyaHomeSdk.getDataInstance().getHomeBean(getService().getCurrentHomeId()).isAdmin();
+                    service.goPanelWithCheckAndTip(PanelActivity.this, bean.getGroupId(), isAdmin);
+                } else {
+                    service.goPanelWithCheckAndTip(PanelActivity.this, bean.devId);
+                }
             }
         });
         getCurrentHomeDetail();
