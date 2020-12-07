@@ -14,8 +14,8 @@ Tuya Smart ui bizbundle Doc: https://tuyainc.github.io/tuyasmart_bizbundle_andro
 
 You can get support from Tuya with the following methods:
 
-Tuya Smart Help Center: https://support.tuya.com/en/help
-Technical Support Council: https://iot.tuya.com/council/
+* Tuya Smart Help Center: https://support.tuya.com/en/help
+* Technical Support Council: https://iot.tuya.com/council/
 
 ## License
 
@@ -33,8 +33,8 @@ This Tuya Smart ui bizbundle Sample is licensed under the MIT License.
 
 您可以通过以一下方式获得技术支持：
 
-涂鸦智能帮助中心：https://support.tuya.com/zh/help
-技术工单支持: https://iot.tuya.com/council/
+* 涂鸦智能帮助中心：https://support.tuya.com/zh/help
+* 技术工单支持: https://iot.tuya.com/council/
 
 ## 使用的开源License
 
