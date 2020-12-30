@@ -1,0 +1,7 @@
+<resources>
+    <string name="demo_family_go_to_family_manage_page">Navigate to family management page</string>
+    <string name="demo_family_receive_invitation">Received new Family invitation🎉</string>
+    <string name="demo_family_invitation_message">Received an invitation from: %1$s</string>
+    <string name="demo_family_accept">Accept</string>
+    <string name="demo_family_reject">Reject</string>
+</resources>

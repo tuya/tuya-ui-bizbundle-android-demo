@@ -25,7 +25,6 @@
     "PIPE_LINE_APPLICATION_ASYNC": [
       "com.tuya.smart.netdiagnosis.AppStartPipeLine",
       "com.tuya.smart.android.tangram.scheduler.StartUpConfig",
-      "com.tuyasmart.stencil.BrowserInitPipeLine"
     ]
   },
   "moduleMap": {
@@ -101,6 +100,10 @@
       "complete_user_information",
       "login_exit_experience"
     ],
+    "com.tuya.smart.login_country.CountryApp": [
+      "country_list",
+      "area_select"
+    ],
     "com.tuya.smart.family.FamilyApp": [
       "familyAction",
       "family_manage",
@@ -112,6 +115,14 @@
       "tysh_family_add_member_rn",
       "tysh_family_link_member_rn",
       "member_info"
+    ],
+    "com.tuya.smart.familymember.FamilyMemberApp": [
+      "add_member",
+      "rn_add_member",
+      "member_info",
+      "family_member",
+      "tysh_family_add_member_rn",
+      "tysh_family_link_member_rn"
     ],
     "com.tuya.smart.ipc.localphotovideo.LocalPhotoVideoApp": [
       "camera_local_video_photo"
@@ -291,6 +302,14 @@
       "newAlarm",
       "groupAlarm"
     ],
+    "com.tuya.smart.netpool.NetPoolModuleApp": [
+      "DeviceNetInfo"
+    ],
+    "com.tuya.smart.migration.MigrationModuleApp": [
+      "inMigration",
+      "inputCodeMigration",
+      "GatewayMigration"
+    ],
     "com.tuya.smart.panel.base.PanelModuleApp": [
       "rn",
       "more",
@@ -300,6 +319,8 @@
       "dev_base_info",
       "zigbee_pair",
       "dev_network_check",
+      "panelAction",
+      "panelMore",
       "panelAction"
     ],
     "com.tuya.smart.homepage.device.management.DeviceManageApp": [
@@ -364,7 +385,6 @@
     "com.tuyasmart.stencil.location.GoogleLocationService": "com.tuya.googlelocation.GoogleLocationServiceImpl",
     "com.tuya.smart.sociallogin_api.GoogleFlipService": "com.tuya.smart.google_flip.GoogleFlipServiceImpl",
     "com.tuya.smart.panelsplitcaller.api.PanelSplitCallerService": "com.tuya.smart.panelsplitcaller.PanelSplitCallerServiceImpl",
-    "com.tuya.smart.statapi.StatService": "com.tuya.smart.stat.StatServiceImpl",
     "com.tuya.smart.activator.core.api.TyDeviceActiveService": "com.tuya.smart.activator.core.TyDeviceActiveServiceImpl",
     "com.tuya.smart.theme.dynamic.resource.api.AbsThemeDynamicResourceService": "com.tuya.smart.theme.dynamic.resource.ThemeDynamicResourceServiceImpl",
     "com.tuya.smart.tracker.api.AutoTrackBusinessService": "com.tuya.android.tracker.core.service.AutoTrackerBusinessServiceImpl",
@@ -420,7 +440,6 @@
     "com.tuya.smart.homearmed.protection.api.AbsHomeSecurityService": "com.tuya.smart.homearmed.protection.impl.HomeSecurityServiceImpl",
     "com.tuya.smart.scene.precondition.api.PreconditionService": "com.tuya.smart.scene.precondition.PreConditionServiceImpl",
     "com.tuya.smart.family.api.AbsFamilyBusinessService": "com.tuya.smart.family.AbsFamilyBusinessServiceImpl",
-    "com.tuya.smart.crashcaught.report.api.TuyaCrashService": "com.tuya.smart.crashcaught.tuya.TuyaCrashServiceImpl",
     "com.tuya.smart.ota.api.BleOtaService": "com.tuya.smart.bleota.BleOtaServiceImpl",
     "com.tuya.smart.tuyatangramapi.TangramApiService": "com.tuya.smart.android.tangram.TangramServiceImpl",
     "com.tuya.smart.activator.guide.api.TyGuideDeviceService": "com.tuya.smart.activator.guide.TyGuideDeviceServiceImpl",
@@ -430,9 +449,11 @@
     "com.tuya.smart.deviceconfig.api.TyDeviceDiscoverService": "com.tuya.smart.deviceconfig.TyDeviceDiscoverServiceImpl",
     "com.tuya.smart.api.loginapi.LoginCountryService": "com.tuya.smart.login.base.service.LoginCountryServiceImpl",
     "com.tuya.smart.antilost.api.AntiLostService": "com.tuya.smart.antlost.AntiLostServiceImpl",
-    "com.tuya.smart.scene.business.api.ITuyaSceneBusinessService": "com.tuya.smart.scene.TuyaSceneBusinessManager",
+    "com.tuya.smart.scene.business.api.ITuyaSceneBusinessService": "com.tuya.smart.scene.business.TuyaSceneBusinessManager",
     "com.tuya.smart.camera.cloud.purchase.AbsCameraCloudPurchaseService": "com.tuya.smart.camera.cloud.purchase.CameraCloudPurchaseServiceImpl",
-    "com.tuya.smart.clearcache.api.ClearCacheService": "com.tuya.smart.clearcache.ClearCacheServiceImpl"
+    "com.tuya.smart.clearcache.api.ClearCacheService": "com.tuya.smart.clearcache.ClearCacheServiceImpl",
+    "com.tuya.smart.panel.ota.service.AbsOtaCallerService": "com.tuya.smart.panel.newota.OtaCallerService",
+    "com.tuya.smart.panel.ota.service.AbsOTACheckService": "com.tuya.smart.panel.newota.OTACheckService"
   },
   "eventMap": {
     "global_clear_event": [

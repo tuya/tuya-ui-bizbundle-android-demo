@@ -11,14 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.tuya.smart.android.common.utils.L;
 import com.tuya.smart.android.user.api.ILogoutCallback;
 import com.tuya.smart.api.service.MicroServiceManager;
-import com.tuya.smart.bizbundle.activator.demo.DeviceActivatorActivity;
-import com.tuya.smart.bizbundle.demo.FeedBackActivity;
-import com.tuya.smart.bizbundle.message.demo.MessageActivity;
-import com.tuya.smart.bizbundle.scene.demo.SceneActivity;
-import com.tuya.smart.bizubundle.cloudstorage.demo.CloudStorageActivity;
-import com.tuya.smart.bizubundle.ipc.demo.IPCPanelActivity;
-import com.tuya.smart.bizubundle.mall.demo.MallActivity;
-import com.tuya.smart.bizubundle.panel.demo.PanelActivity;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.demo_login.base.utils.LoginHelper;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
@@ -177,57 +169,92 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.panel).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, PanelActivity.class));
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.panel.demo.PanelActivity");
+                startActivity(i);
             }
         });
         findViewById(R.id.mall).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, MallActivity.class));
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.mall.demo.MallActivity");
+                startActivity(i);
             }
         });
         findViewById(R.id.scene).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SceneActivity.class));
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.scene.demo.SceneActivity");
+                startActivity(i);
             }
         });
         findViewById(R.id.ipc).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, IPCPanelActivity.class));
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.ipc.demo.IPCPanelActivity");
+                startActivity(i);
             }
         });
         findViewById(R.id.cloud_storage).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CloudStorageActivity.class));
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.cloudstorage.demo.CloudStorageActivity");
+                startActivity(i);
             }
         });
         findViewById(R.id.activator).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, DeviceActivatorActivity.class));
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.activator.demo.DeviceActivatorActivity");
+                startActivity(i);
             }
         });
         findViewById(R.id.message).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, MessageActivity.class));
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.message.demo.MessageActivity");
+                startActivity(i);
             }
         });
         findViewById(R.id.feedback).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, FeedBackActivity.class));
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.demo.FeedBackActivity");
+                startActivity(i);
             }
         });
-        findViewById(R.id.activator).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.ota).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, DeviceActivatorActivity.class));
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.ota.demo.OtaActivity");
+                startActivity(i);
             }
         });
+        findViewById(R.id.family).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.demo.family.FamilyManageActivity");
+                startActivity(i);
+            }
+        });
+        findViewById(R.id.device_detail).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.panelmore.demo.DeviceDetailActivity");
+                startActivity(i);
+            }
+        });
+
     }
 
     @Override

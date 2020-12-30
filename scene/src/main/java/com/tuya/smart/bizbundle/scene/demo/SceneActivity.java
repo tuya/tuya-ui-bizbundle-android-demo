@@ -117,7 +117,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      */
     private void setMapClass() {
         if (null != iTuyaSceneBusinessService) {
-            //TODO 业务方地图Activity
+            //TODO business map Activity
             iTuyaSceneBusinessService.setMapActivity(null);
         }
     }
@@ -127,7 +127,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      */
     private void saveMapData() {
         if (null != iTuyaSceneBusinessService) {
-            //TODO 地图数据保存
+            //TODO save map data
             double lng = 120.06420814321443;
             double lat = 30.302782241301667;
             String city = "hangzhou";

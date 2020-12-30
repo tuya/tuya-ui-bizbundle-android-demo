@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="demo_ota_go_to_ota_upgrade_page">前往 OTA 升级页面</string>
+    <string name="demo_ota_not_support_tip">当前设备不支持固件升级</string>
+    <string name="demo_ota_current_family_is">当前家庭：</string>
+    <string name="demo_ota_current_family_no_device">当前家庭下无可用设备</string>
+    <string name="demo_ota_devices_in_family">当前家庭下的所有设备</string>
+    <string name="demo_ota_back_to_homepage">返回首页</string>
+</resources>

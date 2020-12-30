@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Don't set it too light for ty_theme_color_m1-->
+
+    <!--normal theme color-->
+    <color name="ty_theme_color_m1">#ffff5a28</color>
+    <!--disable theme color-->
+    <color name="ty_theme_color_m1_1">#33ff5a28</color>
+    <!--pressed theme color-->
+    <color name="ty_theme_color_m1_2">#ffff6b3e</color>
+    <!--theme alpha color for 5 percent-->
+    <color name="ty_theme_color_m1_alpha_5">#0dff5a28</color>
+    <!--theme alpha color for 10 percent-->
+    <color name="ty_theme_color_m1_alpha_10">#1aff5a28</color>s
+    <!--theme alpha color for 15 percent-->
+    <color name="ty_theme_color_m1_alpha_15">#26ff5a28</color>
+    <!--theme alpha color for 20 percent-->
+    <color name="ty_theme_color_m1_alpha_20">#33ff5a28</color>
+    <!--theme alpha color for 25 percent-->
+    <color name="ty_theme_color_m1_alpha_25">#40ff5a28</color>
+    <!--theme alpha color for 30 percent-->
+    <color name="ty_theme_color_m1_alpha_30">#4dff5a28</color>
+    <!--theme alpha color for 35 percent-->
+    <color name="ty_theme_color_m1_alpha_35">#59ff5a28</color>
+    <!--theme alpha color for 40 percent-->
+    <color name="ty_theme_color_m1_alpha_40">#66ff5a28</color>
+    <!--theme alpha color for 45 percent-->
+    <color name="ty_theme_color_m1_alpha_45">#73ff5a28</color>
+    <!--theme alpha color for 50 percent-->
+    <color name="ty_theme_color_m1_alpha_50">#80ff5a28</color>
+    <!--theme alpha color for 55 percent-->
+    <color name="ty_theme_color_m1_alpha_55">#8cff5a28</color>
+    <!--theme alpha color for 60 percent-->
+    <color name="ty_theme_color_m1_alpha_60">#99ff5a28</color>
+    <!--theme alpha color for 65 percent-->
+    <color name="ty_theme_color_m1_alpha_65">#a6ff5a28</color>
+    <!--theme alpha color for 70 percent-->
+    <color name="ty_theme_color_m1_alpha_70">#b3ff5a28</color>
+    <!--theme alpha color for 75 percent-->
+    <color name="ty_theme_color_m1_alpha_75">#bfff5a28</color>
+    <!--theme alpha color for 80 percent-->
+    <color name="ty_theme_color_m1_alpha_80">#ccff5a28</color>
+    <!--theme alpha color for 85 percent-->
+    <color name="ty_theme_color_m1_alpha_85">#d9ff5a28</color>
+    <!--theme alpha color for 90 percent-->
+    <color name="ty_theme_color_m1_alpha_90">#e6ff5a28</color>
+    <!--theme alpha color for 95 percent-->
+    <color name="ty_theme_color_m1_alpha_95">#f2ff5a28</color>
+</resources>

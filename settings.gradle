@@ -9,5 +9,8 @@ include ':feedback'
 include ':message'
 include ':activator'
 include ':scene'
+include ':ota'
+include ':family'
+include ':devicedetail'
 
 include ':qqmusic'
