@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="demo_family_go_to_family_manage_page">前往家庭管理页面</string>
+    <string name="demo_family_receive_invitation">收到新的家庭邀请🎉</string>
+    <string name="demo_family_invitation_message">收到来自: %1$s 家庭的邀请</string>
+    <string name="demo_family_accept">接受</string>
+    <string name="demo_family_reject">拒绝</string>
+</resources>

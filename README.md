@@ -27,7 +27,7 @@ This Tuya Smart ui bizbundle Sample is licensed under the MIT License.
 
 涂鸦 Android 业务包 (Tuya Android BizBundle) 是指包含业务逻辑和 UI 界面的涂鸦垂直业务模块，旨在为基于涂鸦全屋智能 SDK 开发的客户提供快速一站式接入涂鸦业务模块的能力。你可以根据所选业务包运行对应 module 。
 
-## 相关文档 
+## 相关文档
 
 涂鸦智能 UI 业务包 文档：https://tuyainc.github.io/tuyasmart_bizbundle_android_doc/zh-hans/
 

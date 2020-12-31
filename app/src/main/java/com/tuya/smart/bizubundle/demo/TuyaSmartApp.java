@@ -12,7 +12,6 @@ import com.tuya.smart.api.service.RouteEventListener;
 import com.tuya.smart.api.service.ServiceEventListener;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
-import com.tuya.smart.optimus.sdk.InitCallback;
 import com.tuya.smart.optimus.sdk.TuyaOptimusSdk;
 import com.tuya.smart.wrapper.api.TuyaWrapper;
 
@@ -30,7 +29,8 @@ public class TuyaSmartApp extends Application {
         TuyaWrapper.init(this, new RouteEventListener() {
             @Override
             public void onFaild(int errorCode, UrlBuilder urlBuilder) {
-                //urlBuilder has all params
+                // urlBuilder.target is a router address, urlBuilder.params is a router params
+                // urlBuilder.target 目标路由， urlBuilder.params 路由参数
                 Log.e("router not implement", urlBuilder.target + urlBuilder.params.toString());
             }
         }, new ServiceEventListener() {
@@ -44,7 +44,6 @@ public class TuyaSmartApp extends Application {
         // register family service，mall bizbundle don't have to implement it.
         // 注册家庭服务，商城业务包可以不注册此服务
         TuyaWrapper.registerService(AbsBizBundleFamilyService.class, new BizBundleFamilyServiceImpl());
-
 
     }
 

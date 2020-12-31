@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_height="@dimen/wh_40"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/wh_15"
+        android:layout_marginTop="20dp"
+        android:id="@+id/edit_id"/>
+
+    <Button
+        android:id="@+id/btn_dev_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wh_48"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/base_ota_btn_selector"
+        android:text="设备列表"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btn_dev_panel_more"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wh_48"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/base_ota_btn_selector"
+        android:text="跳转设备详情"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

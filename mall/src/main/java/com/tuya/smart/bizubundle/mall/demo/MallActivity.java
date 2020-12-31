@@ -43,8 +43,7 @@ public class MallActivity extends AppCompatActivity {
         findViewById(R.id.openWeb).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String url = mUrlEdit.getText().toString();
-                String url = "https://js-bridge.fast-daily.tuya-inc.cn/?a=1";
+                String url = mUrlEdit.getText().toString();
                 if (!TextUtils.isEmpty(url)) {
                     openWeb(MallActivity.this, url);
                 }

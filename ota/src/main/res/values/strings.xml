@@ -1,0 +1,8 @@
+<resources>
+    <string name="demo_ota_go_to_ota_upgrade_page">Go to OTA upgrade page</string>
+    <string name="demo_ota_not_support_tip">This device can not support firmware upgrade</string>
+    <string name="demo_ota_current_family_is">Current family is: </string>
+    <string name="demo_ota_current_family_no_device">Current family has no available devices</string>
+    <string name="demo_ota_devices_in_family">All devices under current home</string>
+    <string name="demo_ota_back_to_homepage">Back to homepage</string>
+</resources>

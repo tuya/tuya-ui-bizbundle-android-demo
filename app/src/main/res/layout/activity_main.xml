@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="设备控制业务包(Panel Device)"
+                android:text="设备控制业务包(Device Control)"
                 android:textColor="@color/black" />
 
             <TextView
@@ -60,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="H5商城业务包(Mall)"
+                android:text="商城业务包(Mall)"
                 android:textColor="@color/black" />
 
             <TextView
@@ -100,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="消息中心"
+                android:text="消息中心(Message Center)"
                 android:textColor="@color/black" />
 
             <TextView
@@ -108,7 +108,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
-                android:text="常见问题与反馈"
+                android:text="常见问题与反馈(FAQ)"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/ota"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="OTA(Firmware Upgrade)"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/family"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="家庭管理(House Management)"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/device_detail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Device Detail 业务包(Device Detail)"
                 android:textColor="@color/black" />
         </LinearLayout>
 

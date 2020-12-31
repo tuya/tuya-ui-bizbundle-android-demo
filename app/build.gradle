@@ -58,10 +58,14 @@ dependencies {
     implementation project(path: ':feedback')
     implementation project(path: ':message')
     implementation project(path: ':activator')
+    implementation project(path: ':ota')
+    implementation project(path: ':family')
+    implementation project(path: ':devicedetail')
 
     //demo use only start
-    implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family:3.17.6r147-1"
-    implementation 'com.tuya.smart:tuyasmart-demo-login:3.19.0.1'
+    api 'com.tuya.smart:tuyasmart:3.22.0'
+    implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family:3.22.0-rc.2"
+    implementation 'com.tuya.smart:tuyasmart-demo-login:3.22.0-rc.2'
     implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family-api:3.17.6r147-1"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
@@ -72,4 +76,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
 }
