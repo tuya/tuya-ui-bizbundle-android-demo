@@ -25,6 +25,12 @@
       "type":"check_firmware_update"
     },
     {
+      "type":"c_test_insert"
+    },
+    {
+      "type":"c_test_async_insert"
+    },
+    {
       "type": "empty",
       "height": 10
     },
