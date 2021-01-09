@@ -25,9 +25,11 @@ import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.home.sdk.bean.HomeBean;
 import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
+import com.tuya.smart.panel.base.service.AbsPanelMoreExpandService;
 import com.tuya.smart.sdk.bean.DeviceBean;
 import com.tuya.smart.sdk.bean.GroupBean;
 import com.tuya.smart.utils.ProgressUtil;
+import com.tuya.smart.wrapper.api.TuyaWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +42,7 @@ public class DeviceDetailActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel_more);
+        TuyaWrapper.registerService(AbsPanelMoreExpandService.class, new PanelMoreExpandServiceImpl());
         edt = findViewById(R.id.edit_id);
         mAdapter = new SimpleDevListAdapter();
         initClick();

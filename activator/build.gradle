@@ -24,5 +24,5 @@ android {
 
 dependencies {
     api 'com.tuya.smart:tuyasmart:3.22.0'
-    api 'com.tuya.smart:tuyasmart-bizbundle-device_activator:3.22.0-5'
+    api 'com.tuya.smart:tuyasmart-bizbundle-device_activator:3.22.0-6'
 }
