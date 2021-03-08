@@ -8,7 +8,7 @@ Tuya Android UI BizBundle is a vertical business bundle that contains logic modu
 
 ## Documentation
 
-[Tuya Smart UI Bizbundle Doc](https://tuyainc.github.io/tuyasmart_bizbundle_android_doc/en/)
+[Tuya Smart UI Bizbundle Doc](https://developer.tuya.com/en/docs/app-development/android-bizbundle-sdk/introduction?id=Ka8qhzjygzfau)
 
 ## Support
 
