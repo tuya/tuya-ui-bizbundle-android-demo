@@ -7,7 +7,10 @@ import android.util.Log;
 import androidx.multidex.MultiDex;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.tuya.smart.android.common.utils.L;
+import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.api.router.UrlBuilder;
+import com.tuya.smart.api.service.RedirectService;
 import com.tuya.smart.api.service.RouteEventListener;
 import com.tuya.smart.api.service.ServiceEventListener;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
@@ -30,7 +33,7 @@ public class TuyaSmartApp extends Application {
             @Override
             public void onFaild(int errorCode, UrlBuilder urlBuilder) {
                 // urlBuilder.target is a router address, urlBuilder.params is a router params
-                // urlBuilder.target 目标路由， urlBuilder.params 路由参数
+                //点击无反应表示路由未现实，需要在此实现， urlBuilder.target 目标路由， urlBuilder.params 路由参数
                 Log.e("router not implement", urlBuilder.target + urlBuilder.params.toString());
             }
         }, new ServiceEventListener() {
@@ -45,6 +48,23 @@ public class TuyaSmartApp extends Application {
         // 注册家庭服务，商城业务包可以不注册此服务
         TuyaWrapper.registerService(AbsBizBundleFamilyService.class, new BizBundleFamilyServiceImpl());
 
+        //Intercept existing routes and jump to custom implementation pages with parameters
+        //拦截已存在的路由，通过参数跳转至自定义实现页面
+        RedirectService service = MicroContext.getServiceManager().findServiceByInterface(RedirectService.class.getName());
+        service.registerUrlInterceptor(new RedirectService.UrlInterceptor() {
+            @Override
+            public void forUrlBuilder(UrlBuilder urlBuilder, RedirectService.InterceptorCallback interceptorCallback) {
+                //Such as:
+                //Intercept the event of clicking the panel right menu and jump to the custom page with the parameters of urlBuilder
+                //例如：拦截点击面板右上角按钮事件，通过 urlBuilder 的参数跳转至自定义页面
+                if (urlBuilder.target.equals("panelAction") && urlBuilder.params.getString("action").equals("gotoPanelMore")) {
+                    interceptorCallback.interceptor("interceptor");
+                    L.e("interceptor", urlBuilder.params.toString());
+                } else {
+                    interceptorCallback.onContinue(urlBuilder);
+                }
+            }
+        });
     }
 
     @Override
