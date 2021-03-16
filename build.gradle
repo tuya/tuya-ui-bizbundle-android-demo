@@ -17,6 +17,7 @@ allprojects {
         jcenter()
         google()
         //***** required start ****//
+        maven { url 'https://maven-other.tuya.com/repository/maven-releases/' }
         maven { url 'https://jitpack.io' }
         //***** required end ****//
     }
