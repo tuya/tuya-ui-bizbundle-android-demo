@@ -70,6 +70,15 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    /**
+     * 编辑场景，如果要创建天气相关条件自动化需要接入地图地位业务包
+     * 国内包：
+     * api 'com.tuya.smart:tuyasmart-bizbundle-map_amap:x.x.x-x'
+     * api 'com.tuya.smart:tuyasmart-bizbundle-location_amap:x.x.x-x'
+     * 国际包：
+     * api 'com.tuya.smart:tuyasmart-bizbundle-map_google:x.x.x-x'
+     * api 'com.tuya.smart:tuyasmart-bizbundle-location_google:x.x.x-x'
+     */
     private void editScene() {
 
         if (mServiceByInterface.getCurrentHomeId() == 0) return;
@@ -92,6 +101,15 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+    /**
+     * 创建场景，如果要创建天气相关条件自动化需要接入地图地位业务包
+     * 国内包：
+     * api 'com.tuya.smart:tuyasmart-bizbundle-map_amap:x.x.x-x'
+     * api 'com.tuya.smart:tuyasmart-bizbundle-location_amap:x.x.x-x'
+     * 国际包：
+     * api 'com.tuya.smart:tuyasmart-bizbundle-map_google:x.x.x-x'
+     * api 'com.tuya.smart:tuyasmart-bizbundle-location_google:x.x.x-x'
+     */
     private void addScene() {
         if (null != iTuyaSceneBusinessService && mServiceByInterface.getCurrentHomeId() != 0) {
             iTuyaSceneBusinessService.addScene(this, mServiceByInterface.getCurrentHomeId(), ADD_SCENE_REQUEST_CODE);
