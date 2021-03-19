@@ -255,6 +255,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.location).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.demo.location.LocationActivity");
+                startActivity(i);
+            }
+        });
     }
 
     @Override

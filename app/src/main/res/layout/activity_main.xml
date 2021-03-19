@@ -132,6 +132,14 @@
                 android:gravity="center"
                 android:text="Device Detail 业务包(Device Detail)"
                 android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="地图定位"
+                android:textColor="@color/black" />
         </LinearLayout>
 
     </ScrollView>
