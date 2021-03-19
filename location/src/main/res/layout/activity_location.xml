@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LocationActivity">
+    <TextView
+        android:id="@+id/start_location"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="启动定位"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/get_location"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="获取定位信息"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/map_location_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="高德地图"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/map_location"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/map_geofence_setting"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Google地理围栏"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/map_geofence"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/request_permission_activity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="无权限时申请"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/request_permission_result"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+
+</LinearLayout>

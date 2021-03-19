@@ -24,7 +24,7 @@
     ],
     "PIPE_LINE_APPLICATION_ASYNC": [
       "com.tuya.smart.netdiagnosis.AppStartPipeLine",
-      "com.tuya.smart.android.tangram.scheduler.StartUpConfig",
+      "com.tuya.smart.android.tangram.scheduler.StartUpConfig"
     ]
   },
   "moduleMap": {
@@ -139,6 +139,10 @@
     "com.tuya.smart.map.MapModuleApp": [
       "map_location_setting",
       "family_location_setting"
+    ],
+    "com.tuya.smart.map.geofence.MapGeoFenceModuleApp": [
+      "map_geofence",
+      "request_permission_activity"
     ],
     "com.tuya.smart.scene.logs.SceneLogApp": [
       "scene_log_list",
@@ -305,11 +309,6 @@
     "com.tuya.smart.netpool.NetPoolModuleApp": [
       "DeviceNetInfo"
     ],
-    "com.tuya.smart.migration.MigrationModuleApp": [
-      "inMigration",
-      "inputCodeMigration",
-      "GatewayMigration"
-    ],
     "com.tuya.smart.panel.base.PanelModuleApp": [
       "rn",
       "more",
@@ -453,7 +452,9 @@
     "com.tuya.smart.camera.cloud.purchase.AbsCameraCloudPurchaseService": "com.tuya.smart.camera.cloud.purchase.CameraCloudPurchaseServiceImpl",
     "com.tuya.smart.clearcache.api.ClearCacheService": "com.tuya.smart.clearcache.ClearCacheServiceImpl",
     "com.tuya.smart.panel.ota.service.AbsOtaCallerService": "com.tuya.smart.panel.newota.OtaCallerService",
-    "com.tuya.smart.panel.ota.service.AbsOTACheckService": "com.tuya.smart.panel.newota.OTACheckService"
+    "com.tuya.smart.panel.ota.service.AbsOTACheckService": "com.tuya.smart.panel.newota.OTACheckService",
+    "com.tuya.smart.map.AbsAmapService": "com.tuya.smart.map.amap.AmapService",
+    "com.tuyasmart.stencil.location.AmapLocationService": "com.tuya.chinalocation.AmapLocationServiceImpl"
   },
   "eventMap": {
     "global_clear_event": [

@@ -13,6 +13,8 @@
         android:theme="@style/Base_BizBundle_Theme"
         tools:replace="android:theme">
 
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
