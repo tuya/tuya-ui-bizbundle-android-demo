@@ -64,7 +64,7 @@ dependencies {
     implementation project(path: ':location')
 
     //demo use only start
-    api 'com.tuya.smart:tuyasmart:3.22.0'
+    api 'com.tuya.smart:tuyasmart:3.25.1'
     implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family:3.22.0-rc.2"
     implementation 'com.tuya.smart:tuyasmart-demo-login:3.22.0-rc.4'
     implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family-api:3.17.6r147-1"

@@ -26,8 +26,8 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    api 'com.tuya.smart:tuyasmart-bizbundle-camera:3.22.0-11'
-    api 'com.tuya.smart:tuyasmart:3.22.0'
+    api 'com.tuya.smart:tuyasmart-bizbundle-camera:3.25.2-2'
+    api 'com.tuya.smart:tuyasmart:3.25.1'
     
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
