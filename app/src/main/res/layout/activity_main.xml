@@ -140,6 +140,13 @@
                 android:gravity="center"
                 android:text="地图定位"
                 android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/groupmanager"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="群组"
+                android:textColor="@color/black" />
         </LinearLayout>
 
     </ScrollView>

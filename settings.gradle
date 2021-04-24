@@ -11,7 +11,11 @@ include ':activator'
 include ':scene'
 include ':ota'
 include ':family'
-include ':devicedetail'
-include ':qqmusic'
-include ':location'
+include ":groupmanager"
+include ":devicedetail"
+include ":location"
 
+
+include ':qqmusic'
+
+include ':panelmore'

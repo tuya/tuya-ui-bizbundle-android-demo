@@ -67,9 +67,7 @@ public class IPCPanelActivity extends AppCompatActivity {
             @Override
             public void onSuccess(HomeBean homeBean) {
                 List<ItemBean> beans = new ArrayList<>(8);
-                for (GroupBean groupBean : homeBean.getGroupList()) {
-                    beans.add(getItemBeanFromGroup(groupBean));
-                }
+
                 for (DeviceBean deviceBean : homeBean.getDeviceList()) {
                     beans.add(getItemBeanFromDevice(deviceBean));
                 }
@@ -85,31 +83,6 @@ public class IPCPanelActivity extends AppCompatActivity {
         });
     }
 
-    private ItemBean getItemBeanFromGroup(GroupBean groupBean) {
-        ItemBean itemBean = new ItemBean();
-        itemBean.setGroupId(groupBean.getId());
-        itemBean.setTitle(groupBean.getName());
-        itemBean.setIconUrl(groupBean.getIconUrl());
-
-        List<DeviceBean> deviceBeans = groupBean.getDeviceBeans();
-        if (deviceBeans == null || deviceBeans.isEmpty()) {
-            return null;
-        } else {
-            DeviceBean onlineDev = null;
-            for (DeviceBean dev : deviceBeans) {
-                if (dev != null) {
-                    if (dev.getIsOnline()) {
-                        onlineDev = dev;
-                        break;
-                    } else {
-                        onlineDev = dev;
-                    }
-                }
-            }
-            itemBean.setDevId(onlineDev.getDevId());
-            return itemBean;
-        }
-    }
 
     private ItemBean getItemBeanFromDevice(DeviceBean deviceBean) {
         ItemBean itemBean = new ItemBean();

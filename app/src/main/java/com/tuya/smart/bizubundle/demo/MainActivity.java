@@ -263,6 +263,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        findViewById(R.id.groupmanager).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.groupmanager.GroupManagerActivity");
+                startActivity(i);
+            }
+        });
     }
 
     @Override

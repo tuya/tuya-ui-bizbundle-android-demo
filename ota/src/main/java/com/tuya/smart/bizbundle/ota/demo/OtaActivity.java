@@ -134,9 +134,9 @@ public class OtaActivity extends AppCompatActivity {
             @Override
             public void onSuccess(final HomeBean homeBean) {
                 final List<SimpleDeviceBean> beans = new ArrayList<>(8);
-                for (GroupBean groupBean : homeBean.getGroupList()) {
-                    beans.add(getItemBeanFromGroup(groupBean));
-                }
+//                for (GroupBean groupBean : homeBean.getGroupList()) {
+//                    beans.add(getItemBeanFromGroup(groupBean));
+//                }
                 for (DeviceBean deviceBean : homeBean.getDeviceList()) {
                     beans.add(getItemBeanFromDevice(deviceBean));
                 }

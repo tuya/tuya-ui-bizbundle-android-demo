@@ -25,7 +25,7 @@ import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.home.sdk.bean.HomeBean;
 import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
-import com.tuya.smart.panel.base.service.AbsPanelMoreExpandService;
+import com.tuya.smart.panel.usecase.panelmore.service.AbsPanelMoreExpandService;
 import com.tuya.smart.sdk.bean.DeviceBean;
 import com.tuya.smart.sdk.bean.GroupBean;
 import com.tuya.smart.utils.ProgressUtil;
@@ -38,6 +38,7 @@ public class DeviceDetailActivity extends Activity {
     private EditText edt;
     private SimpleDevListAdapter mAdapter;
     private BottomSheetDialog bottomSheetDialog;
+    private long groupId;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,13 +71,12 @@ public class DeviceDetailActivity extends Activity {
                 Bundle bundle = new Bundle();
                 bundle.putString("extra_panel_dev_id",devId);
                 bundle.putString("extra_panel_name",deviceBean.getName());
+                bundle.putLong("extra_panel_group_id",groupId);
+
                 urlBuilder.putExtras(bundle);
                 UrlRouter.execute(urlBuilder);
             }
         });
-
-
-
 
     }
 
@@ -93,6 +93,7 @@ public class DeviceDetailActivity extends Activity {
             @Override
             public void onItemClick(SimpleDeviceBean bean, int position) {
                 edt.setText(bean.getDevId());
+                groupId = bean.getGroupId();
                 bottomSheetDialog.dismiss();
             }
         });
