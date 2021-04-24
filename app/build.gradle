@@ -5,8 +5,8 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.test.homesdkdemo"
-        minSdkVersion 19
+        applicationId "com.testbizbundle.demo"
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -61,12 +61,13 @@ dependencies {
     implementation project(path: ':ota')
     implementation project(path: ':family')
     implementation project(path: ':devicedetail')
+    implementation project(path: ':groupmanager')
     implementation project(path: ':location')
 
     //demo use only start
     api 'com.tuya.smart:tuyasmart:3.25.1'
-    implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family:3.22.0-rc.2"
-    implementation 'com.tuya.smart:tuyasmart-demo-login:3.22.0-rc.4'
+    implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family:3.25.0-rc.4"
+    implementation 'com.tuya.smart:tuyasmart-demo-login:3.25.0-rc.3'
     implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family-api:3.17.6r147-1"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

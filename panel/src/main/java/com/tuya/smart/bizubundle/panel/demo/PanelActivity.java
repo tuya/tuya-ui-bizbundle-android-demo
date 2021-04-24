@@ -109,25 +109,7 @@ public class PanelActivity extends AppCompatActivity {
         itemBean.setGroupId(groupBean.getId());
         itemBean.setTitle(groupBean.getName());
         itemBean.setIconUrl(groupBean.getIconUrl());
-
-        List<DeviceBean> deviceBeans = groupBean.getDeviceBeans();
-        if (deviceBeans == null || deviceBeans.isEmpty()) {
-            return null;
-        } else {
-            DeviceBean onlineDev = null;
-            for (DeviceBean dev : deviceBeans) {
-                if (dev != null) {
-                    if (dev.getIsOnline()) {
-                        onlineDev = dev;
-                        break;
-                    } else {
-                        onlineDev = dev;
-                    }
-                }
-            }
-            itemBean.setDevId(onlineDev.getDevId());
-            return itemBean;
-        }
+        return itemBean;
     }
 
     private ItemBean getItemBeanFromDevice(DeviceBean deviceBean) {

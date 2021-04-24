@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.tuya.smart.deviceconfig.api.ITuyaDeviceActiveListener;
-import com.tuya.smart.deviceconfig.api.TuyaDeviceActivatorImpl;
-import com.tuya.smart.deviceconfig.api.TuyaDeviceActivatorManager;
+import com.tuya.smart.activator.config.api.ITuyaDeviceActiveListener;
+import com.tuya.smart.activator.config.api.TuyaDeviceActivatorImpl;
+import com.tuya.smart.activator.config.api.TuyaDeviceActivatorManager;
 
 import java.util.List;
 
@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class DeviceActivatorActivity extends AppCompatActivity {
     private static final int INFO_MESSAGE = 1;
     private EditText infoEt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,11 +41,13 @@ public class DeviceActivatorActivity extends AppCompatActivity {
     };
 
     public void actionConfig(View view) {
-        TuyaDeviceActivatorManager.startDeviceActiveAction(this, TuyaDeviceActivatorImpl.getInstance().getCurrentHomeId(), new ITuyaDeviceActiveListener() {
+        TuyaDeviceActivatorManager.startDeviceActiveAction(this, TuyaDeviceActivatorImpl.getInstance().getCurrentHomeId());
+
+        TuyaDeviceActivatorManager.setListener(new ITuyaDeviceActiveListener() {
             @Override
             public void onDevicesAdd(List<String> list) {
                 StringBuilder str = new StringBuilder();
-                for (String id: list) {
+                for (String id : list) {
                     str.append("add device success, id: " + id).append("\n");
                 }
                 Message msg = Message.obtain();

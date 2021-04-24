@@ -10,10 +10,16 @@
       "type": "device_net_info"
     },
     {
+      "type":"group_edit_devices"
+    },
+    {
       "type": "off_line_warn"
     },
     {
       "type": "section_other"
+    },
+    {
+      "type":"group_create"
     },
     {
       "type":"help_and_feedback"
@@ -177,6 +183,20 @@
     },
     {
       "type": "cameraSetting_restartCfgItem"
+    }
+  ],
+  "devBaseInfo": [
+    {
+      "type": "dev_icon"
+    },
+    {
+      "type": "set_icon"
+    },
+    {
+      "type": "set_name"
+    },
+    {
+      "type": "set_position"
     }
   ]
 }

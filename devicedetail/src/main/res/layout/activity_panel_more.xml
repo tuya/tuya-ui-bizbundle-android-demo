@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_marginHorizontal="@dimen/wh_15"
         android:layout_marginTop="20dp"
+        android:hint="device id"
         android:id="@+id/edit_id"/>
 
     <Button
