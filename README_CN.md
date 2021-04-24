@@ -6,7 +6,7 @@
 
 ## 相关文档
 
-涂鸦智能 UI 业务包 文档：https://tuyainc.github.io/tuyasmart_bizbundle_android_doc/zh-hans/
+涂鸦智能 UI 业务包 文档：https://developer.tuya.com/cn/docs/app-development/introduction?id=Ka8qhzjygzfau
 
 ## 如何获得技术支持
 
