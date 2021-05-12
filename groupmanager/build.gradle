@@ -30,8 +30,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    api 'com.tuya.smart:tuyasmart:3.25.1'
+    api 'com.tuya.smart:tuyasmart:3.26.5'
     implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family-api:3.17.6r147-1"
     // 群组依赖
-    implementation 'com.tuya.smart:tuyasmart-bizbundle-groupmanager:3.25.2-2'
+    implementation 'com.tuya.smart:tuyasmart-bizbundle-groupmanager:3.25.2-4'
 }
