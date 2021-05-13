@@ -30,6 +30,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.tuya.smart:tuyasmart-bizbundle-message:3.25.2-2'
+    api 'com.tuya.smart:tuyasmart-bizbundle-message:3.25.2-4'
 
 }
