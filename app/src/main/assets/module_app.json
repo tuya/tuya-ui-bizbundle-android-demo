@@ -292,7 +292,6 @@
     "com.tuya.smart.panel.base.PanelModuleApp": [
       "rn",
       "more",
-      "group",
       "panel_more",
       "device_info",
       "dev_base_info",
