@@ -57,12 +57,12 @@ public class TuyaSmartApp extends Application {
                 //Such as:
                 //Intercept the event of clicking the panel right menu and jump to the custom page with the parameters of urlBuilder
                 //例如：拦截点击面板右上角按钮事件，通过 urlBuilder 的参数跳转至自定义页面
-                if (urlBuilder.target.equals("panelAction") && urlBuilder.params.getString("action").equals("gotoPanelMore")) {
-                    interceptorCallback.interceptor("interceptor");
-                    Log.e("interceptor", urlBuilder.params.toString());
-                } else {
-                    interceptorCallback.onContinue(urlBuilder);
-                }
+                // if (urlBuilder.target.equals("panelAction") && urlBuilder.params.getString("action").equals("gotoPanelMore")) {
+                //     interceptorCallback.interceptor("interceptor");
+                //     Log.e("interceptor", urlBuilder.params.toString());
+                // } else {
+                //     interceptorCallback.onContinue(urlBuilder);
+                // }
             }
         });
     }
