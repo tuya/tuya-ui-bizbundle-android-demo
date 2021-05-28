@@ -61,7 +61,7 @@ public class TuyaSmartApp extends Application {
                 //     interceptorCallback.interceptor("interceptor");
                 //     Log.e("interceptor", urlBuilder.params.toString());
                 // } else {
-                //     interceptorCallback.onContinue(urlBuilder);
+                    interceptorCallback.onContinue(urlBuilder);
                 // }
             }
         });
