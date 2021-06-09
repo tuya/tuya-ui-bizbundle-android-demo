@@ -14,8 +14,6 @@ include ':family'
 include ":groupmanager"
 include ":devicedetail"
 include ":location"
-
-
 include ':qqmusic'
-
 include ':panelmore'
+include ':alexa_google_bind'

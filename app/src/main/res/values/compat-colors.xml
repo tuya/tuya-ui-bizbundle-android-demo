@@ -1,8 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"  encoding="utf-8"?>
 <resources>
-    <!--
-Automatically generated files, it should not be modified manually!!!
--->
+
+    <string name="qqAppKey"></string>
+    <string name="qqMusicAppID">87</string>
+    <string name="qqMusicAppPubilcKey"></string>
+    <string name="qqMusicLocalPrivateKey"></string>
+    <string name="google_maps_key"></string>
+    <string name="amapKey"></string>
+
+    <string name="ap_mode_ssid">SmartLife|SL</string>
+    <bool name="is_need_ble_support">true</bool>
+    <bool name="is_need_blemesh_support">true</bool>
+    <bool name="is_scan_support">true</bool>
+
+    <!-- google授权绑定 -->
+    <string name="google_flip_client_id"></string>
+    <!-- Alexa授权绑定 -->
+    <bool name="is_alexa_flip_support">false</bool>
+    <bool name="is_show_alexa_oem_account">false</bool>
+    <bool name="is_alexa_to_tuyapp_support">true</bool>
+
     <color name="status_bg_color">@color/ty_theme_color_b2</color>
     <color name="list_primary_color">@color/ty_theme_color_b6_n1</color>
     <color name="list_sub_color">@color/ty_theme_color_b6_n2</color>

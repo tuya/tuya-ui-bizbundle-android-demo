@@ -17,6 +17,8 @@ android {
         manifestPlaceholders = [
                 TUYA_SMART_APPKEY: "${properties.getProperty("appKey")}",
                 TUYA_SMART_SECRET: "${properties.getProperty("appSecret")}",
+                INTERNAL_HOST: "${properties.getProperty("app_scheme")}".toLowerCase(Locale.ENGLISH).concat('.app.tuya.com'),
+                ALEXA_AUTH_INTERNAL_HOST: "${properties.getProperty("app_scheme")}".toLowerCase(Locale.ENGLISH).concat('.applink.smart321.com'),
         ]
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"
@@ -63,6 +65,7 @@ dependencies {
     implementation project(path: ':devicedetail')
     implementation project(path: ':groupmanager')
     implementation project(path: ':location')
+    implementation project(path: ':alexa_google_bind')
 
     //demo use only start
     api 'com.tuya.smart:tuyasmart:3.26.5'

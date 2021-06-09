@@ -271,6 +271,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        findViewById(R.id.alexa_google_bind).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.demo.socialbind.AlexaGoogleBindActivity");
+                startActivity(i);
+            }
+        });
     }
 
     @Override
