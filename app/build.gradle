@@ -19,6 +19,7 @@ android {
                 TUYA_SMART_SECRET: "${properties.getProperty("appSecret")}",
                 INTERNAL_HOST: "${properties.getProperty("app_scheme")}".toLowerCase(Locale.ENGLISH).concat('.app.tuya.com'),
                 ALEXA_AUTH_INTERNAL_HOST: "${properties.getProperty("app_scheme")}".toLowerCase(Locale.ENGLISH).concat('.applink.smart321.com'),
+                PACKAGE_NAME     : applicationId
         ]
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"
@@ -68,12 +69,12 @@ dependencies {
     implementation project(path: ':alexa_google_bind')
 
     //demo use only start
-    api 'com.tuya.smart:tuyasmart:3.26.5'
+    api 'com.tuya.smart:tuyasmart:3.27.5'
     implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family:3.25.0-rc.4"
     implementation 'com.tuya.smart:tuyasmart-demo-login:3.25.0-rc.3'
     implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family-api:3.17.6r147-1"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation "androidx.multidex:multidex:2.0.1"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     //demo use only end

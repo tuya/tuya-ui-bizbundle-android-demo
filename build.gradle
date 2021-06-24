@@ -1,6 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
+        maven { url 'https://maven-other.tuya.com/repository/maven-releases/' }
         google()
         jcenter()
 
@@ -15,10 +16,10 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://maven-other.tuya.com/repository/maven-releases/' }
         jcenter()
         google()
         //***** required start ****//
-        maven { url 'https://maven-other.tuya.com/repository/maven-releases/' }
         maven { url 'https://jitpack.io' }
         //***** required end ****//
     }

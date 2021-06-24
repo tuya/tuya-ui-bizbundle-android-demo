@@ -26,14 +26,14 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    api 'com.tuya.smart:tuyasmart-bizbundle-panel:3.25.2-4'
-    api 'com.tuya.smart:tuyasmart:3.26.5'
+    api 'com.tuya.smart:tuyasmart-bizbundle-panel:3.27.5-3'
+    api 'com.tuya.smart:tuyasmart:3.27.5'
 
     // amap map
     // 高德地图
-    api 'com.amap.api:search:6.9.2'
-    api 'com.amap.api:map2d:5.2.0'
-    api 'com.tuya.smart:tuyasmart-react-native-amap:3.21.0-rc.1'
+    implementation 'com.amap.api:search:7.7.0'
+    implementation 'com.amap.api:3dmap:7.8.0'
+    api 'com.tuya.smart:tuyasmart-react-native-amap:3.27.5'
 
     // google map
     // 谷歌地图

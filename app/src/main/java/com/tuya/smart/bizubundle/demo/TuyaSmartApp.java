@@ -34,7 +34,7 @@ public class TuyaSmartApp extends Application {
             public void onFaild(int errorCode, UrlBuilder urlBuilder) {
                 // urlBuilder.target is a router address, urlBuilder.params is a router params
                 //点击无反应表示路由未现实，需要在此实现， urlBuilder.target 目标路由， urlBuilder.params 路由参数
-                Log.e("router not implement", urlBuilder.target + urlBuilder.params.toString());
+                Log.e("router not implement", urlBuilder.target + " : " + urlBuilder.params.toString());
             }
         }, new ServiceEventListener() {
             @Override

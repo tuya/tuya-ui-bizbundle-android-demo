@@ -46,7 +46,9 @@
       "camera_panel_more",
       "camera_motion_monitor",
       "camera_panel_info",
-      "camera_time_zone_select"
+      "camera_time_zone_select",
+      "camera_base_setting",
+      "camera_ir_night_vision"
     ],
     "com.tuya.smart.safety.SafetyApp": [
       "account_and_safety"
@@ -119,7 +121,7 @@
     "com.tuya.smart.commonbiz.shortcut.PinShortcutApp": [
       "pinned_shortcut"
     ],
-    "com.tuya.smart.map.MapModuleApp": [
+    "com.tuya.smart.map.generalmap.MapModuleApp": [
       "map_location_setting",
       "family_location_setting"
     ],
@@ -295,7 +297,6 @@
       "panel_more",
       "device_info",
       "dev_base_info",
-      "zigbee_pair",
       "dev_network_check",
       "panelMore",
       "panelAction"
@@ -368,7 +369,6 @@
     "com.tuya.smart.activator.bind.success.api.TyBindSuccessService": "com.tuya.smart.activator.bind.success.TyBindSuccessServiceImpl",
     "com.tuya.smart.activator.bluescan.ui.api.TuyaBlueScanService": "com.tuya.smart.activator.bluescan.ui.TuyaBlueScanServiceImpl",
     "com.tuya.smart.activator.guide.api.TyGuideDeviceService": "com.tuya.smart.activator.guide.TyGuideDeviceServiceImpl",
-
     "com.tuya.group_api.GroupManagerService": "com.tuya.smart.group.GroupManagerImpl",
     "com.tuya.smart.push.api.FcmPushService": "com.tuya.smart.fcmpush.FcmPushServiceImpl",
     "com.tuya.smart.api.loginapi.LoginUserService": "com.tuya.smart.login.base.service.LoginUserServiceImpl",

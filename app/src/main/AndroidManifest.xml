@@ -30,6 +30,10 @@
             android:name="TUYA_SMART_SECRET"
             android:value="${TUYA_SMART_SECRET}" />
 
+        <meta-data
+            android:name="PACKAGE_NAME"
+            android:value="${PACKAGE_NAME}" />
+
         <!-- demo use only start -->
         <activity
             android:name="com.tuya.smart.demo_login.base.activity.SplashActivity"
