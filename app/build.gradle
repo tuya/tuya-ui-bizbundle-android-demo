@@ -67,6 +67,7 @@ dependencies {
     implementation project(path: ':groupmanager')
     implementation project(path: ':location')
     implementation project(path: ':alexa_google_bind')
+    implementation "com.tuya.smart:tuyasmart-theme-open:1.0.0"
 
     //demo use only start
     api 'com.tuya.smart:tuyasmart:3.27.5'
@@ -83,4 +84,31 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+}
+
+apply plugin: 'com.tuya.open.theme'
+tuyaOpenTheme{
+    // 浅色模式配置, 目前不支持深色模式的配置
+    lightTheme {
+        color{
+            // 背景色
+            backgroundColor "#EBB759"
+            // 主题色
+            themeColor "#598DEB"
+            // 警告色
+            warningColor "#FF4444"
+            // 提示色
+            tipColor "#00CC99"
+            // 引导色
+            guideColor "#E819FA"
+            // tab选中背景色
+            tabBarSelectColor "#FF5A28"
+            // 导航栏背景色配置
+            navigationBarColor "#FFFFFF"
+        }
+        colorAlpha{
+            // 弹窗蒙层透明度
+            alertMaskAlpha 0.8
+        }
+    }
 }
