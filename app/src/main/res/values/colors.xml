@@ -7,6 +7,7 @@
     <!--
 Automatically generated files, it should not be modified manually!!!
 -->
+    <!--
     <color name="ty_theme_color_b1">#fff8f8f8</color>
     <color name="ty_theme_color_b1_2">#ffdfdfdf</color>
     <color name="ty_theme_color_b2">#ffffffff</color>
@@ -459,4 +460,6 @@ Automatically generated files, it should not be modified manually!!!
     <color name="ty_theme_color_m5_n8">#ffffffff</color>
     <color name="ty_theme_color_m5_1_n8">#ffffffff</color>
     <color name="ty_theme_color_m5_2_n8">#ffffffff</color>
+-->
+    <color name="transparent">#00ffffff</color>
 </resources>

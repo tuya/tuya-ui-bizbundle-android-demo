@@ -29,6 +29,6 @@ android {
 }
 
 dependencies {
-    api 'com.tuya.smart:tuyasmart:3.26.5'
-    api 'com.tuya.smart:tuyasmart-bizbundle-panelmore:3.25.2-4'
+    api 'com.tuya.smart:tuyasmart:3.27.5'
+    api 'com.tuya.smart:tuyasmart-bizbundle-panelmore:3.27.5-3'
 }

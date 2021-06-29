@@ -53,7 +53,7 @@ public class PanelMoreExpandServiceImpl extends AbsPanelMoreExpandService {
     }
 
     @Override
-    public void groupClickItem(Context context, int action, TextBean data, GroupBean groupBean, boolean isAdmin) {
+    public void groupClickItem(Context context, int action, GroupBean groupBean, boolean isAdmin) {
         if (action == R.id.action_test_insert) {
             Toast.makeText(context, "action_test_insert", Toast.LENGTH_LONG).show();
         } else if (action == R.id.action_test_async_insert) {
