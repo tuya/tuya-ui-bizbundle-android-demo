@@ -52,9 +52,8 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-
-    implementation project(path: ':mall')
     implementation project(path: ':panel')
+    implementation project(path: ':mall')
     implementation project(path: ':scene')
     implementation project(path: ':ipc')
     implementation project(path: ':cloudstorage')
