@@ -15,6 +15,7 @@ import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.home.sdk.bean.scene.SceneBean;
 import com.tuya.smart.home.sdk.callback.ITuyaResultCallback;
+import com.tuya.smart.scene.base.bean.SmartSceneBean;
 import com.tuya.smart.scene.business.api.ITuyaSceneBusinessService;
 import com.tuya.smart.utils.ToastUtil;
 
@@ -179,7 +180,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      * @param data
      */
     private void onEditSuc(Intent data) {
-        SceneBean sceneBean = (SceneBean) data.getSerializableExtra("sceneBean");
+        SmartSceneBean sceneBean = (SmartSceneBean) data.getSerializableExtra("SmartSceneBean");
         if (null != sceneBean) {
             ToastUtil.shortToast(this, "Scene：" + sceneBean.getName() + "edit success!");
         }
@@ -191,7 +192,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      * @param data
      */
     private void onAddSuc(Intent data) {
-        SceneBean sceneBean = (SceneBean) data.getSerializableExtra("sceneBean");
+        SmartSceneBean sceneBean = (SmartSceneBean) data.getSerializableExtra("SmartSceneBean");
         if (null != sceneBean) {
             ToastUtil.shortToast(this, "Scene：" + sceneBean.getName() + "create success!");
         }

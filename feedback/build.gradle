@@ -27,5 +27,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api 'com.tuya.smart:tuyasmart:3.27.5'
-    api 'com.tuya.smart:tuyasmart-bizbundle-feedback:3.27.5-3'
+    api 'com.tuya.smart:tuyasmart-bizbundle-feedback:3.27.5-4'
 }

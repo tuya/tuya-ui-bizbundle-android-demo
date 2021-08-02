@@ -38,5 +38,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     api 'com.tuya.smart:tuyasmart:3.25.1'
-    api 'com.tuya.smart:tuyasmart-bizbundle-amazon_google_bind:3.27.5-3'
+    api 'com.tuya.smart:tuyasmart-bizbundle-amazon_google_bind:3.27.5-4'
 }
