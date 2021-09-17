@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lightscene_module_title">LIGHT SCENE MANAGEMENT</string>
+    <string name="lightscene_list">Light Scene List</string>
+    <string name="lightscene_create">Light Scene Create</string>
+    <string name="lightscene_execute">Click Execute</string>
+</resources>

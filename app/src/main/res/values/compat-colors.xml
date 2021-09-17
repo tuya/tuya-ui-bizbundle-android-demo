@@ -2,7 +2,7 @@
 <resources>
 
     <string name="qqAppKey"></string>
-    <string name="qqMusicAppID"></string>
+    <string name="qqMusicAppID">87</string>
     <string name="qqMusicAppPubilcKey"></string>
     <string name="qqMusicLocalPrivateKey"></string>
     <string name="google_maps_key"></string>

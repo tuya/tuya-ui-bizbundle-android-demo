@@ -66,6 +66,7 @@ dependencies {
     implementation project(path: ':groupmanager')
     implementation project(path: ':location')
     implementation project(path: ':alexa_google_bind')
+    implementation project(path: ':lightscene')
     implementation "com.tuya.smart:tuyasmart-theme-open:1.0.0"
 
     //demo use only start

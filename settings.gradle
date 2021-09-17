@@ -17,3 +17,4 @@ include ":devicedetail"
 include ":location"
 include ':panelmore'
 include ':alexa_google_bind'
+include ':lightscene'

@@ -155,6 +155,16 @@
                 android:gravity="center"
                 android:text="alexa &amp; google bind"
                 android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/light_scene"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:text="灯光场景"
+                android:textColor="@color/black" />
+
         </LinearLayout>
 
     </ScrollView>
