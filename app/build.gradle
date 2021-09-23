@@ -1,11 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.testbizbundle.demo"
+        applicationId "com.test007.demo"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -66,6 +69,7 @@ dependencies {
     implementation project(path: ':groupmanager')
     implementation project(path: ':location')
     implementation project(path: ':alexa_google_bind')
+    implementation project(path: ':lightscene')
     implementation "com.tuya.smart:tuyasmart-theme-open:1.0.0"
 
     //demo use only start

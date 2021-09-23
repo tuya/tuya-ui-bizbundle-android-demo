@@ -280,6 +280,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        findViewById(R.id.light_scene).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.appsdk.sample.lightscene.LightSceneManagerActivity");
+                startActivity(i);
+            }
+        });
     }
 
     @Override

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lightscene_module_title">灯光场景管理</string>
+    <string name="lightscene_list">灯光场景列表</string>
+    <string name="lightscene_create">灯光场景创建</string>
+    <string name="lightscene_execute">点击执行</string>
+</resources>

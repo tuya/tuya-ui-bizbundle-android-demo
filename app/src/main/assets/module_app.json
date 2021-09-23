@@ -452,7 +452,8 @@
     "com.tuya.smart.theme.api.AbsThemeService": "com.tuya.smart.theme.ThemeServiceImpl",
     "com.tuya.smart.login.country.api.service.LoginCountryService": "com.tuya.smart.demo_login.LoginCountryServiceImpl",
     "com.tuya.smart.data.api.AbsSceneDataService": "com.tuya.smart.data.SceneDataServiceImpl",
-    "com.tuya.smart.network.error.api.AbsNetworkErrorHandlerService": "com.tuya.smart.network.error.handler.NetworkErrorHandlerServiceImpl"
+    "com.tuya.smart.network.error.api.AbsNetworkErrorHandlerService": "com.tuya.smart.network.error.handler.NetworkErrorHandlerServiceImpl",
+    "com.tuya.smart.scene.lighting.api.SceneLightingService":"com.tuya.smart.scene.lighting.SceneLightingServiceImpl"
   },
   "eventMap": {
     "global_clear_event": [
