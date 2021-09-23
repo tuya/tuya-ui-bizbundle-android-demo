@@ -17,6 +17,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,7 +58,7 @@ public class LightSceneListAdapter extends RecyclerView.Adapter<LightSceneListAd
         ViewHolder holder = new ViewHolder(
                 LayoutInflater.from(parent.getContext()).inflate(R.layout.home_item_list, parent, false));
 
-        holder.ivIcon.setImageResource(R.drawable.ty_hb_next_icon);
+        holder.ivIcon.setImageResource(R.drawable.scene_schedule_arrow_right);
         holder.itemView.setOnClickListener(v -> {
             // lightScene Detail
             TuyaLightSceneBean tuyaLightSceneBean = data.get(holder.getAdapterPosition());
@@ -67,7 +68,7 @@ public class LightSceneListAdapter extends RecyclerView.Adapter<LightSceneListAd
             }
         });
 
-        holder.tvName.setOnClickListener(new View.OnClickListener() {
+        holder.btnExecute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 TuyaLightSceneBean tuyaLightSceneBean = data.get(holder.getAdapterPosition());
@@ -97,7 +98,7 @@ public class LightSceneListAdapter extends RecyclerView.Adapter<LightSceneListAd
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         TuyaLightSceneBean bean = data.get(position);
-        holder.tvName.setText(bean.getName() + "#" + context.getResources().getString(R.string.lightscene_execute));
+        holder.tvName.setText(bean.getName());
     }
 
     @Override
@@ -107,12 +108,14 @@ public class LightSceneListAdapter extends RecyclerView.Adapter<LightSceneListAd
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView tvName;
+        private final Button btnExecute;
         private final ImageView ivIcon;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tvName = itemView.findViewById(R.id.tvName);
+            btnExecute = itemView.findViewById(R.id.btnExecute);
             ivIcon = itemView.findViewById(R.id.ivIcon);
         }
 
