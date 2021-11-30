@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.tuya.group_api.GroupState;
-import com.tuya.group_api.TuyaGroupManager;
+import com.tuya.group_ui_api.GroupState;
+import com.tuya.group_ui_api.TuyaGroupManager;
 import com.tuya.groupmanager.adapter.SimpleDevListAdapter;
 import com.tuya.groupmanager.bean.SimpleDeviceBean;
 import com.tuya.smart.api.service.MicroServiceManager;

@@ -11,6 +11,8 @@ import android.widget.Toast;
 import com.tuya.smart.activator.config.api.ITuyaDeviceActiveListener;
 import com.tuya.smart.activator.config.api.TuyaDeviceActivatorImpl;
 import com.tuya.smart.activator.config.api.TuyaDeviceActivatorManager;
+import com.tuya.smart.activator.relation.api.TyActivatorRelationKit;
+import com.tuya.smart.sdk.TuyaSdk;
 
 import java.util.List;
 
@@ -41,7 +43,7 @@ public class DeviceActivatorActivity extends AppCompatActivity {
     };
 
     public void actionConfig(View view) {
-        TuyaDeviceActivatorManager.startDeviceActiveAction(this, TuyaDeviceActivatorImpl.getInstance().getCurrentHomeId());
+        TuyaDeviceActivatorManager.startDeviceActiveAction(this, TyActivatorRelationKit.INSTANCE.getRelation().getRelationId());
 
         TuyaDeviceActivatorManager.setListener(new ITuyaDeviceActiveListener() {
             @Override
@@ -66,10 +68,7 @@ public class DeviceActivatorActivity extends AppCompatActivity {
                 Toast.makeText(DeviceActivatorActivity.this, "u can open the panel of the device: " + s, Toast.LENGTH_SHORT).show();
             }
 
-            @Override
-            public void onExitConfigBiz() {
 
-            }
         });
     }
 }

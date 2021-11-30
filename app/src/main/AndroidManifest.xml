@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/Base_BizBundle_Theme"
-        tools:replace="android:theme">
+        tools:replace="android:theme,android:supportsRtl,android:allowBackup">
 
         <activity android:name=".MainActivity">
             <intent-filter>

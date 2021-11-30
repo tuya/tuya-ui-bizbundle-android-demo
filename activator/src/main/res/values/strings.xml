@@ -1,4 +1,5 @@
 <resources>
 
     <string name="start_device_active">添加设备</string>
+    <bool name="is_support_google_iap">false</bool>>
 </resources>

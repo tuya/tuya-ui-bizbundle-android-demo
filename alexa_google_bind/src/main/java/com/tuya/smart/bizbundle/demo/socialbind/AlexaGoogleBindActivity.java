@@ -1,21 +1,15 @@
 package com.tuya.smart.bizbundle.demo.socialbind;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.tuya.smart.android.common.utils.L;
-import com.tuya.smart.api.router.UrlBuilder;
-import com.tuya.smart.api.router.UrlRouter;
 import com.tuya.smart.api.service.MicroServiceManager;
 import com.tuya.smart.bind.TuyaSocialLoginBindManager;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.callback.ITuyaResultCallback;
-
-import static com.tuya.smart.personal_third_service.MoreServiceRouter.ACTIVITY_TUYA_WEB;
 
 public class AlexaGoogleBindActivity extends AppCompatActivity {
     private String TAG = "AlexaGoogleBindActivity";
