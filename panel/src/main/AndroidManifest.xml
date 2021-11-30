@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.tuya.smart.bizubundle.panel.demo">
-
-    <application>
+    <!-- Android 11 attribute-->
+    <application tools:remove="android:preserveLegacyExternalStorage">
         <activity android:name=".PanelActivity" />
     </application>
 </manifest>

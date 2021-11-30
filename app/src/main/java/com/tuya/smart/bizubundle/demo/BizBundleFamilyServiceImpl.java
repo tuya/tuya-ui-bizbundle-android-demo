@@ -11,12 +11,8 @@ public class BizBundleFamilyServiceImpl extends AbsBizBundleFamilyService {
     }
 
     @Override
-    public void setCurrentHomeId(long l) {
-        mHomeId = l;
-    }
-
-    @Override
-    public void shiftCurrentFamily(long l, String s) {
-        mHomeId = l;
+    public void shiftCurrentFamily(long familyId, String curName) {
+        super.shiftCurrentFamily(familyId, curName);
+        mHomeId = familyId;
     }
 }

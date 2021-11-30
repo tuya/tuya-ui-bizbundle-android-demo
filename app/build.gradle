@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        
+
     }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -22,7 +22,7 @@ android {
                 TUYA_SMART_SECRET: "${properties.getProperty("appSecret")}",
                 INTERNAL_HOST: "${properties.getProperty("app_scheme")}".toLowerCase(Locale.ENGLISH).concat('.app.tuya.com'),
                 ALEXA_AUTH_INTERNAL_HOST: "${properties.getProperty("app_scheme")}".toLowerCase(Locale.ENGLISH).concat('.applink.smart321.com'),
-                PACKAGE_NAME     : applicationId
+                PACKAGE_NAME            : applicationId
         ]
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"
@@ -55,6 +55,7 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
+
     implementation project(path: ':panel')
     implementation project(path: ':mall')
     implementation project(path: ':scene')
@@ -70,13 +71,14 @@ dependencies {
     implementation project(path: ':location')
     implementation project(path: ':alexa_google_bind')
     implementation project(path: ':lightscene')
+    implementation project(path: ':share')
+    implementation project(path: ':control')
     implementation "com.tuya.smart:tuyasmart-theme-open:1.0.0"
 
     //demo use only start
-    api 'com.tuya.smart:tuyasmart:3.27.5'
-    implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family:3.25.0-rc.4"
-    implementation 'com.tuya.smart:tuyasmart-demo-login:3.25.0-rc.3'
-    implementation "com.tuya.smart:tuyasmart-commonbiz-bizbundle-family-api:3.17.6r147-1"
+    api 'com.tuya.smart:tuyasmart:3.32.5'
+
+    implementation 'com.tuya.smart:tuyasmart-demo-login:3.32.5-rc.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation "androidx.multidex:multidex:2.0.1"
@@ -90,10 +92,10 @@ dependencies {
 }
 
 apply plugin: 'com.tuya.open.theme'
-tuyaOpenTheme{
+tuyaOpenTheme {
     // 浅色模式配置, 目前不支持深色模式的配置
     lightTheme {
-        color{
+        color {
             // 背景色
             backgroundColor "#EBB759"
             // 主题色
@@ -109,7 +111,7 @@ tuyaOpenTheme{
             // 导航栏背景色配置
             navigationBarColor "#FFFFFF"
         }
-        colorAlpha{
+        colorAlpha {
             // 弹窗蒙层透明度
             alertMaskAlpha 0.8
         }

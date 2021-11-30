@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+package="com.tuya.smart.share">
+<application>
+    <activity android:name=".ShareActivity"
+        android:exported="true" />
+</application>
+</manifest>

@@ -13,6 +13,8 @@ import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.api.service.MicroServiceManager;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.scene.lighting.api.SceneLightingService;
+import com.tuya.smart.scene.lighting.bean.LightSmartSceneBean;
+import com.tuya.smart.scene.lighting.manager.LightSceneDataModelManager;
 
 public class LightSceneManagerActivity extends AppCompatActivity {
 
@@ -34,6 +36,7 @@ public class LightSceneManagerActivity extends AppCompatActivity {
                 }
                 SceneLightingService sceneLightingService = MicroContext.findServiceByInterface(SceneLightingService.class.getName());
                 if(null != sceneLightingService) {
+                    LightSceneDataModelManager.getInstance().setCurEditLightSmartSceneBean(new LightSmartSceneBean());
                     sceneLightingService.gotoSceneLightingActivity(LightSceneManagerActivity.this, 100);
                 }
             }

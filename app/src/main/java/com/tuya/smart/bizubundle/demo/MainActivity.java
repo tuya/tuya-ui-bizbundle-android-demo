@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
     public void setCurrentFamily(HomeBean homeBean) {
         mCurrentFamilyName.setText(homeBean.getName());
         AbsBizBundleFamilyService familyService = MicroServiceManager.getInstance().findServiceByInterface(AbsBizBundleFamilyService.class.getName());
-        familyService.setCurrentHomeId(homeBean.getHomeId());
+        familyService.shiftCurrentFamily(homeBean.getHomeId(), homeBean.getName());
     }
 
     private void openUIBizBundle() {
@@ -286,6 +286,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent();
                 i.setClassName(MainActivity.this, "com.tuya.appsdk.sample.lightscene.LightSceneManagerActivity");
+                startActivity(i);
+            }
+        });
+        findViewById(R.id.share).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.share.ShareActivity");
+                startActivity(i);
+            }
+        });
+        findViewById(R.id.control).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.control.demo.ControlManagerActivity");
                 startActivity(i);
             }
         });

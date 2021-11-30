@@ -55,6 +55,7 @@
                 android:text="设备控制业务包(Device Control)"
                 android:textColor="@color/black" />
 
+
             <TextView
                 android:id="@+id/mall"
                 android:layout_width="match_parent"
@@ -134,6 +135,14 @@
                 android:textColor="@color/black" />
 
             <TextView
+                android:id="@+id/control"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="multi control 业务包(多控关联)"
+                android:textColor="@color/black" />
+
+            <TextView
                 android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -160,9 +169,17 @@
                 android:id="@+id/light_scene"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginBottom="50dp"
                 android:gravity="center"
                 android:text="灯光场景"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:text="分享"
                 android:textColor="@color/black" />
 
         </LinearLayout>
