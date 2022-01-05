@@ -20,11 +20,7 @@ public class PanelMoreExpandServiceImpl extends AbsPanelMoreExpandService {
 
     @Override
     public void devClickItem(Context context, int action, DeviceBean deviceBean, boolean isAdmin) {
-        if (action == R.id.action_test_insert) {
-            Toast.makeText(context, "action_test_insert", Toast.LENGTH_LONG).show();
-        } else if (action == R.id.action_test_async_insert) {
-            Toast.makeText(context, "action_test_async_insert", Toast.LENGTH_LONG).show();
-        }
+
     }
 
     @Override
@@ -54,11 +50,7 @@ public class PanelMoreExpandServiceImpl extends AbsPanelMoreExpandService {
 
     @Override
     public void groupClickItem(Context context, int action, GroupBean groupBean, boolean isAdmin) {
-        if (action == R.id.action_test_insert) {
-            Toast.makeText(context, "action_test_insert", Toast.LENGTH_LONG).show();
-        } else if (action == R.id.action_test_async_insert) {
-            Toast.makeText(context, "action_test_async_insert", Toast.LENGTH_LONG).show();
-        }
+
     }
 
     @Override
