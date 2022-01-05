@@ -26,6 +26,8 @@ import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.home.sdk.bean.HomeBean;
 import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
 import com.tuya.smart.panel.usecase.panelmore.service.AbsPanelMoreExpandService;
+import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreItemClickService;
+import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreMenuService;
 import com.tuya.smart.sdk.bean.DeviceBean;
 import com.tuya.smart.sdk.bean.GroupBean;
 import com.tuya.smart.utils.ProgressUtil;
@@ -39,18 +41,20 @@ public class DeviceDetailActivity extends Activity {
     private SimpleDevListAdapter mAdapter;
     private BottomSheetDialog bottomSheetDialog;
     private long groupId;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel_more);
         TuyaWrapper.registerService(AbsPanelMoreExpandService.class, new PanelMoreExpandServiceImpl());
+        TuyaWrapper.registerService(PanelMoreItemClickService.class, new PanelMoreItemClickServiceImp());
         edt = findViewById(R.id.edit_id);
         mAdapter = new SimpleDevListAdapter();
         initClick();
         getCurrentHomeDetail();
     }
 
-    private void initClick(){
+    private void initClick() {
         findViewById(R.id.btn_dev_list).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,15 +67,15 @@ public class DeviceDetailActivity extends Activity {
             public void onClick(View view) {
                 UrlBuilder urlBuilder = new UrlBuilder(DeviceDetailActivity.this, "panelMore");
                 String devId = edt.getText().toString().trim();
-                if(TextUtils.isEmpty(devId)){
-                    Toast.makeText(DeviceDetailActivity.this,"input device id",Toast.LENGTH_LONG).show();
+                if (TextUtils.isEmpty(devId)) {
+                    Toast.makeText(DeviceDetailActivity.this, "input device id", Toast.LENGTH_LONG).show();
                     return;
                 }
                 DeviceBean deviceBean = TuyaHomeSdk.getDataInstance().getDeviceBean(devId);
                 Bundle bundle = new Bundle();
-                bundle.putString("extra_panel_dev_id",devId);
-                bundle.putString("extra_panel_name",deviceBean.getName());
-                bundle.putLong("extra_panel_group_id",groupId);
+                bundle.putString("extra_panel_dev_id", devId);
+                bundle.putString("extra_panel_name", deviceBean.getName());
+                bundle.putLong("extra_panel_group_id", groupId);
 
                 urlBuilder.putExtras(bundle);
                 UrlRouter.execute(urlBuilder);

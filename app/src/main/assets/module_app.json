@@ -17,7 +17,6 @@
       "com.tuya.smart.uibizcomponents.UiBizComponentLaunchPipeline",
       "com.tuya.smart.messagepush.MessagePushStartPipeLine",
       "com.tuya.smart.theme.core.ThemeSyncPipeLine",
-      "com.tuya.smart.stat.StatPipeLine",
       "com.tuya.smart.tuyamall.AppStartPipeLine",
       "com.tuya.smart.panel.base.RNVersionPipeLine",
       "com.tuya.smart.pushcenter.PushCenterPipeLine",
@@ -26,7 +25,6 @@
     ],
     "PIPE_LINE_APPLICATION_SYNC": [
       "com.tuya.smart.theme.core.ThemeSyncPipeLine",
-      "com.tuya.smart.stat.StatPipeLine",
       "com.tuya.smart.tuyamall.AppStartPipeLine",
       "com.tuya.smart.panel.base.RNVersionPipeLine",
       "com.tuya.smart.pushcenter.PushCenterPipeLine",
@@ -423,7 +421,6 @@
     "com.tuya.smart.scene.action.api.AbsSceneActionService": "com.tuya.smart.scene.action.SceneActionServiceImpl",
     "com.tuya.smart.scene.recommend.api.SceneRecommendService": "com.tuya.smart.scene.recommend.SceneRecommendServiceImpl",
     "com.tuyasmart.stencil.location.GoogleLocationService": "com.tuya.googlelocation.GoogleLocationServiceImpl",
-    "com.tuya.smart.statapi.StatService": "com.tuya.smart.stat.StatServiceImpl",
     "com.tuya.smart.activator.core.api.TyDeviceActiveService": "com.tuya.smart.activator.core.TyDeviceActiveServiceImpl",
     "com.tuya.smart.homepage.health.center.api.AbsHealthCenterService": "com.tuya.smart.homepage.health.HealthCenterServiceImpl",
     "com.tuya.smart.activator.config.api.TyActivatorWifiOperateService": "com.tuya.smart.activator.ui.kit.TyActivatorWifiOperateServiceImpl",

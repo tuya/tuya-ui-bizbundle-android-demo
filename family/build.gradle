@@ -25,8 +25,8 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    api 'com.tuya.smart:tuyasmart-bizbundle-family:3.32.5-6'
-    api 'com.tuya.smart:tuyasmart:3.32.5'
+    api 'com.tuya.smart:tuyasmart-bizbundle-family:3.32.5-8'
+    api 'com.tuya.smart:tuyasmart:3.32.7'
     // You need to rely on the following map gallery to ensure that the geographic location settings under the family are available.
 //    api 'com.tuya.smart:tuyasmart-bizbundle-map_amap:3.25.2-4'
 //    api 'com.tuya.smart:tuyasmart-bizbundle-location_amap:3.25.2-4'
