@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     signingConfigs {
 
-
     }
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 31
+    buildToolsVersion "31.0.0"
 
     defaultConfig {
         applicationId "com.test007.demo"
@@ -19,13 +19,13 @@ android {
         Properties properties = new Properties()
         properties.load(project.rootProject.file('local.properties').newDataInputStream())
         manifestPlaceholders = [
-                TUYA_SMART_APPKEY: "${properties.getProperty("appKey")}",
-                TUYA_SMART_SECRET: "${properties.getProperty("appSecret")}",
-                INTERNAL_HOST: "${properties.getProperty("app_scheme")}".concat('.app.tuya.com'),
-                ALEXA_AUTH_INTERNAL_HOST: "${properties.getProperty("app_scheme")}".concat('.applink.smart321.com'),
+                TUYA_SMART_APPKEY           : "${properties.getProperty("appKey")}",
+                TUYA_SMART_SECRET           : "${properties.getProperty("appSecret")}",
+                INTERNAL_HOST               : "${properties.getProperty("app_scheme")}".concat('.app.tuya.com'),
+                ALEXA_AUTH_INTERNAL_HOST    : "${properties.getProperty("app_scheme")}".concat('.applink.smart321.com'),
                 ALEXA_AUTH_INTERNAL_HOST_NEW: "${properties.getProperty("app_scheme")}".toLowerCase(Locale.ENGLISH).concat('.applink.smart321.com'),
 
-                PACKAGE_NAME            : applicationId
+                PACKAGE_NAME                : applicationId
         ]
         ndk {
             abiFilters "armeabi-v7a", "arm64-v8a"
@@ -35,6 +35,8 @@ android {
 
     packagingOptions {
         pickFirst 'lib/*/libc++_shared.so'
+        pickFirst 'lib/*/libyuv.so'
+        pickFirst 'lib/*/libopenh264.so'
     }
 
     buildTypes {
@@ -76,11 +78,13 @@ dependencies {
     implementation project(path: ':lightscene')
     implementation project(path: ':share')
     implementation project(path: ':control')
+    implementation project(path: ':speech')
+
     implementation "com.tuya.smart:tuyasmart-theme-open:1.1.0"
     implementation "com.tuya.smart:tuyasmart-commonbiz-relation-api:3.31.0"
 
     //demo use only start
-    api 'com.tuya.smart:tuyasmart:3.32.7'
+    api 'com.tuya.smart:tuyasmart:3.34.7'
 
     implementation 'com.tuya.smart:tuyasmart-demo-login:3.32.5-rc.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -92,6 +96,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    annotationProcessor 'com.google.dagger:hilt-android-compiler:2.36'
+    implementation 'com.google.dagger:hilt-android:2.36'
 
 }
 
@@ -117,7 +123,7 @@ tuyaOpenTheme {
         }
         colorAlpha {
             // 弹窗蒙层透明度
-            alertMaskAlpha 0.8
+            alertMaskAlpha 0.3
         }
     }
 }

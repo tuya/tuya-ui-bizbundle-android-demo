@@ -177,9 +177,17 @@
                 android:id="@+id/share"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginBottom="50dp"
                 android:gravity="center"
                 android:text="分享"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/speech"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:text="speech sdk"
                 android:textColor="@color/black" />
 
         </LinearLayout>

@@ -9,7 +9,7 @@
         android:id="@+id/toolbar_main"
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
-        android:background="@color/colorPrimary"
+        android:background="@color/color_primary"
         app:layout_constraintTop_toTopOf="parent"
         app:titleTextColor="@color/white" />
 
