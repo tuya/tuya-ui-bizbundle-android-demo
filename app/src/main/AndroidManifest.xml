@@ -13,14 +13,30 @@
         android:theme="@style/Base_BizBundle_Theme"
         tools:replace="android:theme,android:supportsRtl,android:allowBackup">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
                 <!--  demo use only start  -->
                 <action android:name="tuyasmart_demo_main" />
                 <!--  demo use only end  -->
             </intent-filter>
+
         </activity>
+
+        <activity-alias
+            android:name="com.tuya.smart.hometab.activity.shortcut"
+            android:exported="true"
+            android:targetActivity=".MainActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            -->
+        </activity-alias>
+
 
         <meta-data
             android:name="TUYA_SMART_APPKEY"

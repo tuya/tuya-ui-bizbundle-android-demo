@@ -461,5 +461,5 @@ Automatically generated files, it should not be modified manually!!!
     <color name="ty_theme_color_m5_1_n8">#ffffffff</color>
     <color name="ty_theme_color_m5_2_n8">#ffffffff</color>
 -->
-    <color name="transparent">#00ffffff</color>
+    <color name="transparent">#00000000</color>
 </resources>

@@ -12,9 +12,9 @@ import com.tuya.appsdk.sample.lightscene.list.LightSceneListActivity;
 import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.api.service.MicroServiceManager;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.tuya.smart.light.scene.data.bean.LightSmartSceneBean;
+import com.tuya.smart.light.scene.data.manager.LightSceneDataModelManager;
 import com.tuya.smart.scene.lighting.api.SceneLightingService;
-import com.tuya.smart.scene.lighting.bean.LightSmartSceneBean;
-import com.tuya.smart.scene.lighting.manager.LightSceneDataModelManager;
 
 public class LightSceneManagerActivity extends AppCompatActivity {
 

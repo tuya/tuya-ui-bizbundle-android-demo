@@ -18,6 +18,10 @@ import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.optimus.sdk.TuyaOptimusSdk;
 import com.tuya.smart.wrapper.api.TuyaWrapper;
 
+import dagger.hilt.android.AndroidEntryPoint;
+import dagger.hilt.android.HiltAndroidApp;
+
+@HiltAndroidApp
 public class TuyaSmartApp extends Application {
 
     @Override

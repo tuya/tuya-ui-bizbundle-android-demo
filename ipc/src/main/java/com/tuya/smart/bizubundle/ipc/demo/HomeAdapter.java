@@ -11,8 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.tuya.smart.bizubundle.ipc.demo.ItemBean;
-import com.tuya.smart.bizubundle.ipc.demo.R;
 
 import java.util.List;
 

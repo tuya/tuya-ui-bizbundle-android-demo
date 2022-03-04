@@ -10,7 +10,7 @@
       "type": "device_net_info"
     },
     {
-      "type":"group_edit_devices"
+      "type": "group_edit_devices"
     },
     {
       "type": "off_line_warn"
@@ -19,25 +19,28 @@
       "type": "section_other"
     },
     {
-      "type":"bind_multi_control_link"
+      "type": "bind_multi_control_link"
     },
     {
-      "type":"group_create"
+      "type": "group_create"
     },
     {
-      "type":"help_and_feedback"
+      "type": "help_and_feedback"
     },
     {
-      "type":"check_device_network"
+      "type": "add_icon_to_home_screen"
     },
     {
-      "type":"check_firmware_update"
+      "type": "check_device_network"
     },
     {
-      "type":"c_test_insert"
+      "type": "check_firmware_update"
     },
     {
-      "type":"c_test_async_insert"
+      "type": "c_test_insert"
+    },
+    {
+      "type": "c_test_async_insert"
     },
     {
       "type": "empty",

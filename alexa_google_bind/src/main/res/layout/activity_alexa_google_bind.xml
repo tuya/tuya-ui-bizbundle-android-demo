@@ -23,4 +23,19 @@
         android:layout_gravity="center"
         android:text="跳转Google"/>
 
+    <Button
+        android:id="@+id/bt_get_bind_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mg_10"
+        android:layout_gravity="center"
+        android:text="获取已绑定列表，点击解绑技能"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rv_bind_list"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@color/background_main"
+        android:layout_height="match_parent"/>
+
 </LinearLayout>

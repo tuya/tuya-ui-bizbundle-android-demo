@@ -29,6 +29,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private TextView mCurrentFamilyName;
+    private RouterPresenter routePresenter;
     private ITuyaHomeChangeListener mHomeChangeListener = new ITuyaHomeChangeListener() {
         @Override
         public void onHomeAdded(long homeId) {
@@ -305,6 +306,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        findViewById(R.id.speech).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.demo.speech.SpeechDemoActivity");
+                startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -314,4 +324,25 @@ public class MainActivity extends AppCompatActivity {
         TuyaHomeSdk.getHomeManagerInstance().onDestroy();
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        if (schemeJump(intent)) {
+            return;
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (routePresenter != null) {
+            routePresenter.route(this);
+            routePresenter = null;
+        }
+    }
+
+    private boolean schemeJump(Intent intent) {
+        routePresenter = RouterPresenter.parser(intent);
+        return routePresenter != null;
+    }
 }

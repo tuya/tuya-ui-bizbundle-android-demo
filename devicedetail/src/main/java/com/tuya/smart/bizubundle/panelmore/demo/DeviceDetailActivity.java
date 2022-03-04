@@ -25,7 +25,6 @@ import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.home.sdk.bean.HomeBean;
 import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
-import com.tuya.smart.panel.usecase.panelmore.service.AbsPanelMoreExpandService;
 import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreItemClickService;
 import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreMenuService;
 import com.tuya.smart.sdk.bean.DeviceBean;
@@ -46,7 +45,7 @@ public class DeviceDetailActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel_more);
-        TuyaWrapper.registerService(AbsPanelMoreExpandService.class, new PanelMoreExpandServiceImpl());
+        TuyaWrapper.registerService(PanelMoreMenuService.class, new PanelMoreMenuServiceImpl());
         TuyaWrapper.registerService(PanelMoreItemClickService.class, new PanelMoreItemClickServiceImp());
         edt = findViewById(R.id.edit_id);
         mAdapter = new SimpleDevListAdapter();
