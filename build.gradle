@@ -4,16 +4,6 @@ buildscript {
         kotlin_version = '1.5.30'
     }
     repositories {
-        maven {
-            url "https://maven.tuya-inc.top/repository/maven-android-pre/"
-        }
-        maven {
-            url "https://maven.tuya-inc.top/nexus/content/repositories/releases/"
-        }
-        maven {
-            url "https://maven.tuya-inc.top/nexus/content/repositories/snapshots/"
-        }
-
         maven { url 'https://maven-other.tuya.com/repository/maven-releases/' }
 
 
@@ -36,15 +26,6 @@ buildscript {
 
 allprojects {
     repositories {
-        maven {
-            url "https://maven.tuya-inc.top/repository/maven-android-pre/"
-        }
-        maven {
-            url "https://maven.tuya-inc.top/nexus/content/repositories/releases/"
-        }
-        maven {
-            url "https://maven.tuya-inc.top/nexus/content/repositories/snapshots/"
-        }
         maven { url 'https://maven-other.tuya.com/repository/maven-releases/' }
 
         jcenter()

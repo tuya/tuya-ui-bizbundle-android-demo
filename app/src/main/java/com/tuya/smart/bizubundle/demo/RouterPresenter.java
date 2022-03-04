@@ -33,11 +33,7 @@ import java.util.Set;
 
 public class RouterPresenter {
     private static final String TAG = "HomeRoutePresenter";
-
-    private static final String HOME_ALIAS = "com.tuya.smart.hometab.activity.FamilyHomeActivity.alias";
-    private static final String SPEECH_ALIAS = "com.tuya.smart.hometab.activity.speech";
     private static final String PINNED_SHORTCUT_ALIAS = "com.tuya.smart.hometab.activity.shortcut";
-    private static final String LOCAL_ALARM_ALIAS = "com.tuya.smart.hometab.activity.local.alarm";
 
     private String url;
 
@@ -54,12 +50,8 @@ public class RouterPresenter {
             return null;
         }
 
-//        if (SPEECH_ALIAS.equals(intent.getComponent().getClassName())) {
-//            return new RouterPresenter("tuyaSmart://speech_shortcut", null);
-//        }
-
         // 桌面快捷方式
-        if (PINNED_SHORTCUT_ALIAS.equals(intent.getComponent().getClassName()) || LOCAL_ALARM_ALIAS.equals(intent.getComponent().getClassName())) {
+        if (PINNED_SHORTCUT_ALIAS.equals(intent.getComponent().getClassName())) {
             String url = null;
             try {
                 url = intent.getStringExtra("url");
@@ -78,32 +70,6 @@ public class RouterPresenter {
         }
         return null;
     }
-
-//        if (HOME_ALIAS.equals(intent.getComponent().getClassName())) {
-//            String url = null;
-//            try {
-//                url = intent.getStringExtra("url");
-//            } catch (Throwable t) {
-//                LogUtil.e(TAG, "get url error", t);
-//            }
-//            L.d(TAG, "schemeJump: " + url);
-//            if (TextUtils.isEmpty(url)) {
-//                return null;
-//            }
-//            if (isTargetHome(intent, url)) {
-//                return null;
-//            }
-//            Bundle extras = null;
-//            try {
-//                extras = intent.getBundleExtra("params");
-//            } catch (Throwable t) {
-//                LogUtil.e(TAG, "get params error", t);
-//            }
-//            return new RouterPresenter(url, extras);
-//        }
-//        return null;
-
-
 
     public void route(Context context) {
         UrlRouter.execute(context, url, extras);

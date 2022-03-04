@@ -51,9 +51,11 @@
       "com.tuya.smart.debugtool.network.locator.IpLocatorPipeLine",
       "com.tuya.debugtool.ui.autotest.UiAutoTestPipeLine",
       "com.tuya.smart.homearmed.base.ApmPipeLine",
-      "com.tuya.smart.rnplugin.tyrctpublicblebeaconmanager.TuyaBeaconFencePipeLine"
+      "com.tuya.smart.rnplugin.tyrctpublicblebeaconmanager.TuyaBeaconFencePipeLine",
+      "com.tuya.smart.panel.base.RNVersionPipeLine"
     ],
     "PIPE_LINE_APPLICATION_SYNC": [
+      "com.tuya.smart.panel.base.RNVersionPipeLine",
       "com.tuya.tuya_smart_entry.FlutterRoutePluginPipeLine",
       "com.tuya.smart.theme.core.ThemeSyncPipeLine",
       "com.tuya.smart.stat.StatPipeLine",
@@ -632,6 +634,7 @@
     ]
   },
   "serviceMap": {
+    "com.tuya.smart.clearcache.api.ClearCacheService": "com.tuya.smart.clearcache.ClearCacheServiceImpl",
     "com.tuya.smart.scene.business.api.ITuyaSceneBusinessService": "com.tuya.smart.scene.business.TuyaSceneBusinessManager",
     "com.tuya.smart.sharedevice.api.AbsDeviceShareBusiness": "com.tuya.smart.sharedevice.biz.DeviceShareBusinessImpl",
     "com.tuya.smart.scene.business.service.SceneConditionService": "com.tuya.samrt.scene.condition.service.SceneConditionServiceImpl",
