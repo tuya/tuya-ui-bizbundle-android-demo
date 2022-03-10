@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Tuya Android UI BizBundle is a vertical business bundle that contains logic modules and UI pages. It's designed to provide customers with the ability to quickly access the Tuya business module based on the Tuya Smart Home SDK.You can run the module according to the selected bizbundle.
+Tuya Android UI BizBundle is a vertical business bundle that contains logic modules and UI pages. It's designed to provide customers with the ability to quickly access the Tuya business module based on the Tuya Smart Life App SDK.You can run the module according to the selected bizbundle.
 
 ## Documentation
 
