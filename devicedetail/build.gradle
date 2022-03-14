@@ -30,6 +30,6 @@ android {
 
 dependencies {
     api 'com.tuya.smart:tuyasmart:3.34.8'
-    api 'com.tuya.smart:tuyasmart-bizbundle-panelmore:3.34.5-5'
+    api 'com.tuya.smart:tuyasmart-bizbundle-panelmore:3.34.5-6'
 
 }

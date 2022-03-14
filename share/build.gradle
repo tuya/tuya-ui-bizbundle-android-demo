@@ -41,5 +41,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     api 'com.tuya.smart:tuyasmart:3.34.8'
-    implementation 'com.tuya.smart:tuyasmart-bizbundle-share:3.34.5-5'
+    implementation 'com.tuya.smart:tuyasmart-bizbundle-share:3.34.5-6'
 }
