@@ -26,8 +26,8 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    api 'com.tuya.smart:tuyasmart-bizbundle-panel:3.34.5-5'
-    api 'com.tuya.smart:tuyasmart:3.34.8'
+    api 'com.tuya.smart:tuyasmart-bizbundle-panel:3.34.5-7'
+    api 'com.tuya.smart:tuyasmart:3.34.9'
 
     // amap map
     // 高德地图

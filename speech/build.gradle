@@ -38,9 +38,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 
-    api 'com.tuya.smart:tuyasmart:3.34.8'
+    api 'com.tuya.smart:tuyasmart:3.34.9'
 
-    api 'com.tuya.smart:tuyasmart-bizbundle-speech:3.34.5-5'
+    api 'com.tuya.smart:tuyasmart-bizbundle-speech:3.34.5-7'
 
     //依赖设备 控制UI业务包
     api project(':panel')
