@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.tuya.smart.android.common.utils.L;
 import com.tuya.smart.api.router.UrlBuilder;
 import com.tuya.smart.api.router.UrlRouter;
 import com.tuya.smart.api.service.MicroServiceManager;
@@ -25,6 +27,8 @@ import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.home.sdk.bean.HomeBean;
 import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
+import com.tuya.smart.infraredsubdev_storage_api.OnInfraredSubDevDisplaySettingsListener;
+import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreInfraredSubDevDisplayService;
 import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreItemClickService;
 import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreMenuService;
 import com.tuya.smart.sdk.bean.DeviceBean;
@@ -40,6 +44,7 @@ public class DeviceDetailActivity extends Activity {
     private SimpleDevListAdapter mAdapter;
     private BottomSheetDialog bottomSheetDialog;
     private long groupId;
+    private static final String TAG = "deviceDetailActivity";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,6 +56,25 @@ public class DeviceDetailActivity extends Activity {
         mAdapter = new SimpleDevListAdapter();
         initClick();
         getCurrentHomeDetail();
+
+        PanelMoreInfraredSubDevDisplayService service = MicroServiceManager.getInstance().
+                findServiceByInterface(PanelMoreInfraredSubDevDisplayService.class.getName());
+        service.registerInfraredSubDevDisplaySettingsListener(new OnInfraredSubDevDisplaySettingsListener() {
+            @Override
+            public void onDisplaySettingsChanged(Long homeId, String gwId, Boolean shown) {
+                // 更新设备列表，读取
+                //  service.getInfraredSubDevDisplaySettings() 读取当前的红外子设备是否需要显示到首页
+
+                Log.e(TAG, " changed " + "homeId: " + homeId + " devId" + gwId + " show" + shown);
+                Toast.makeText(DeviceDetailActivity.this, "infrared Changed", Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onDisplaySettingsRemoved(Long homeId, String gwId) {
+                Log.e(TAG, " removed " + "homeId: " + homeId + " devId" + gwId);
+                Toast.makeText(DeviceDetailActivity.this, "infrared removed", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void initClick() {
@@ -145,6 +169,7 @@ public class DeviceDetailActivity extends Activity {
                 Toast.makeText(DeviceDetailActivity.this, s + "\n" + s1, Toast.LENGTH_LONG).show();
             }
         });
+
     }
 
     /**

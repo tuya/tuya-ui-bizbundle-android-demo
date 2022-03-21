@@ -31,6 +31,9 @@
       "type": "add_icon_to_home_screen"
     },
     {
+      "type":"show_infrared_gateway_sub_device"
+    },
+    {
       "type": "check_device_network"
     },
     {
