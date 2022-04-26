@@ -28,7 +28,7 @@ public class SimpleDevListAdapter extends RecyclerView.Adapter<SimpleDevListAdap
     @NonNull
     @Override
     public SimpleDevViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.demo_rv_item_simple_dev, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.demo_panel_rv_item_simple_dev, parent, false);
         return new SimpleDevViewHolder(view);
     }
 
@@ -43,6 +43,11 @@ public class SimpleDevListAdapter extends RecyclerView.Adapter<SimpleDevListAdap
             viewHolder.icon.setImageURI(uri);
         }
         viewHolder.title.setText(bean.getTitle());
+        if (bean.isShow()) {
+            viewHolder.subTitle.setText("true");
+        } else {
+            viewHolder.subTitle.setText("false");
+        }
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,10 +76,12 @@ public class SimpleDevListAdapter extends RecyclerView.Adapter<SimpleDevListAdap
     static class SimpleDevViewHolder extends RecyclerView.ViewHolder {
         SimpleDraweeView icon;
         TextView title;
+        TextView subTitle;
 
         public SimpleDevViewHolder(View itemView) {
             super(itemView);
             icon = itemView.findViewById(R.id.simple_dev_item_icon);
+            subTitle = itemView.findViewById(R.id.simple_dev_show_subtitle);
             title = itemView.findViewById(R.id.simple_dev_item_title);
         }
     }
