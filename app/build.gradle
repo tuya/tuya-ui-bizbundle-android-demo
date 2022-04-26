@@ -3,6 +3,7 @@ apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     signingConfigs {
+    
 
     }
     compileSdkVersion 31
@@ -86,7 +87,7 @@ dependencies {
     //demo use only start
     api 'com.tuya.smart:tuyasmart:3.34.9'
 
-    implementation 'com.tuya.smart:tuyasmart-demo-login:3.32.5-rc.1'
+    implementation 'com.tuya.smart:tuyasmart-demo-login:3.32.5-rc.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation "androidx.multidex:multidex:2.0.1"

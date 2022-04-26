@@ -148,6 +148,8 @@ public class DeviceDetailActivity extends Activity {
 
     private void getCurrentHomeDetail() {
         ProgressUtil.showLoading(this, "Loading...");
+        PanelMoreInfraredSubDevDisplayService service = MicroServiceManager.getInstance().
+                findServiceByInterface(PanelMoreInfraredSubDevDisplayService.class.getName());
         TuyaHomeSdk.newHomeInstance(getService().getCurrentHomeId()).getHomeDetail(new ITuyaHomeResultCallback() {
             @Override
             public void onSuccess(final HomeBean homeBean) {
@@ -157,6 +159,10 @@ public class DeviceDetailActivity extends Activity {
                 }
                 for (DeviceBean deviceBean : homeBean.getDeviceList()) {
                     beans.add(getItemBeanFromDevice(deviceBean));
+                }
+                for (SimpleDeviceBean bean:beans){
+                   boolean b  =  service.getInfraredSubDevDisplaySettings(getService().getCurrentHomeId(),bean.getDevId());
+                   bean.setShow(b);
                 }
                 mAdapter.setData(beans);
                 ProgressUtil.hideLoading();

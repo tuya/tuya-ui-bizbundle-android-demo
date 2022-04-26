@@ -40,7 +40,7 @@ dependencies {
 
     api 'com.tuya.smart:tuyasmart:3.34.9'
 
-    api 'com.tuya.smart:tuyasmart-bizbundle-speech:3.34.5-7'
+    api 'com.tuya.smart:tuyasmart-bizbundle-speech:3.34.5-9'
 
     //依赖设备 控制UI业务包
     api project(':panel')

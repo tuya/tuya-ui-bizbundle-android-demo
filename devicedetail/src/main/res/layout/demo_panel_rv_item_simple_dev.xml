@@ -17,11 +17,24 @@
         android:id="@+id/simple_dev_item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:textColor="@color/black"
         android:textSize="16sp"
-        android:layout_marginStart="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/simple_dev_item_icon"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="device_name" />
+
+    <TextView
+        android:id="@+id/simple_dev_show_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="11111"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/simple_dev_item_title"
+        app:layout_constraintTop_toBottomOf="@id/simple_dev_item_title"
+        tools:text="111111" />
 </androidx.constraintlayout.widget.ConstraintLayout>

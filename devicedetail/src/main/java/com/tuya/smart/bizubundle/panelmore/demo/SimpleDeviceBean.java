@@ -6,6 +6,8 @@ public class SimpleDeviceBean {
     private String iconUrl;
     private String title;
     private int type;
+    // 红外子设备是否显示
+    private boolean show;
 
     public String getDevId() {
         return devId;
@@ -45,5 +47,13 @@ public class SimpleDeviceBean {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public boolean isShow() {
+        return show;
+    }
+
+    public void setShow(boolean show) {
+        this.show = show;
     }
 }

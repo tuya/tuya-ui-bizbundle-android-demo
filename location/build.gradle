@@ -38,8 +38,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     api 'com.tuya.smart:tuyasmart:3.34.9'
-    api 'com.tuya.smart:tuyasmart-bizbundle-map_amap:3.34.5-7'
-    api 'com.tuya.smart:tuyasmart-bizbundle-location_amap:3.34.5-7'
-    api 'com.tuya.smart:tuyasmart-bizbundle-map_google:3.34.5-7'
-    api 'com.tuya.smart:tuyasmart-bizbundle-location_google:3.34.5-7'
+    api 'com.tuya.smart:tuyasmart-bizbundle-map_amap:3.34.5-9'
+    api 'com.tuya.smart:tuyasmart-bizbundle-location_amap:3.34.5-9'
+    api 'com.tuya.smart:tuyasmart-bizbundle-map_google:3.34.5-9'
+    api 'com.tuya.smart:tuyasmart-bizbundle-location_google:3.34.5-9'
 }

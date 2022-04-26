@@ -28,6 +28,7 @@ allprojects {
     repositories {
         maven { url 'https://maven-other.tuya.com/repository/maven-releases/' }
 
+
         jcenter()
         google()
         //***** required start ****//
