@@ -7,16 +7,11 @@ import android.os.Message;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.tuya.smart.activator.config.api.ITuyaDeviceActiveListener;
-import com.tuya.smart.activator.config.api.TuyaDeviceActivatorImpl;
-import com.tuya.smart.activator.config.api.TuyaDeviceActivatorManager;
-import com.tuya.smart.activator.relation.api.TyActivatorRelationKit;
-import com.tuya.smart.sdk.TuyaSdk;
-
 import java.util.List;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.tuya.smart.activator.plug.mesosphere.TuyaDeviceActivatorManager;
+import com.tuya.smart.activator.plug.mesosphere.api.ITuyaDeviceActiveListener;
 
 public class DeviceActivatorActivity extends AppCompatActivity {
     private static final int INFO_MESSAGE = 1;
@@ -43,9 +38,9 @@ public class DeviceActivatorActivity extends AppCompatActivity {
     };
 
     public void actionConfig(View view) {
-        TuyaDeviceActivatorManager.startDeviceActiveAction(this, TyActivatorRelationKit.INSTANCE.getRelation().getRelationId());
+        TuyaDeviceActivatorManager.INSTANCE.startDeviceActiveAction(this);
 
-        TuyaDeviceActivatorManager.setListener(new ITuyaDeviceActiveListener() {
+        TuyaDeviceActivatorManager.INSTANCE.addListener(new ITuyaDeviceActiveListener() {
             @Override
             public void onDevicesAdd(List<String> list) {
                 StringBuilder str = new StringBuilder();

@@ -12,9 +12,7 @@ import com.tuya.appsdk.sample.lightscene.list.LightSceneListActivity;
 import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.api.service.MicroServiceManager;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.light.scene.data.bean.LightSmartSceneBean;
-import com.tuya.smart.light.scene.data.manager.LightSceneDataModelManager;
-import com.tuya.smart.scene.lighting.api.SceneLightingService;
+import com.tuya.smart.light.scene.plug.api.AbsLightScenePlugService;
 
 public class LightSceneManagerActivity extends AppCompatActivity {
 
@@ -34,10 +32,9 @@ public class LightSceneManagerActivity extends AppCompatActivity {
                 if (homeId == 0) {
                     return;
                 }
-                SceneLightingService sceneLightingService = MicroContext.findServiceByInterface(SceneLightingService.class.getName());
+                AbsLightScenePlugService sceneLightingService = MicroContext.findServiceByInterface(AbsLightScenePlugService.class.getName());
                 if(null != sceneLightingService) {
-                    LightSceneDataModelManager.getInstance().setCurEditLightSmartSceneBean(new LightSmartSceneBean());
-                    sceneLightingService.gotoSceneLightingActivity(LightSceneManagerActivity.this, 100);
+                    sceneLightingService.launchLightSceneCreate(LightSceneManagerActivity.this, 100);
                 }
             }
         });
@@ -53,7 +50,7 @@ public class LightSceneManagerActivity extends AppCompatActivity {
                 if (homeId == 0) {
                     return;
                 }
-                SceneLightingService sceneLightingService = MicroContext.findServiceByInterface(SceneLightingService.class.getName());
+                AbsLightScenePlugService sceneLightingService = MicroContext.findServiceByInterface(AbsLightScenePlugService.class.getName());
                 if(null != sceneLightingService) {
                     startActivity(new Intent(LightSceneManagerActivity.this, LightSceneListActivity.class));
                 }

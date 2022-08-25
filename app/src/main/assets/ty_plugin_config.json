@@ -1,0 +1,252 @@
+{
+  "ty_plugins": {
+    "TYUniApDirectlyDeviceManager": {
+      "name": "com.tuya.smart.plugin.tyuniapdirectlydevicemanager.TYUniApDirectlyDeviceManager",
+      "version": "1.1.0"
+    },
+    "TYUniBaseMiniProgramManager": {
+      "name": "com.tuya.smart.plugin.tyunibaseminiprogrammanager.TYUniBaseMiniProgramManager",
+      "version": "1.0.4"
+    },
+    "TYUniImagePickerManager": {
+      "name": "com.tuya.smart.plugin.tyuniimagepickermanager.TYUniImagePickerManager",
+      "version": "1.3.1"
+    },
+    "TYUniPhoneScreenManager": {
+      "name": "com.tuya.smart.plugin.tyuniphonescreenmanager.TYUniPhoneScreenManager",
+      "version": "1.0"
+    },
+    "TYUniOpenExtApiManager": {
+      "name": "com.tuya.smart.plugin.tyuniopenextapimanager.TYUniOpenExtApiManager",
+      "version": "1.0.0-rc.5"
+    },
+    "TYUniPhoneClipboardManager": {
+      "name": "com.tuya.smart.plugin.tyuniphoneclipboardmanager.TYUniPhoneClipboardManager",
+      "version": "1.1.0-rc.5"
+    },
+    "TYUniDeviceControlManager": {
+      "name": "com.tuya.smart.plugin.tyunidevicecontrolmanager.TYUniDeviceControlManager",
+      "version": "0.0.73"
+    },
+    "TYUniIPCCameraManager": {
+      "name": "com.tuya.smart.plugin.tyuniipccameramanager.TYUniIPCCameraManager",
+      "version": "1.0.1"
+    },
+    "TYUniAuthorizeManager": {
+      "name": "com.tuya.smart.plugin.tyuniauthorizemanager.TYUniAuthorizeManager",
+      "version": "1.1.11"
+    },
+    "TYUniRouterManager": {
+      "name": "com.tuya.smart.plugin.tyuniroutermanager.TYUniRouterManager",
+      "version": "0.0.72"
+    },
+    "TYUniRecordingManager": {
+      "name": "com.tuya.smart.plugin.tyunirecordingmanager.TYUniRecordingManager",
+      "version": "1.0.15"
+    },
+    "TYUniDLVideoManager": {
+      "name": "com.tuya.smart.plugin.tyunidlvideomanager.TYUniDLVideoManager",
+      "version": "0.1.0-ipcCamera.29"
+    },
+    "TYUniMiniHighwayManager": {
+      "name": "com.tuya.smart.plugin.tyuniminihighwaymanager.TYUniMiniHighwayManager",
+      "version": "1.0.7"
+    },
+    "TYUniDiffLayerManager": {
+      "name": "com.tuya.smart.plugin.tyunidifflayermanager.TYUniDiffLayerManager",
+      "version": "1.0.11"
+    },
+    "TYUniDeviceMotionManager": {
+      "name": "com.tuya.smart.plugin.tyunidevicemotionmanager.TYUniDeviceMotionManager",
+      "version": "1.0.1"
+    },
+    "TYUniUtilsManager": {
+      "name": "com.tuya.smart.plugin.tyuniutilsmanager.TYUniUtilsManager",
+      "version": "1.0.12"
+    },
+    "TYUniAudioManager": {
+      "name": "com.tuya.smart.plugin.tyuniaudiomanager.TYUniAudioManager",
+      "version": "1.0.0"
+    },
+    "TYUniNetworkManager": {
+      "name": "com.tuya.smart.plugin.tyuninetworkmanager.TYUniNetworkManager",
+      "version": "1.0.10"
+    },
+    "TYUniLocationManager": {
+      "name": "com.tuya.smart.plugin.tyunilocationmanager.TYUniLocationManager",
+      "version": "1.1.1"
+    },
+    "TYUniMiniProgramManager": {
+      "name": "com.tuya.smart.plugin.tyuniminiprogrammanager.TYUniMiniProgramManager",
+      "version": "0.0.81"
+    },
+    "TYUniPhoneNetworkManager": {
+      "name": "com.tuya.smart.plugin.tyuniphonenetworkmanager.TYUniPhoneNetworkManager",
+      "version": "1.2.0-rc.6"
+    },
+    "TYUniLocalizationManager": {
+      "name": "com.tuya.smart.plugin.tyunilocalizationmanager.TYUniLocalizationManager",
+      "version": "1.4.1"
+    },
+    "TYUniStorageManager": {
+      "name": "com.tuya.smart.plugin.tyunistoragemanager.TYUniStorageManager",
+      "version": "1.1.2"
+    },
+    "TYUniThingControlManager": {
+      "name": "com.tuya.smart.plugin.tyunithingcontrolmanager.TYUniThingControlManager",
+      "version": "0.0.54"
+    },
+    "TYUniDownloadFileManager": {
+      "name": "com.tuya.smart.plugin.tyunidownloadfilemanager.TYUniDownloadFileManager",
+      "version": "1.0.0"
+    },
+    "TYUniFileManager": {
+      "name": "com.tuya.smart.plugin.tyunifilemanager.TYUniFileManager",
+      "version": "0.0.71"
+    },
+    "TYUniAPMManager": {
+      "name": "com.tuya.smart.plugin.tyuniapmmanager.TYUniAPMManager",
+      "version": "1.1.0-rc.7"
+    },
+    "TYUniImageNetworkManager": {
+      "name": "com.tuya.smart.plugin.tyuniimagenetworkmanager.TYUniImageNetworkManager",
+      "version": "1.0.2"
+    },
+    "TYUniGroupControlManager": {
+      "name": "com.tuya.smart.plugin.tyunigroupcontrolmanager.TYUniGroupControlManager",
+      "version": "1.0.6"
+    },
+    "TYUniAccelerometerManager": {
+      "name": "com.tuya.smart.plugin.tyuniaccelerometermanager.TYUniAccelerometerManager",
+      "version": "1.0.1"
+    },
+    "TYUniCompassManager": {
+      "name": "com.tuya.smart.plugin.tyunicompassmanager.TYUniCompassManager",
+      "version": "1.0.1"
+    },
+    "TYUniDeviceActivationManager": {
+      "name": "com.tuya.smart.plugin.tyunideviceactivationmanager.TYUniDeviceActivationManager",
+      "version": "1.2.5"
+    },
+    "TYUniOpenPageManager": {
+      "name": "com.tuya.smart.plugin.tyuniopenpagemanager.TYUniOpenPageManager",
+      "version": "2.1.11"
+    },
+    "TYUniScriptContextManager": {
+      "name": "com.tuya.smart.plugin.tyuniscriptcontextmanager.TYUniScriptContextManager",
+      "version": "1.0"
+    },
+    "TYUniNavigationBarManager": {
+      "name": "com.tuya.smart.plugin.tyuninavigationbarmanager.TYUniNavigationBarManager",
+      "version": "1.0"
+    },
+    "TYUniInteractionManager": {
+      "name": "com.tuya.smart.plugin.tyuniinteractionmanager.TYUniInteractionManager",
+      "version": "1.3.2"
+    },
+    "TYUniDeviceDetailManager": {
+      "name": "com.tuya.smart.plugin.tyunidevicedetailmanager.TYUniDeviceDetailManager",
+      "version": "0.0.78"
+    },
+    "TYUniPanelManager": {
+      "name": "com.tuya.smart.plugin.tyunipanelmanager.TYUniPanelManager",
+      "version": "1.0.0-rc.6"
+    },
+    "TYUniGyroscopeManager": {
+      "name": "com.tuya.smart.plugin.tyunigyroscopemanager.TYUniGyroscopeManager",
+      "version": "0.0.3-rc.3"
+    },
+    "TYUniPhoneVibrateManager": {
+      "name": "com.tuya.smart.plugin.tyuniphonevibratemanager.TYUniPhoneVibrateManager",
+      "version": "1.0.1"
+    },
+    "TYUniGZLTabBarManager": {
+      "name": "com.tuya.smart.plugin.tyunigzltabbarmanager.TYUniGZLTabBarManager",
+      "version": "1.1.0"
+    },
+    "TYUniSceneManager": {
+      "name": "com.tuya.smart.plugin.tyuniscenemanager.TYUniSceneManager",
+      "version": "1.1.1"
+    },
+    "TYUniUploadFileManager": {
+      "name": "com.tuya.smart.plugin.tyuniuploadfilemanager.TYUniUploadFileManager",
+      "version": "1.1.8"
+    },
+    "TYUniHomeDataManager": {
+      "name": "com.tuya.smart.plugin.tyunihomedatamanager.TYUniHomeDataManager",
+      "version": "1.1.1"
+    },
+    "TYUniPhoneCallManager": {
+      "name": "com.tuya.smart.plugin.tyuniphonecallmanager.TYUniPhoneCallManager",
+      "version": "1.1.0-rc.6"
+    },
+    "TYUniScanCodeManager": {
+      "name": "com.tuya.smart.plugin.tyuniscancodemanager.TYUniScanCodeManager",
+      "version": "0.0.76"
+    },
+    "TYUniScrollManager": {
+      "name": "com.tuya.smart.plugin.tyuniscrollmanager.TYUniScrollManager",
+      "version": "1.0"
+    },
+    "TYUniPhoneBluetoothManager": {
+      "name": "com.tuya.smart.plugin.tyuniphonebluetoothmanager.TYUniPhoneBluetoothManager",
+      "version": "0.0.9"
+    },
+    "TYUniAPIRequestManager": {
+      "name": "com.tuya.smart.plugin.tyuniapirequestmanager.TYUniAPIRequestManager",
+      "version": "0.0.57"
+    },
+    "TYUniShareManager": {
+      "name": "com.tuya.smart.plugin.tyunisharemanager.TYUniShareManager",
+      "version": "1.0.5"
+    },
+    "TYUniIPCCameraSettingsManager": {
+      "name": "com.tuya.smart.plugin.tyuniipccamerasettingsmanager.TYUniIPCCameraSettingsManager",
+      "version": "1.1.1"
+    },
+    "TYUniNavigatorManager": {
+      "name": "com.tuya.smart.plugin.tyuninavigatormanager.TYUniNavigatorManager",
+      "version": "2.4.0-rc.2"
+    },
+    "TYUniPhoneManager": {
+      "name": "com.tuya.smart.plugin.tyuniphonemanager.TYUniPhoneManager",
+      "version": "1.2.1"
+    },
+    "TYUniBluetoothManager": {
+      "name": "com.tuya.smart.plugin.tyunibluetoothmanager.TYUniBluetoothManager",
+      "version": "1.3.1"
+    },
+    "TYUniAppInfoManager": {
+      "name": "com.tuya.smart.plugin.tyuniappinfomanager.TYUniAppInfoManager",
+      "version": "1.2.2"
+    },
+    "TYUniDLMapManager": {
+      "name": "com.tuya.smart.plugin.tyunidlmapmanager.TYUniDLMapManager",
+      "version": "1.0.2"
+    },
+    "TYUniDLIPCManager": {
+      "name": "com.tuya.smart.plugin.tyunidlipcmanager.TYUniDLIPCManager",
+      "version": "1.0.11"
+    },
+    "TYUniOTAManager": {
+      "name": "com.tuya.smart.plugin.tyuniotamanager.TYUniOTAManager",
+      "version": "1.0.1"
+    },
+    "TYUniFontManager": {
+      "name": "com.tuya.smart.plugin.tyunifontmanager.TYUniFontManager",
+      "version": "1.0.2"
+    },
+    "TYUniMemoryWarningManager": {
+      "name": "com.tuya.smart.plugin.tyunimemorywarningmanager.TYUniMemoryWarningManager",
+      "version": "1.0.1"
+    },
+    "TYUniCountrySelectManager": {
+      "name": "com.tuya.smart.plugin.tyunicountryselectmanager.TYUniCountrySelectManager",
+      "version": "1.0.0"
+    },
+    "TYUniP2pFileManager": {
+      "name": "com.tuya.smart.plugin.tyunip2pfilemanager.TYUniP2pFileManager",
+      "version": "1.0.0"
+    }
+  }
+}

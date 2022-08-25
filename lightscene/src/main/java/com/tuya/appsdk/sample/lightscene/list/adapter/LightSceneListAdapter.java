@@ -33,7 +33,8 @@ import com.tuya.sdk.scene.TuyaLightSceneSdk;
 import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.api.service.MicroServiceManager;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.scene.lighting.api.SceneLightingService;
+import com.tuya.smart.light.scene.api.bean.LightSceneDetailBean;
+import com.tuya.smart.light.scene.plug.api.AbsLightScenePlugService;
 
 import java.util.ArrayList;
 
@@ -62,9 +63,9 @@ public class LightSceneListAdapter extends RecyclerView.Adapter<LightSceneListAd
         holder.itemView.setOnClickListener(v -> {
             // lightScene Detail
             TuyaLightSceneBean tuyaLightSceneBean = data.get(holder.getAdapterPosition());
-            SceneLightingService sceneLightingService = MicroContext.findServiceByInterface(SceneLightingService.class.getName());
+            AbsLightScenePlugService sceneLightingService = MicroContext.findServiceByInterface(AbsLightScenePlugService.class.getName());
             if(null != sceneLightingService) {
-                sceneLightingService.editSceneLightingActivity(v.getContext(), tuyaLightSceneBean, 101);
+                sceneLightingService.launchLightSceneEdit(v.getContext(), new LightSceneDetailBean(tuyaLightSceneBean), 101);
             }
         });
 

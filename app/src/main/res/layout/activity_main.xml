@@ -185,9 +185,17 @@
                 android:id="@+id/speech"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginBottom="50dp"
                 android:gravity="center"
                 android:text="speech sdk"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/miniapp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:text="小程序SDK"
                 android:textColor="@color/black" />
 
         </LinearLayout>

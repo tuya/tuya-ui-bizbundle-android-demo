@@ -82,7 +82,8 @@ public class PanelActivity extends AppCompatActivity {
 
     private void getCurrentHomeDetail() {
         ProgressUtil.showLoading(this, "Loading...");
-        TuyaHomeSdk.newHomeInstance(getService().getCurrentHomeId()).getHomeDetail(new ITuyaHomeResultCallback() {
+        long homeid = getService().getCurrentHomeId();
+        TuyaHomeSdk.newHomeInstance(homeid).getHomeDetail(new ITuyaHomeResultCallback() {
             @Override
             public void onSuccess(HomeBean homeBean) {
                 List<ItemBean> beans = new ArrayList<>(8);

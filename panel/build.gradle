@@ -26,8 +26,19 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    api 'com.tuya.smart:tuyasmart-bizbundle-panel:3.34.5-9'
-    api 'com.tuya.smart:tuyasmart:3.34.9'
+
+  // implementation 'com.tuya.smart:tuyasmart-bizbundle-ota:3.32.5-6'
+    api ("com.tuya.smart:tuyasmart-bizbundle-panel:${bizbundle_version}")
+    api ("com.tuya.smart:tuyasmart-bizbundle-camera_panel:${bizbundle_version}")
+
+   // api ('com.tuya.smart:tuyasmart-TYCBTDeviceKit:2.3.6-bizbundle.2')
+  //api 'com.tuya.smart:tuyasmart-TuyaRNApi:5.62.18-feature-5.62.16-bizbundle-android.3'
+  //  implementation ('com.tuya.smart:tuyasmart-bizbundle-panel:4.2.0-SNAPSHOT')
+    // implementation 'com.tuya.smart:tuyasmart-bizbundle-panel:4.2.0-3-SNAPSHOT'
+   // implementation 'com.tuya.smart:tuyasmart-bizbundle-ipc:4.2.0-1-SNAPSHOT'
+    //api 'com.tuya.smart:tuyasmart:3.34.9'
+    api "com.tuya.smart:tuyasmart-bizbundle-family:${bizbundle_version}"
+    api "com.tuya.smart:tuyasmart:${sdk_version}"
 
     // amap map
     // 高德地图

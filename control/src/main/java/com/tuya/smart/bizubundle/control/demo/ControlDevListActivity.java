@@ -15,22 +15,26 @@ import android.widget.Toast;
 import com.tuya.smart.android.common.utils.L;
 import com.tuya.smart.api.service.MicroServiceManager;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.control.ControlManager;
-import com.tuya.smart.control.utils.ControlState;
+import com.tuya.smart.control.PluginControlService;
+import com.tuya.smart.control.plug.api.IPluginControlService;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.home.sdk.bean.HomeBean;
 import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
 import com.tuya.smart.sdk.bean.DeviceBean;
+import com.tuya.smart.wrapper.api.TuyaWrapper;
 
 public class ControlDevListActivity extends AppCompatActivity {
 
 
     SimpleDevListAdapter adapter;
+    IPluginControlService pluginControlService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control_dev_list);
+        TuyaWrapper.registerService(IPluginControlService.class, new PluginControlService());
+        pluginControlService = MicroServiceManager.getInstance().findServiceByInterface(IPluginControlService.class.getName());
         initView();
         loadData();
     }
@@ -51,9 +55,7 @@ public class ControlDevListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(DeviceBean item, int position) {
                 String devId = item.getDevId();
-
-                ControlState controlState = ControlManager.gotoMultiControl(ControlDevListActivity.this, devId);
-                Log.e("12312", controlState.name() + "    " + devId);
+                pluginControlService.gotoMultiControl(ControlDevListActivity.this, devId);
             }
         });
 

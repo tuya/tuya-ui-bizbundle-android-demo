@@ -5,18 +5,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
-import com.tuya.smart.home.sdk.bean.scene.SceneBean;
-import com.tuya.smart.home.sdk.callback.ITuyaResultCallback;
-import com.tuya.smart.scene.base.bean.SmartSceneBean;
+import com.tuya.smart.scene.api.IResultCallback;
 import com.tuya.smart.scene.business.api.ITuyaSceneBusinessService;
+import com.tuya.smart.scene.model.NormalScene;
 import com.tuya.smart.utils.ToastUtil;
 
 import java.util.List;
@@ -45,6 +42,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
         mEditScene = findViewById(R.id.edit_scene);
         mSetMap = findViewById(R.id.set_map);
         mSaveMapData = findViewById(R.id.save_map_data);
+
         mSetLocation.setOnClickListener(this);
         mAddScene.setOnClickListener(this);
         mEditScene.setOnClickListener(this);
@@ -83,13 +81,15 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
     private void editScene() {
 
         if (mServiceByInterface.getCurrentHomeId() == 0) return;
-        TuyaHomeSdk.getSceneManagerInstance().getSceneList(mServiceByInterface.getCurrentHomeId(), new ITuyaResultCallback<List<SceneBean>>() {
+
+        TuyaHomeSdk.getSceneServiceInstance().baseService().getSimpleSceneAll(mServiceByInterface.getCurrentHomeId(), new IResultCallback<List<NormalScene>>() {
+
             @Override
-            public void onSuccess(List<SceneBean> result) {
-                if (!result.isEmpty()) {
-                    SceneBean sceneBean = result.get(0);
+            public void onSuccess(List<NormalScene> normalScenes) {
+                if (!normalScenes.isEmpty()) {
+                    NormalScene sceneBean = normalScenes.get(0);
                     if (null != iTuyaSceneBusinessService) {
-                        iTuyaSceneBusinessService.editScene(SceneActivity.this, mServiceByInterface.getCurrentHomeId(), sceneBean, EDIT_SCENE_REQUEST_CODE);
+                        iTuyaSceneBusinessService.editSceneBean(SceneActivity.this, mServiceByInterface.getCurrentHomeId(), sceneBean, EDIT_SCENE_REQUEST_CODE);
                     }
                 }
             }
@@ -99,7 +99,6 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
 
             }
         });
-
     }
 
     /**
@@ -113,7 +112,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      */
     private void addScene() {
         if (null != iTuyaSceneBusinessService && mServiceByInterface.getCurrentHomeId() != 0) {
-            iTuyaSceneBusinessService.addScene(this, mServiceByInterface.getCurrentHomeId(), ADD_SCENE_REQUEST_CODE);
+            iTuyaSceneBusinessService.addSceneBean(this, mServiceByInterface.getCurrentHomeId(), ADD_SCENE_REQUEST_CODE);
         }
     }
 
@@ -137,7 +136,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
     private void setMapClass() {
         if (null != iTuyaSceneBusinessService) {
             //TODO business map Activity
-            iTuyaSceneBusinessService.setMapActivity(null);
+            iTuyaSceneBusinessService.setMapActivity(SceneActivity.class);
         }
     }
 
@@ -180,11 +179,12 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      * @param data
      */
     private void onEditSuc(Intent data) {
-        SmartSceneBean sceneBean = (SmartSceneBean) data.getSerializableExtra("SmartSceneBean");
+        NormalScene sceneBean = (NormalScene) data.getSerializableExtra("NormalScene");
         if (null != sceneBean) {
             ToastUtil.shortToast(this, "Scene：" + sceneBean.getName() + "edit success!");
         }
     }
+
 
     /**
      * add scene success
@@ -192,7 +192,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      * @param data
      */
     private void onAddSuc(Intent data) {
-        SmartSceneBean sceneBean = (SmartSceneBean) data.getSerializableExtra("SmartSceneBean");
+        NormalScene sceneBean = (NormalScene) data.getSerializableExtra("NormalScene");
         if (null != sceneBean) {
             ToastUtil.shortToast(this, "Scene：" + sceneBean.getName() + "create success!");
         }
