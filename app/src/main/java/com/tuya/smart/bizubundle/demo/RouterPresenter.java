@@ -17,7 +17,6 @@ import com.tuya.smart.api.router.UrlRouter;
 import com.tuya.smart.api.service.MicroServiceManager;
 import com.tuya.smart.api.service.SchemeService;
 import com.tuya.smart.api.tab.Constants;
-import com.tuya.smart.bizubundle.panel.demo.PanelActivity;
 import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.panelcaller.api.AbsPanelCallerService;

@@ -10,6 +10,7 @@ import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreMenuService;
 import com.tuya.smart.sdk.bean.DeviceBean;
 import com.tuya.smart.sdk.bean.GroupBean;
 
+@Deprecated
 public class PanelMoreMenuServiceImpl extends PanelMoreMenuService {
     @Override
     public IMenuBean insertDevMenuItem(Context context, String type, boolean isAdmin, DeviceBean deviceBean, float order) {

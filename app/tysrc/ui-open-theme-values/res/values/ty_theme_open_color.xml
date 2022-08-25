@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!--
+Automatically generated files, it should not be modified manually!!!
+-->
+    <color name="ty_theme_open_color_theme">#ff598deb</color>
+    <color name="ty_theme_open_color_warning">#ffff4444</color>
+    <color name="ty_theme_open_color_tips">#ff00cc99</color>
+    <color name="ty_theme_open_color_guide">#ffe819fa</color>
+    <color name="ty_theme_open_color_tab_bar_selected">#ffff5a28</color>
+    <color name="ty_theme_open_color_background">#ffebb759</color>
+    <color name="ty_theme_open_color_navigator_bg">#ffffffff</color>
+    <color name="ty_theme_open_color_bottom_tab_bar">#ffebb759</color>
+    <color name="ty_theme_open_color_card_bg">#ffebb759</color>
+    <color name="ty_theme_open_color_alert_bg">#ffebb759</color>
+    <color name="ty_theme_open_color_alert_mask">#ff598deb</color>
+    <color name="ty_theme_open_color_list_cell_bg">#ff598deb</color>
+    <color name="ty_theme_open_color_head_line_text">#e6ffffff</color>
+    <color name="ty_theme_open_color_sub_head_text">#b3ffffff</color>
+    <color name="ty_theme_open_color_auxi_libiary_text">#80ffffff</color>
+    <color name="ty_theme_open_color_disable_text">#4cffffff</color>
+    <color name="ty_theme_open_color_theme_text">#ffffffff</color>
+    <color name="ty_theme_open_color_warning_text">#ffffffff</color>
+    <color name="ty_theme_open_color_tips_text">#ffffffff</color>
+    <color name="ty_theme_open_color_guide_text">#ffffffff</color>
+</resources>

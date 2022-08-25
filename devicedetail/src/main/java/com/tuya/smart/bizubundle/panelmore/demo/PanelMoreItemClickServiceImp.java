@@ -8,6 +8,7 @@ import com.tuya.smart.sdk.bean.DeviceBean;
 import com.tuya.smart.sdk.bean.GroupBean;
 import com.tuya.smart.uispec.list.plug.text.TextBean;
 
+@Deprecated
 public class PanelMoreItemClickServiceImp extends PanelMoreItemClickService {
 
     @Override

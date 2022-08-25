@@ -28,23 +28,28 @@ import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.home.sdk.bean.HomeBean;
 import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
 import com.tuya.smart.infraredsubdev_storage_api.OnInfraredSubDevDisplaySettingsListener;
-import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreInfraredSubDevDisplayService;
+
 import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreItemClickService;
 import com.tuya.smart.panel.usecase.panelmore.service.PanelMoreMenuService;
 import com.tuya.smart.sdk.bean.DeviceBean;
 import com.tuya.smart.sdk.bean.GroupBean;
+import com.tuya.smart.tuyasmart_device_detail.api.IPluginInfraredSubDevDisplayService;
 import com.tuya.smart.utils.ProgressUtil;
 import com.tuya.smart.wrapper.api.TuyaWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * see GotoNewCell and tyarchercell_config.json ,a new way to add a new item.
+ */
 public class DeviceDetailActivity extends Activity {
     private EditText edt;
     private SimpleDevListAdapter mAdapter;
     private BottomSheetDialog bottomSheetDialog;
     private long groupId;
     private static final String TAG = "deviceDetailActivity";
+    private SimpleDeviceBean currentSelectBean;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,13 +62,17 @@ public class DeviceDetailActivity extends Activity {
         initClick();
         getCurrentHomeDetail();
 
-        PanelMoreInfraredSubDevDisplayService service = MicroServiceManager.getInstance().
-                findServiceByInterface(PanelMoreInfraredSubDevDisplayService.class.getName());
+        //      PanelMoreInfraredSubDevDisplayService is deprecated,please use IPluginInfraredSubDevDisplayService
+//        PanelMoreInfraredSubDevDisplayService service = MicroServiceManager.getInstance().
+//                findServiceByInterface(PanelMoreInfraredSubDevDisplayService.class.getName());
+        IPluginInfraredSubDevDisplayService service = MicroServiceManager.getInstance().findServiceByInterface(IPluginInfraredSubDevDisplayService.class.getName());
         service.registerInfraredSubDevDisplaySettingsListener(new OnInfraredSubDevDisplaySettingsListener() {
             @Override
             public void onDisplaySettingsChanged(Long homeId, String gwId, Boolean shown) {
-                // 更新设备列表，读取
-                //  service.getInfraredSubDevDisplaySettings() 读取当前的红外子设备是否需要显示到首页
+                // 更新设备列表
+                // gwId 为红外设备id
+                // devId 为红外子设备id
+                //  service.getInfraredSubDevDisplaySettings(homeId,devId) 读取当前的红外子设备是否需要显示到首页
 
                 Log.e(TAG, " changed " + "homeId: " + homeId + " devId" + gwId + " show" + shown);
                 Toast.makeText(DeviceDetailActivity.this, "infrared Changed", Toast.LENGTH_LONG).show();
@@ -96,10 +105,16 @@ public class DeviceDetailActivity extends Activity {
                 }
                 DeviceBean deviceBean = TuyaHomeSdk.getDataInstance().getDeviceBean(devId);
                 Bundle bundle = new Bundle();
-                bundle.putString("extra_panel_dev_id", devId);
-                bundle.putString("extra_panel_name", deviceBean.getName());
-                bundle.putLong("extra_panel_group_id", groupId);
 
+                bundle.putString("extra_panel_name", currentSelectBean.getTitle());
+                bundle.putLong("extra_panel_group_id", groupId);
+                if (groupId > 0) {
+                    bundle.putBoolean("extra_is_group", true);
+                    bundle.putString("extra_panel_dev_id", groupId + "");
+                } else {
+                    bundle.putString("extra_panel_dev_id", devId);
+                    bundle.putBoolean("extra_is_group", false);
+                }
                 urlBuilder.putExtras(bundle);
                 UrlRouter.execute(urlBuilder);
             }
@@ -122,6 +137,7 @@ public class DeviceDetailActivity extends Activity {
                 edt.setText(bean.getDevId());
                 groupId = bean.getGroupId();
                 bottomSheetDialog.dismiss();
+                currentSelectBean = bean;
             }
         });
 
@@ -148,8 +164,9 @@ public class DeviceDetailActivity extends Activity {
 
     private void getCurrentHomeDetail() {
         ProgressUtil.showLoading(this, "Loading...");
-        PanelMoreInfraredSubDevDisplayService service = MicroServiceManager.getInstance().
-                findServiceByInterface(PanelMoreInfraredSubDevDisplayService.class.getName());
+        IPluginInfraredSubDevDisplayService service = MicroServiceManager.getInstance()
+                .findServiceByInterface(IPluginInfraredSubDevDisplayService.class.getName());
+
         TuyaHomeSdk.newHomeInstance(getService().getCurrentHomeId()).getHomeDetail(new ITuyaHomeResultCallback() {
             @Override
             public void onSuccess(final HomeBean homeBean) {
@@ -160,9 +177,9 @@ public class DeviceDetailActivity extends Activity {
                 for (DeviceBean deviceBean : homeBean.getDeviceList()) {
                     beans.add(getItemBeanFromDevice(deviceBean));
                 }
-                for (SimpleDeviceBean bean:beans){
-                   boolean b  =  service.getInfraredSubDevDisplaySettings(getService().getCurrentHomeId(),bean.getDevId());
-                   bean.setShow(b);
+                for (SimpleDeviceBean bean : beans) {
+                    boolean b = service.getInfraredSubDevDisplaySettings(getService().getCurrentHomeId(), bean.getDevId());
+                    bean.setShow(b);
                 }
                 mAdapter.setData(beans);
                 ProgressUtil.hideLoading();

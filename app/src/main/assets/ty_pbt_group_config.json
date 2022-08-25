@@ -1,0 +1,52 @@
+[
+  {
+    "npmName": "TYKit",
+    "version": "2.2.9",
+    "PBTGroupName": "TYCBTTYKit"
+  },
+  {
+    "npmName": "MiniKit",
+    "version": "2.4.3",
+    "PBTGroupName": "TYTTTMiniKit"
+  },
+  {
+    "npmName": "MediaKit",
+    "version": "1.0.1",
+    "PBTGroupName": "TYTTTMediaKit"
+  },
+  {
+    "npmName": "IPCKit",
+    "version": "1.1.9",
+    "PBTGroupName": "TYTTTIPCKit"
+  },
+  {
+    "npmName": "P2PKit",
+    "version": "1.0.0",
+    "PBTGroupName": "TYCBTP2PKit"
+  },
+  {
+    "npmName": "HomeKit",
+    "version": "2.2.0",
+    "PBTGroupName": "TYCBTHomeKit"
+  },
+  {
+    "npmName": "BaseKit",
+    "version": "2.3.11",
+    "PBTGroupName": "TYCBTBaseKit"
+  },
+  {
+    "npmName": "DeviceKit",
+    "version": "2.3.6",
+    "PBTGroupName": "TYCBTDeviceKit"
+  },
+  {
+    "npmName": "MapKit",
+    "version": "2.3.1",
+    "PBTGroupName": "TYCBTMapKit"
+  },
+  {
+    "npmName": "DebuggerKit",
+    "version": "2.0.6",
+    "PBTGroupName": "TYCBTDebuggerKit"
+  }
+]

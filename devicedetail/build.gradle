@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'kotlin-android'
 }
 
 android {
@@ -26,11 +27,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
-    api 'com.tuya.smart:tuyasmart:3.34.9'
-    api 'com.tuya.smart:tuyasmart-bizbundle-panelmore:3.34.5-9'
 
+    api "com.tuya.smart:tuyasmart-bizbundle-panelmore:${bizbundle_version}"
+    api "com.tuya.smart:tuyasmart-bizbundle-family:${bizbundle_version}"
+    api "com.tuya.smart:tuyasmart:${sdk_version}"
 
 }

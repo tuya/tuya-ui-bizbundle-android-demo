@@ -7,7 +7,6 @@ import android.util.Log;
 import androidx.multidex.MultiDex;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.tuya.smart.android.common.utils.L;
 import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.api.router.UrlBuilder;
 import com.tuya.smart.api.service.RedirectService;
@@ -18,7 +17,6 @@ import com.tuya.smart.home.sdk.TuyaHomeSdk;
 import com.tuya.smart.optimus.sdk.TuyaOptimusSdk;
 import com.tuya.smart.wrapper.api.TuyaWrapper;
 
-import dagger.hilt.android.AndroidEntryPoint;
 import dagger.hilt.android.HiltAndroidApp;
 
 @HiltAndroidApp

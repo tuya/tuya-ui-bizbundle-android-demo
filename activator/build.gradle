@@ -23,6 +23,6 @@ android {
 }
 
 dependencies {
-    api 'com.tuya.smart:tuyasmart:3.34.9'
-    api 'com.tuya.smart:tuyasmart-bizbundle-device_activator:3.34.5-9'
+    api "com.tuya.smart:tuyasmart:${sdk_version}"
+    api "com.tuya.smart:tuyasmart-bizbundle-device_activator:${bizbundle_version}"
 }
