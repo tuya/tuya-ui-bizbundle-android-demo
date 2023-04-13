@@ -18,7 +18,3 @@
 ## 使用的开源 License
 
 涂鸦智能 UI 业务包使用 MIT License.
-
-## 收费标准
-
-Self-developed Smart Life App 服务是涂鸦 IoT App 解决方案的一种，以 App 云端连接服务为主，涉及收费标准详见[产品定价](https://developer.tuya.com/cn/docs/app-development/app-sdk-price?id=Kbu0tcr2cbx3o)

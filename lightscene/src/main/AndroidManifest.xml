@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tuya.appsdk.sample.lightscene">
+    package="com.thingclips.appsdk.sample.lightscene">
 
     <application>
-        <activity android:name=".LightSceneManagerActivity"></activity>
+        <activity android:name="com.thingclips.appsdk.sample.lightscene.LightSceneManagerActivity"></activity>
         <activity
-            android:name=".list.LightSceneListActivity"
+            android:name="com.thingclips.appsdk.sample.lightscene.list.LightSceneListActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
     </application>

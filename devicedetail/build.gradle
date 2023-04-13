@@ -4,12 +4,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.1"
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -36,9 +35,8 @@ android {
 }
 
 dependencies {
-
-    api "com.tuya.smart:tuyasmart-bizbundle-panelmore:${bizbundle_version}"
-    api "com.tuya.smart:tuyasmart-bizbundle-family:${bizbundle_version}"
-    api "com.tuya.smart:tuyasmart:${sdk_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-panelmore:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
 
 }

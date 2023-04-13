@@ -1,4 +1,5 @@
 <resources>
+    <bool name="is_huawei_pkg">false</bool>
     <string name="demo_ota_go_to_ota_upgrade_page">Go to OTA upgrade page</string>
     <string name="demo_ota_not_support_tip">This device can not support firmware upgrade</string>
     <string name="demo_ota_current_family_is">Current family is: </string>

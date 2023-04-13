@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="scene_toolbar_menu_text" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+</resources>

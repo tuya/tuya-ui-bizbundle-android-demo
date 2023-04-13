@@ -10,8 +10,10 @@ import android.widget.Toast;
 import java.util.List;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.tuya.smart.activator.plug.mesosphere.TuyaDeviceActivatorManager;
-import com.tuya.smart.activator.plug.mesosphere.api.ITuyaDeviceActiveListener;
+import com.thingclips.smart.activator.plug.mesosphere.ThingDeviceActivatorManager;
+import com.thingclips.smart.activator.plug.mesosphere.api.IThingDeviceActiveListener;
+import com.thingclips.smart.activator.scan.qrcode.ScanManager;
+
 
 public class DeviceActivatorActivity extends AppCompatActivity {
     private static final int INFO_MESSAGE = 1;
@@ -38,9 +40,9 @@ public class DeviceActivatorActivity extends AppCompatActivity {
     };
 
     public void actionConfig(View view) {
-        TuyaDeviceActivatorManager.INSTANCE.startDeviceActiveAction(this);
+        ThingDeviceActivatorManager.INSTANCE.startDeviceActiveAction(this);
 
-        TuyaDeviceActivatorManager.INSTANCE.addListener(new ITuyaDeviceActiveListener() {
+        ThingDeviceActivatorManager.INSTANCE.addListener(new IThingDeviceActiveListener() {
             @Override
             public void onDevicesAdd(List<String> list) {
                 StringBuilder str = new StringBuilder();
@@ -65,5 +67,9 @@ public class DeviceActivatorActivity extends AppCompatActivity {
 
 
         });
+    }
+
+    public void actionScan(View view){
+        ScanManager.INSTANCE.openScan(this);
     }
 }

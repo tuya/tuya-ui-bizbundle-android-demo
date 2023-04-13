@@ -1,2 +1,0 @@
-com.tencent.qqmusic.third.api.contract
-string app_name

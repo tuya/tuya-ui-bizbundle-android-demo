@@ -30,9 +30,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    api "com.tuya.smart:tuyasmart-bizbundle-ota:${bizbundle_version}"
-    api 'com.tuya.smart:tuyasmart-commonbiz-bizbundle-family-api:3.32.5-rc.2'
-    api 'com.tuya.smart:tuyasmart-commonbiz-family:4.2.0-feature-4.2.0-bizbundle.1'
-    api "com.tuya.smart:tuyasmart:${sdk_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-ota:${bizbundle_version}"
+//    api 'com.tuya.smart:tuyasmart-commonbiz-bizbundle-family-api:3.32.5-rc.2'
+//    api 'com.tuya.smart:tuyasmart-commonbiz-family:4.2.0-feature-4.2.0-bizbundle.1'
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
 
 }

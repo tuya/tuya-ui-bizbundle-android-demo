@@ -17,10 +17,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.tuya.smart.api.router.UrlRouter;
-import com.tuya.smart.api.service.MicroServiceManager;
-import com.tuyasmart.stencil.bean.location.LocationBean;
-import com.tuyasmart.stencil.location.LocationService;
+
+import com.thingclips.smart.api.router.UrlRouter;
+import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.stencil.bean.location.LocationBean;
+import com.thingclips.stencil.location.LocationService;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

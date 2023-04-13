@@ -7,13 +7,13 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.tuya.smart.android.common.utils.L;
-import com.tuya.smart.api.service.MicroServiceManager;
-import com.tuya.smart.camera.cloud.purchase.AbsCameraCloudPurchaseService;
-import com.tuya.smart.camera.cloud.purchase.AbsCloudCallback;
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.home.sdk.TuyaHomeSdk;
-import com.tuya.smart.sdk.bean.DeviceBean;
+import com.thingclips.smart.android.common.utils.L;
+import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.camera.cloud.purchase.AbsCameraCloudPurchaseService;
+import com.thingclips.smart.camera.cloud.purchase.AbsCloudCallback;
+import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.thingclips.smart.home.sdk.ThingHomeSdk;
+import com.thingclips.smart.sdk.bean.DeviceBean;
 
 public class CloudStorageActivity extends AppCompatActivity {
 
@@ -31,7 +31,7 @@ public class CloudStorageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String devId = edt.getText().toString().trim();
-                DeviceBean deviceBean = TuyaHomeSdk.getDataInstance().getDeviceBean(devId);
+                DeviceBean deviceBean = ThingHomeSdk.getDataInstance().getDeviceBean(devId);
                 if (null == deviceBean) {
                     L.e("CloudStorageActivity", "please make sure the deviceBean cache exists");
                     return;
