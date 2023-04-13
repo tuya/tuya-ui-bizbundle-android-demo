@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_miniapp_init"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="miniapp initial"
+        />
+
+    <!-- 打开小程序 -->
+    <Button
+        android:id="@+id/btn_open_miniapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open miniapp"
+        android:onClick="openMiniAPP"
+        />
+
+    <!-- 清除缓存 -->
+    <Button
+        android:id="@+id/btn_clea_miniapp_cache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="clear cache"
+        android:onClick="clearCache"
+        />
+</LinearLayout>

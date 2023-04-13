@@ -1,0 +1,113 @@
+[
+  {
+    "name": "headerSection",
+    "items": [
+      {
+        "cellType": "header"
+      },
+      {
+        "cellType": "device_info"
+      },
+      {
+        "cellType": "net_setting"
+      },
+      {
+        "cellType": "group_edit_devices"
+      },
+      {
+        "cellType": "iot_card_recharge"
+      },
+      {
+        "cellType": "scene_and_automation"
+      },
+      {
+        "cellType": "device_evaluation"
+      }
+    ]
+  },
+  {
+    "name": "recommendProductSection",
+    "header": {
+      "cellType": "recommend_product_empty"
+    },
+    "items": [
+      {
+        "cellType": "recommend_products"
+      }
+    ],
+    "margin": {
+      "top": 16
+    }
+  },
+  {
+    "name": "thirdPartyControlSection",
+    "header": {
+      "cellType": "section_third-party_control"
+    },
+    "items": [
+      {
+        "cellType": "third-party_control"
+      }
+    ]
+  },
+  {
+    "name": "offLineWarnSection",
+    "header": {
+      "cellType": "section_off_line_warn"
+    },
+    "items": [
+      {
+        "cellType": "off_line_warn"
+      }
+    ]
+  },
+  {
+    "name": "otherSection",
+    "header": {
+      "cellType": "section_other"
+    },
+    "items": [
+      {
+        "cellType": "bind_multi_control_link"
+      },
+      {
+        "cellType": "group_create"
+      },
+      {
+        "cellType": "help_and_feedback"
+      },
+      {
+        "cellType": "add_icon_to_home_screen"
+      },
+      {
+        "cellType": "show_infrared_gateway_sub_device"
+      },
+      {
+        "cellType": "check_device_network"
+      },
+      {
+        "cellType": "check_firmware_update"
+      },
+      {
+        "cellType": "c_test_insert"
+      },
+      {
+        "cellType": "c_test_async_insert"
+      }
+    ]
+  },
+  {
+    "name": "footerSection",
+    "header": {
+      "cellType": "device_detail_empty"
+    },
+    "items": [
+      {
+        "cellType": "footer"
+      }
+    ],
+    "margin": {
+      "top": 16
+    }
+  }
+]

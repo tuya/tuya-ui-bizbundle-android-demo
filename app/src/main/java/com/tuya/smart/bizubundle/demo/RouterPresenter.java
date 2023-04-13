@@ -9,22 +9,12 @@ import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
 
-import com.tuya.smart.android.common.utils.L;
-import com.tuya.smart.api.MicroContext;
-import com.tuya.smart.api.logger.LogUtil;
-import com.tuya.smart.api.module.ModuleApp;
-import com.tuya.smart.api.router.UrlRouter;
-import com.tuya.smart.api.service.MicroServiceManager;
-import com.tuya.smart.api.service.SchemeService;
-import com.tuya.smart.api.tab.Constants;
-import com.tuya.smart.bizubundle.panel.demo.PanelActivity;
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.home.sdk.TuyaHomeSdk;
-import com.tuya.smart.panelcaller.api.AbsPanelCallerService;
-import com.tuya.smart.sdk.bean.DeviceBean;
-
-
-import java.util.Set;
+import com.thingclips.smart.android.common.utils.L;
+import com.thingclips.smart.api.MicroContext;
+import com.thingclips.smart.api.logger.LogUtil;
+import com.thingclips.smart.api.module.ModuleApp;
+import com.thingclips.smart.api.router.UrlRouter;
+import com.thingclips.smart.api.service.SchemeService;
 
 /**
  * @author huyang

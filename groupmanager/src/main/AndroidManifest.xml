@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tuya.groupmanager">
+    package="com.thingclips.groupmanager">
 
     <application>
-        <activity android:name=".GroupListActivity"></activity>
-        <activity android:name=".GroupManagerActivity" />
+        <activity android:name="com.thingclips.groupmanager.GroupListActivity"></activity>
+        <activity android:name="com.thingclips.groupmanager.GroupManagerActivity" />
     </application>
 
 </manifest>

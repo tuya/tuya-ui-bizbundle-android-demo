@@ -10,14 +10,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.tuya.smart.api.MicroContext;
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.home.sdk.TuyaHomeSdk;
-import com.tuya.smart.home.sdk.bean.scene.SceneBean;
-import com.tuya.smart.home.sdk.callback.ITuyaResultCallback;
-import com.tuya.smart.scene.base.bean.SmartSceneBean;
-import com.tuya.smart.scene.business.api.ITuyaSceneBusinessService;
-import com.tuya.smart.utils.ToastUtil;
+import com.thingclips.smart.api.MicroContext;
+import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.thingclips.smart.home.sdk.ThingHomeSdk;
+import com.thingclips.smart.map.generalmap.ui.GeneralMapActivity;
+import com.thingclips.smart.scene.api.IResultCallback;
+import com.thingclips.smart.scene.business.api.IThingSceneBusinessService;
+import com.thingclips.smart.scene.model.NormalScene;
+import com.thingclips.smart.utils.ToastUtil;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
     private View mAddScene;
     private View mEditScene;
     private View mSetLocation;
-    private ITuyaSceneBusinessService iTuyaSceneBusinessService;
+    private IThingSceneBusinessService iThingSceneBusinessService;
     private static final int ADD_SCENE_REQUEST_CODE = 1001;
     private static final int EDIT_SCENE_REQUEST_CODE = 1002;
     private View mSetMap;
@@ -45,13 +45,14 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
         mEditScene = findViewById(R.id.edit_scene);
         mSetMap = findViewById(R.id.set_map);
         mSaveMapData = findViewById(R.id.save_map_data);
+
         mSetLocation.setOnClickListener(this);
         mAddScene.setOnClickListener(this);
         mEditScene.setOnClickListener(this);
         mSetMap.setOnClickListener(this);
         mSaveMapData.setOnClickListener(this);
         // Get scene business service
-        iTuyaSceneBusinessService = MicroContext.findServiceByInterface(ITuyaSceneBusinessService.class.getName());
+        iThingSceneBusinessService = MicroContext.findServiceByInterface(IThingSceneBusinessService.class.getName());
         mServiceByInterface = MicroContext.getServiceManager().findServiceByInterface(AbsBizBundleFamilyService.class.getName());
     }
 
@@ -82,14 +83,19 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      */
     private void editScene() {
 
-        if (mServiceByInterface.getCurrentHomeId() == 0) return;
-        TuyaHomeSdk.getSceneManagerInstance().getSceneList(mServiceByInterface.getCurrentHomeId(), new ITuyaResultCallback<List<SceneBean>>() {
+        if (mServiceByInterface.getCurrentHomeId() == 0) {
+            return;
+        }
+
+        ThingHomeSdk.getSceneServiceInstance().baseService().getSimpleSceneAll(mServiceByInterface.getCurrentHomeId(),
+                new IResultCallback<List<NormalScene>>() {
+
             @Override
-            public void onSuccess(List<SceneBean> result) {
-                if (!result.isEmpty()) {
-                    SceneBean sceneBean = result.get(0);
-                    if (null != iTuyaSceneBusinessService) {
-                        iTuyaSceneBusinessService.editScene(SceneActivity.this, mServiceByInterface.getCurrentHomeId(), sceneBean, EDIT_SCENE_REQUEST_CODE);
+            public void onSuccess(List<NormalScene> normalScenes) {
+                if (!normalScenes.isEmpty()) {
+                    NormalScene sceneBean = normalScenes.get(0);
+                    if (null != iThingSceneBusinessService) {
+                        iThingSceneBusinessService.editSceneBean(SceneActivity.this, mServiceByInterface.getCurrentHomeId(), sceneBean, EDIT_SCENE_REQUEST_CODE);
                     }
                 }
             }
@@ -99,7 +105,6 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
 
             }
         });
-
     }
 
     /**
@@ -112,8 +117,8 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      * api 'com.tuya.smart:tuyasmart-bizbundle-location_google:x.x.x-x'
      */
     private void addScene() {
-        if (null != iTuyaSceneBusinessService && mServiceByInterface.getCurrentHomeId() != 0) {
-            iTuyaSceneBusinessService.addScene(this, mServiceByInterface.getCurrentHomeId(), ADD_SCENE_REQUEST_CODE);
+        if (null != iThingSceneBusinessService && mServiceByInterface.getCurrentHomeId() != 0) {
+            iThingSceneBusinessService.addSceneBean(this, mServiceByInterface.getCurrentHomeId(), ADD_SCENE_REQUEST_CODE);
         }
     }
 
@@ -124,8 +129,8 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
     private void setLocation() {
         double lng = 120.06420814321443;
         double lat = 30.302782241301667;
-        if (null != iTuyaSceneBusinessService) {
-            iTuyaSceneBusinessService.setAppLocation(lng, lat);
+        if (null != iThingSceneBusinessService) {
+            iThingSceneBusinessService.setAppLocation(lng, lat);
         }
     }
 
@@ -135,9 +140,9 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      * Note: Chinese city list default. Use it when your account is not a Chinese account.
      */
     private void setMapClass() {
-        if (null != iTuyaSceneBusinessService) {
+        if (null != iThingSceneBusinessService) {
             //TODO business map Activity
-            iTuyaSceneBusinessService.setMapActivity(null);
+            iThingSceneBusinessService.setMapActivity(GeneralMapActivity.class);
         }
     }
 
@@ -145,13 +150,13 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      * You can use the method to set location information after use custom map class impl
      */
     private void saveMapData() {
-        if (null != iTuyaSceneBusinessService) {
+        if (null != iThingSceneBusinessService) {
             //TODO save map data
             double lng = 120.06420814321443;
             double lat = 30.302782241301667;
             String city = "hangzhou";
             String address = "address";
-            iTuyaSceneBusinessService.saveMapData(lng, lat, city, address);
+            iThingSceneBusinessService.saveMapData(lng, lat, city, address);
         }
     }
 
@@ -180,11 +185,12 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      * @param data
      */
     private void onEditSuc(Intent data) {
-        SmartSceneBean sceneBean = (SmartSceneBean) data.getSerializableExtra("SmartSceneBean");
+        NormalScene sceneBean = (NormalScene) data.getSerializableExtra("NormalScene");
         if (null != sceneBean) {
             ToastUtil.shortToast(this, "Scene：" + sceneBean.getName() + "edit success!");
         }
     }
+
 
     /**
      * add scene success
@@ -192,7 +198,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
      * @param data
      */
     private void onAddSuc(Intent data) {
-        SmartSceneBean sceneBean = (SmartSceneBean) data.getSerializableExtra("SmartSceneBean");
+        NormalScene sceneBean = (NormalScene) data.getSerializableExtra("NormalScene");
         if (null != sceneBean) {
             ToastUtil.shortToast(this, "Scene：" + sceneBean.getName() + "create success!");
         }

@@ -7,18 +7,17 @@ import android.util.Log;
 import androidx.multidex.MultiDex;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.tuya.smart.android.common.utils.L;
-import com.tuya.smart.api.MicroContext;
-import com.tuya.smart.api.router.UrlBuilder;
-import com.tuya.smart.api.service.RedirectService;
-import com.tuya.smart.api.service.RouteEventListener;
-import com.tuya.smart.api.service.ServiceEventListener;
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.home.sdk.TuyaHomeSdk;
-import com.tuya.smart.optimus.sdk.TuyaOptimusSdk;
-import com.tuya.smart.wrapper.api.TuyaWrapper;
+import com.thingclips.smart.android.network.ThingSmartNetWork;
+import com.thingclips.smart.api.MicroContext;
+import com.thingclips.smart.api.router.UrlBuilder;
+import com.thingclips.smart.api.service.RedirectService;
+import com.thingclips.smart.api.service.RouteEventListener;
+import com.thingclips.smart.api.service.ServiceEventListener;
+import com.thingclips.smart.home.sdk.ThingHomeSdk;
+import com.thingclips.smart.optimus.sdk.ThingOptimusSdk;
+import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.thingclips.smart.wrapper.api.ThingWrapper;
 
-import dagger.hilt.android.AndroidEntryPoint;
 import dagger.hilt.android.HiltAndroidApp;
 
 @HiltAndroidApp
@@ -31,9 +30,9 @@ public class TuyaSmartApp extends Application {
         // 请不要修改初始化顺序
         Fresco.initialize(this);
 
-        TuyaHomeSdk.init(this);
+        ThingHomeSdk.init(this);
 
-        TuyaWrapper.init(this, new RouteEventListener() {
+        ThingWrapper.init(this, new RouteEventListener() {
             @Override
             public void onFaild(int errorCode, UrlBuilder urlBuilder) {
                 // urlBuilder.target is a router address, urlBuilder.params is a router params
@@ -46,11 +45,11 @@ public class TuyaSmartApp extends Application {
                 Log.e("service not implement", serviceName);
             }
         });
-        TuyaOptimusSdk.init(this);
+        ThingOptimusSdk.init(this);
 
         // register family service，mall bizbundle don't have to implement it.
         // 注册家庭服务，商城业务包可以不注册此服务
-        TuyaWrapper.registerService(AbsBizBundleFamilyService.class, new BizBundleFamilyServiceImpl());
+        ThingWrapper.registerService(AbsBizBundleFamilyService.class, new BizBundleFamilyServiceImpl());
 
         //Intercept existing routes and jump to custom implementation pages with parameters
         //拦截已存在的路由，通过参数跳转至自定义实现页面

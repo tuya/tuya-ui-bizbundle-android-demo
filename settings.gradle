@@ -20,5 +20,5 @@ include ':alexa_google_bind'
 include ':lightscene'
 include ':share'
 include ':control'
-include ':speech'
-
+include ':third_service'
+include ':miniapp'

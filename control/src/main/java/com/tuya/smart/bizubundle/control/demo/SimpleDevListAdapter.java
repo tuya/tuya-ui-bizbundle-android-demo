@@ -9,10 +9,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-
-import com.tuya.smart.control.ControlManager;
-import com.tuya.smart.control.utils.ControlState;
-import com.tuya.smart.sdk.bean.DeviceBean;
+import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.control.PluginControlService;
+import com.thingclips.smart.control.plug.api.IPluginControlService;
+import com.thingclips.smart.sdk.bean.DeviceBean;
+import com.thingclips.smart.wrapper.api.ThingWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +28,12 @@ public class SimpleDevListAdapter extends RecyclerView.Adapter<SimpleDevListAdap
     private OnItemClickListener mOnItemClickListener;
 
     private Context context;
+    private IPluginControlService pluginControlService;
 
     public SimpleDevListAdapter(Context context) {
         this.context = context;
+        ThingWrapper.registerService(IPluginControlService.class, new PluginControlService());
+        pluginControlService = MicroServiceManager.getInstance().findServiceByInterface(IPluginControlService.class.getName());
     }
 
     @NonNull
@@ -48,7 +52,7 @@ public class SimpleDevListAdapter extends RecyclerView.Adapter<SimpleDevListAdap
         viewHolder.tvName.setText(bean.getName());
 
         String devId = bean.getDevId();
-        Boolean bool = ControlManager.isSupportMultiControl(devId);
+        Boolean bool = pluginControlService.isDeviceSupportMultiControl(devId);
         if (bool) {
             viewHolder.tvOnline.setText("支持多控关联");
         } else {

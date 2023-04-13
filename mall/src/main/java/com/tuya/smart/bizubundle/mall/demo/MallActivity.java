@@ -13,11 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
 
-import com.tuya.smart.api.MicroContext;
-import com.tuya.smart.jsbridge.base.webview.WebViewActivity;
-import com.tuya.smart.tuyamall.api.IGetMallUrlCallback;
-import com.tuya.smart.tuyamall.api.TuyaMallService;
-import com.tuya.smart.utils.ToastUtil;
+import com.thingclips.smart.api.MicroContext;
+import com.thingclips.smart.jsbridge.base.webview.WebViewActivity;
+import com.thingclips.smart.thingmall.api.IGetMallUrlCallback;
+import com.thingclips.smart.thingmall.api.ThingMallService;
+import com.thingclips.smart.utils.ToastUtil;
 
 public class MallActivity extends AppCompatActivity {
 
@@ -49,7 +49,7 @@ public class MallActivity extends AppCompatActivity {
                 }
             }
         });
-        TuyaMallService service = MicroContext.getServiceManager().findServiceByInterface(TuyaMallService.class.getName());
+        ThingMallService service = MicroContext.getServiceManager().findServiceByInterface(ThingMallService.class.getName());
         ToastUtil.showToast(this, "mall enable is " + service.isSupportMall());
         service.requestMallHome(new IGetMallUrlCallback() {
             @Override

@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -37,6 +37,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    api 'com.tuya.smart:tuyasmart:3.34.9'
-    api 'com.tuya.smart:tuyasmart-bizbundle-light_scene:3.34.5-9'
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-light_scene:${bizbundle_version}"
 }

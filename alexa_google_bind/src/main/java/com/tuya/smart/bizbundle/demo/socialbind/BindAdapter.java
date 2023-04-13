@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView.Adapter;
 
-import com.tuya.smart.social.auth.manager.api.AuthorityBean;
+import com.thingclips.smart.social.auth.manager.api.AuthorityBean;
 
 import java.util.List;
 

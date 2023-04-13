@@ -9,16 +9,16 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.tuya.smart.api.MicroContext;
-import com.tuya.smart.api.service.MicroServiceManager;
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.home.sdk.TuyaHomeSdk;
-import com.tuya.smart.home.sdk.bean.HomeBean;
-import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
-import com.tuya.smart.panelcaller.api.AbsPanelCallerService;
-import com.tuya.smart.sdk.bean.DeviceBean;
-import com.tuya.smart.sdk.bean.GroupBean;
-import com.tuya.smart.utils.ProgressUtil;
+import com.thingclips.smart.api.MicroContext;
+import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.thingclips.smart.home.sdk.ThingHomeSdk;
+import com.thingclips.smart.home.sdk.bean.HomeBean;
+import com.thingclips.smart.home.sdk.callback.IThingHomeResultCallback;
+import com.thingclips.smart.panelcaller.api.AbsPanelCallerService;
+import com.thingclips.smart.sdk.bean.DeviceBean;
+import com.thingclips.smart.sdk.bean.GroupBean;
+import com.thingclips.smart.utils.ProgressUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,7 +63,7 @@ public class IPCPanelActivity extends AppCompatActivity {
         if (currentHomeId <= 0) {
             return;
         }
-        TuyaHomeSdk.newHomeInstance(currentHomeId).getHomeDetail(new ITuyaHomeResultCallback() {
+        ThingHomeSdk.newHomeInstance(currentHomeId).getHomeDetail(new IThingHomeResultCallback() {
             @Override
             public void onSuccess(HomeBean homeBean) {
                 List<ItemBean> beans = new ArrayList<>(8);

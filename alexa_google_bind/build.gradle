@@ -37,9 +37,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    api 'com.tuya.smart:tuyasmart:3.34.9'
-
-    api 'com.tuya.smart:tuyasmart-bizbundle-amazon_google_bind:3.34.5-9'
-
-
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-amazon_google_bind:${bizbundle_version}"
 }

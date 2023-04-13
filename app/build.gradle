@@ -2,17 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'dagger.hilt.android.plugin'
 
 android {
-    signingConfigs {
-    
-
-    }
-    compileSdkVersion 31
-    buildToolsVersion "31.0.0"
+    compileSdkVersion 33
+//    buildToolsVersion "33.0.1"
 
     defaultConfig {
-        applicationId "com.test007.demo"
-        minSdkVersion 21
-        targetSdkVersion 29
+        applicationId "com.sdk.test1"
+        minSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -25,7 +21,6 @@ android {
                 INTERNAL_HOST               : "${properties.getProperty("app_scheme")}".concat('.app.tuya.com'),
                 ALEXA_AUTH_INTERNAL_HOST    : "${properties.getProperty("app_scheme")}".concat('.applink.smart321.com'),
                 ALEXA_AUTH_INTERNAL_HOST_NEW: "${properties.getProperty("app_scheme")}".toLowerCase(Locale.ENGLISH).concat('.applink.smart321.com'),
-
                 PACKAGE_NAME                : applicationId
         ]
         ndk {
@@ -35,9 +30,13 @@ android {
     }
 
     packagingOptions {
+        pickFirst 'lib/*/liblog.so'
         pickFirst 'lib/*/libc++_shared.so'
         pickFirst 'lib/*/libyuv.so'
         pickFirst 'lib/*/libopenh264.so'
+
+        pickFirst 'lib/*/libv8wrapper.so'
+        pickFirst 'lib/*/libv8android.so'
     }
 
     buildTypes {
@@ -56,7 +55,18 @@ android {
     packagingOptions {
         exclude 'AndroidManifest.xml'
     }
+    lintOptions {
+        abortOnError false
+    }
+
 }
+
+configurations.all {
+    exclude group:"com.thingclips.smart",module:"thingplugin-annotation"
+    exclude group:"com.thingclips.android.module",module:"thingmodule-annotation"
+    exclude group: "com.thingclips.smart" ,module: 'thingsmart-modularCampAnno'
+}
+
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -79,19 +89,21 @@ dependencies {
     implementation project(path: ':lightscene')
     implementation project(path: ':share')
     implementation project(path: ':control')
-    implementation project(path: ':speech')
+    implementation project(path: ':third_service')
 
-    implementation "com.tuya.smart:tuyasmart-theme-open:1.1.0"
-    implementation "com.tuya.smart:tuyasmart-commonbiz-relation-api:3.31.0"
+    implementation "com.thingclips.smart:thingsmart-theme-open:1.0.0"
+    implementation "com.thingclips.smart:thingsmart-commonbiz-relation-api:4.5.0-rc.1"
 
     //demo use only start
-    api 'com.tuya.smart:tuyasmart:3.34.9'
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
 
-    implementation 'com.tuya.smart:tuyasmart-demo-login:3.32.5-rc.2'
+    implementation 'com.thingclips.smart:thingsmart-demo-login:4.5.2'
+
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation "androidx.multidex:multidex:2.0.1"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
     //demo use only end
 
     testImplementation 'junit:junit:4.12'
@@ -102,8 +114,8 @@ dependencies {
 
 }
 
-apply plugin: 'com.tuya.open.theme'
-tuyaOpenTheme {
+apply plugin: 'com.thingclips.open.theme'
+thingOpenTheme {
     // 浅色模式配置, 目前不支持深色模式的配置
     lightTheme {
         color {
@@ -117,6 +129,8 @@ tuyaOpenTheme {
             tipColor "#00CC99"
             // 引导色
             guideColor "#E819FA"
+
+
             // tab选中背景色
             tabBarSelectColor "#FF5A28"
             // 导航栏背景色配置

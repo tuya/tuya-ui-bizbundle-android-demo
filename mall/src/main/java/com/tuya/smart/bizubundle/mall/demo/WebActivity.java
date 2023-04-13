@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.tuya.smart.jsbridge.base.webview.WebViewFragment;
+import com.thingclips.smart.jsbridge.base.webview.WebViewFragment;
 
 public class WebActivity extends AppCompatActivity {
 

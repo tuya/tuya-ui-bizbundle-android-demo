@@ -13,10 +13,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.tuya.smart.home.sdk.TuyaHomeSdk;
-import com.tuya.smart.home.sdk.bean.HomeBean;
-import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
-import com.tuya.smart.utils.ToastUtil;
+
+import com.thingclips.smart.home.sdk.ThingHomeSdk;
+import com.thingclips.smart.home.sdk.bean.HomeBean;
+import com.thingclips.smart.home.sdk.callback.IThingHomeResultCallback;
+import com.thingclips.smart.utils.ToastUtil;
 
 import java.util.Arrays;
 
@@ -64,7 +65,7 @@ public class FamilyCreateDialogFragment extends DialogFragment {
             @Override
             public void onClick(View v) {
                 String name = mFamilyName.getText().toString().trim();
-                TuyaHomeSdk.getHomeManagerInstance().createHome(name, 0, 0, name, Arrays.asList("home"), new ITuyaHomeResultCallback() {
+                ThingHomeSdk.getHomeManagerInstance().createHome(name, 0, 0, name, Arrays.asList("home"), new IThingHomeResultCallback() {
                     @Override
                     public void onSuccess(HomeBean bean) {
                         // do something

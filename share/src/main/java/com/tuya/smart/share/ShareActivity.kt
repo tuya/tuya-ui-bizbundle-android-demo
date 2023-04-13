@@ -5,9 +5,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.tuya.smart.api.MicroContext
-import com.tuya.smart.sharemanager.api.AbsShareManager
-import com.tuya.smart.sharemanager.constant.ShareType
+import com.thingclips.smart.api.MicroContext
+import com.thingclips.smart.sharemanager.api.AbsShareManager
+import com.thingclips.smart.sharemanager.constant.ShareType
 
 /**
  * ShareActivity
