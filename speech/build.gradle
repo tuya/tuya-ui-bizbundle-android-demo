@@ -38,9 +38,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 
-    api "com.tuya.smart:tuyasmart:${sdk_version}"
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
 
-    api "com.tuya.smart:tuyasmart-bizbundle-speech:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-speech:${bizbundle_version}"
 
     //依赖设备 控制UI业务包
     api project(':panel')

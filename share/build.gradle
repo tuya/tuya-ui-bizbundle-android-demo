@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+
+    compileSdkVersion 33
     buildToolsVersion "30.0.2"
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -40,6 +41,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    api "com.tuya.smart:tuyasmart:${sdk_version}"
-    api "com.tuya.smart:tuyasmart-bizbundle-share:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-share:${bizbundle_version}"
 }

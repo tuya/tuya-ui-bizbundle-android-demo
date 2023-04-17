@@ -1,7 +1,266 @@
 {
-  "deviceDetail": [
+  "my":[
     {
-      "type": "header"
+      "type" :"avatar"
+    },
+    {
+      "type" :"empty",
+      "height" :16
+    },
+    {
+      "type" :"thirdService"
+    },
+    {
+      "type" :"empty",
+      "height" :16
+    },
+    {
+      "type" :"family"
+    },
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type": "deviceList"
+    },
+    {
+      "type" :"outdoorOfflineStore"
+    },
+    {
+      "type" :"message"
+    },
+    {
+      "type" :"healthCenter"
+    },
+    {
+      "type" :"help"
+    },
+    {
+      "type" :"moreService"
+    },
+    {
+      "type" :"mall"
+    },
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"setting"
+    },
+    {
+      "type" :"empty",
+      "height" : 16,
+      "bindTypes": ["exit"]
+    },
+    {
+      "type" :"exit"
+    }
+  ],
+  "account":[
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"avatar"
+    },
+    {
+      "type" :"nick"
+    },
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"timeZone"
+    }
+  ],
+  "accountSecurity":[
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"region"
+    },
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"phoneNumber"
+    },
+    {
+      "type": "bindPhone"
+    },
+    {
+      "type" :"email"
+    },
+    {
+      "type" :"bindEmail"
+    },
+    {
+      "type" :"thirdAccount"
+    },
+    {
+      "type" :"cloudProject"
+    },
+    {
+      "type" :"manageAuthorization"
+    },
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"password"
+    },
+    {
+      "type": "fingerLogin"
+    },
+    {
+      "type" :"gestureSwitch"
+    },
+    {
+      "type" :"gestureChange"
+    },
+    {
+      "type" :"gestureSetting"
+    },
+    {
+      "type" :"loginVertify"
+    },
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"close"
+    }
+  ],
+  "setting":[
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"account"
+    },
+    {
+      "type":"security"
+    },
+    {
+      "type": "deviceUpgrades"
+    },
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"sound"
+    },
+    {
+      "type" :"push"
+    },
+    {
+      "type": "scan"
+    },
+    {
+      "type": "active"
+    },
+    {
+      "type" :"darkColorMode"
+    },
+    {
+      "type" :"unit"
+    },
+    {
+      "type" : "pad"
+    },
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"about"
+    },
+    {
+      "type" :"privacySetting"
+    },
+    {
+      "type" :"privacyPolicySetting"
+    },
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"network"
+    },
+    {
+      "type" :"cache"
+    },
+    {
+      "type" :"language-debug"
+    },
+    {
+      "type": "empty",
+      "bindTypes": ["language"],
+      "height": 16
+    },
+    {
+      "type": "language"
+    },
+    {
+      "type" :"empty",
+      "height" : 26
+    },
+    {
+      "type" :"logout"
+    }
+  ],
+  "about":[
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"rateUs"
+    },
+    {
+      "type" :"aboutUs"
+    },
+    {
+      "type" :"source"
+    },
+    {
+      "type" :"uploadLog"
+    },
+    {
+      "type" :"currentVersion"
+    },
+    {
+      "type" :"checkVersion"
+    },
+    {
+      "type" :"testflight"
+    },
+    {
+      "type" :"environment"
+    },
+    {
+      "type" :"empty",
+      "height" : 16
+    },
+    {
+      "type" :"consumerHotline"
+    }
+  ],
+  "deviceDetail":[
+    {
+      "type":"header"
     },
     {
       "type": "device_info"
@@ -10,47 +269,92 @@
       "type": "device_net_info"
     },
     {
-      "type": "group_edit_devices"
+      "type": "connect_cloud_activation"
     },
     {
-      "type": "off_line_warn"
+      "type":"group_edit_devices"
     },
     {
-      "type": "section_other"
+      "type": "cellular_management"
     },
     {
-      "type": "bind_multi_control_link"
+      "type":"scene_and_automation"
     },
     {
-      "type": "group_create"
+      "type":"device_evaluation"
     },
     {
-      "type": "help_and_feedback"
+      "type":"recommend_products"
     },
     {
-      "type": "add_icon_to_home_screen"
+      "type":"section_third-party_control"
+    },
+    {
+      "type":"third-party_control"
+    },
+    {
+      "type":"section_off_line_warn"
+    },
+    {
+      "type":"off_line_warn"
+    },
+    {
+      "type":"section_other"
+    },
+    {
+      "type":"device_from"
+    },
+    {
+      "type":"bind_multi_control_link"
+    },
+    {
+      "type":"sync_control"
+    },
+    {
+      "type":"panel_share_group_or_device"
+    },
+    {
+      "type":"group_create"
+    },
+    {
+      "type":"link_device"
+    },
+    {
+      "type":"location_access_authorization"
+    },
+    {
+      "type":"product_instruction"
+    },
+    {
+      "type":"help_and_feedback"
+    },
+    {
+      "type":"add_icon_to_home_screen"
     },
     {
       "type":"show_infrared_gateway_sub_device"
     },
     {
-      "type": "check_device_network"
+      "type":"device_add_to_family"
     },
     {
-      "type": "check_firmware_update"
+      "type":"check_device_network"
     },
     {
-      "type": "c_test_insert"
+      "type":"accessories_manager"
     },
     {
-      "type": "c_test_async_insert"
+      "type":"check_firmware_update"
     },
     {
-      "type": "empty",
-      "height": 10
+      "type":"sub_device_migrate"
     },
     {
-      "type": "footer"
+      "type":"empty",
+      "height":10
+    },
+    {
+      "type":"footer"
     }
   ],
   "devBaseInfo": [

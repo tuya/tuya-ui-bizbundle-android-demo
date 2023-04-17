@@ -7,12 +7,12 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.tuya.smart.android.user.api.IQurryDomainCallback;
-import com.tuya.smart.api.MicroContext;
-import com.tuya.smart.api.router.UrlRouter;
+import com.thingclips.smart.android.user.api.IQurryDomainCallback;
+import com.thingclips.smart.api.MicroContext;
+import com.thingclips.smart.api.router.UrlRouter;
 import com.tuya.smart.bizbundle.feedback.demo.R;
-import com.tuya.smart.feedback.api.FeedbackService;
-import com.tuya.smart.home.sdk.TuyaHomeSdk;
+import com.thingclips.smart.feedback.api.FeedbackService;
+import com.thingclips.smart.home.sdk.ThingHomeSdk;
 
 public class FeedBackActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -33,7 +33,7 @@ public class FeedBackActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.btn_feedback_service) {
-            TuyaHomeSdk.getUserInstance().queryDomainByBizCodeAndKey("help_center", "main_page", new IQurryDomainCallback() {
+            ThingHomeSdk.getUserInstance().queryDomainByBizCodeAndKey("help_center", "main_page", new IQurryDomainCallback() {
                 @Override
                 public void onSuccess(String domain) {
                     FeedbackService feedbackService = MicroContext.findServiceByInterface(FeedbackService.class.getName());
@@ -49,7 +49,7 @@ public class FeedBackActivity extends AppCompatActivity implements View.OnClickL
             });
 
         } else if (v.getId() == R.id.btn_feedback_route) {
-            TuyaHomeSdk.getUserInstance().queryDomainByBizCodeAndKey("help_center", "main_page", new IQurryDomainCallback() {
+            ThingHomeSdk.getUserInstance().queryDomainByBizCodeAndKey("help_center", "main_page", new IQurryDomainCallback() {
                 @Override
                 public void onSuccess(String domain) {
                     UrlRouter.execute(UrlRouter.makeBuilder(FeedBackActivity.this, "helpCenter"));

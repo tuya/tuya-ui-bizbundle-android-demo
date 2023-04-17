@@ -1,12 +1,11 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 33
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -26,34 +25,43 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
+    //必须依赖---start
+    //homesdk 基础能力
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
+    //设备控制业务包
+    api "com.thingclips.smart:thingsmart-bizbundle-panel:${bizbundle_version}"
+    //基础扩展能力
+    api ("com.thingclips.smart:thingsmart-bizbundle-basekit:${bizbundle_version}"){
+        exclude group:"com.thingclips.smart",module:"thingplugin-annotation"
+    }
+    //涂鸦业务扩展能力
+    api "com.thingclips.smart:thingsmart-bizbundle-bizkit:${bizbundle_version}"
+    //设备控制相关能力
+    api "com.thingclips.smart:thingsmart-bizbundle-devicekit:${bizbundle_version}"
 
-  // implementation 'com.tuya.smart:tuyasmart-bizbundle-ota:3.32.5-6'
-    api ("com.tuya.smart:tuyasmart-bizbundle-panel:${bizbundle_version}")
-    api ("com.tuya.smart:tuyasmart-bizbundle-camera_panel:${bizbundle_version}")
+    //强烈建议引入---start
+    //家庭相关依赖
+    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
+    //地園扩展能力
+    api "com.thingclips.smart:thingsmart-bizbundle-mapkit:${bizbundle_version}"
+    //多媒体扩展能力
+    api "com.thingclips.smart:thingsmart-bizbundle-mediakit:${bizbundle_version}"
 
-   // api ('com.tuya.smart:tuyasmart-TYCBTDeviceKit:2.3.6-bizbundle.2')
-  //api 'com.tuya.smart:tuyasmart-TuyaRNApi:5.62.18-feature-5.62.16-bizbundle-android.3'
-  //  implementation ('com.tuya.smart:tuyasmart-bizbundle-panel:4.2.0-SNAPSHOT')
-    // implementation 'com.tuya.smart:tuyasmart-bizbundle-panel:4.2.0-3-SNAPSHOT'
-   // implementation 'com.tuya.smart:tuyasmart-bizbundle-ipc:4.2.0-1-SNAPSHOT'
-    //api 'com.tuya.smart:tuyasmart:3.34.9'
-    api "com.tuya.smart:tuyasmart-bizbundle-family:${bizbundle_version}"
-    api "com.tuya.smart:tuyasmart:${sdk_version}"
+    //按需依赖---start
+    //IPC 面板相关依赖项
+    api "com.thingclips.smart:thingsmart-bizbundle-camera_panel:${bizbundle_version}"
 
-    // amap map
     // 高德地图
     implementation 'com.amap.api:search:7.9.0'
-    implementation 'com.amap.api:navi-3dmap:8.0.0_3dmap8.0.0'
-    api 'com.tuya.smart:tuyasmart-react-native-amap:3.31.0-rc.2'
-
-    // google map
+    implementation 'com.amap.api:3dmap:8.1.0'
+    api 'com.thingclips.smart:thingsmart-react-native-amap:4.5.0-rc.1'
     // 谷歌地图
-    api 'com.tuya.smart:tuyasmart-react-native-googlemap:3.31.5-rc.1'
-    api 'com.google.android.gms:play-services-maps:17.0.0'
+    api 'com.thingclips.smart:thingsmart-react-native-googlemap:4.5.0-rc.1'
+    api 'com.google.android.gms:play-services-maps:18.0.0'
 
     // qq music (speaker products)
     // qq 音乐 （音箱产品）
-    api project(':qqmusic')
+//    api project(':qqmusic')
     api("com.tencent.yunxiaowei.dmsdk:core:2.3.0") {
         exclude group: 'com.squareup.okhttp3', module: 'okhttp'
     }

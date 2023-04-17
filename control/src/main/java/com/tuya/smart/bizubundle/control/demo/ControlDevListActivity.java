@@ -9,19 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
-import com.tuya.smart.android.common.utils.L;
-import com.tuya.smart.api.service.MicroServiceManager;
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.control.PluginControlService;
-import com.tuya.smart.control.plug.api.IPluginControlService;
-import com.tuya.smart.home.sdk.TuyaHomeSdk;
-import com.tuya.smart.home.sdk.bean.HomeBean;
-import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
-import com.tuya.smart.sdk.bean.DeviceBean;
-import com.tuya.smart.wrapper.api.TuyaWrapper;
+import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.thingclips.smart.control.PluginControlService;
+import com.thingclips.smart.control.plug.api.IPluginControlService;
+import com.thingclips.smart.home.sdk.ThingHomeSdk;
+import com.thingclips.smart.home.sdk.bean.HomeBean;
+import com.thingclips.smart.home.sdk.callback.IThingHomeResultCallback;
+import com.thingclips.smart.sdk.bean.DeviceBean;
+import com.thingclips.smart.wrapper.api.ThingWrapper;
+
 
 public class ControlDevListActivity extends AppCompatActivity {
 
@@ -33,7 +32,7 @@ public class ControlDevListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control_dev_list);
-        TuyaWrapper.registerService(IPluginControlService.class, new PluginControlService());
+        ThingWrapper.registerService(IPluginControlService.class, new PluginControlService());
         pluginControlService = MicroServiceManager.getInstance().findServiceByInterface(IPluginControlService.class.getName());
         initView();
         loadData();
@@ -63,7 +62,7 @@ public class ControlDevListActivity extends AppCompatActivity {
 
 
     private void loadData() {
-        TuyaHomeSdk.newHomeInstance(getService().getCurrentHomeId()).getHomeDetail(new ITuyaHomeResultCallback() {
+        ThingHomeSdk.newHomeInstance(getService().getCurrentHomeId()).getHomeDetail(new IThingHomeResultCallback() {
             @Override
             public void onSuccess(final HomeBean homeBean) {
 

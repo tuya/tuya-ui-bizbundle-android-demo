@@ -26,8 +26,49 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    api "com.tuya.smart:tuyasmart-bizbundle-camera:${bizbundle_version}"
-    api "com.tuya.smart:tuyasmart:${sdk_version}"
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-camera:${bizbundle_version}"
+
+    //使用RN 面板需要先集成设备控制业务包
+
+//    //设备控制业务包
+//    api "com.thingclips.smart:thingsmart-bizbundle-panel:${bizbundle_version}"
+//
+//    //强烈建议引入---start
+//    //家庭相关依赖
+//    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
+//    //基础扩展能力，对标微信大部分API
+//    api "com.thingclips.smart:thingsmart-bizbundle-basekit:4.8.0-1-SNAPSHOT"
+//    //涂鸦业务护展能力
+//    api "com.thingclips.smart:thingsmart-bizbundle-bizkit:4.8.0-SNAPSHOT"
+//    //地園扩展能力
+//    api "com.thingclips.smart:thingsmart-bizbundle-mapkit:4.8.0-SNAPSHOT"
+//    //多媒体扩展能力
+//    api "com.thingclips.smart:thingsmart-bizbundle-mediakit:4.8.0-SNAPSHOT"
+//    //
+//    api "com.thingclips.smart:thingsmart-bizbundle-devicekit:4.8.0-SNAPSHOT"
+//
+//    //按需依赖---start
+//    //IPC 面板相关依赖项
+//    api "com.thingclips.smart:thingsmart-bizbundle-camera_panel:${bizbundle_version}"
+//
+//    // 高德地图
+//    implementation 'com.amap.api:search:7.9.0'
+//    implementation 'com.amap.api:3dmap:8.1.0'
+//    api 'com.thingclips.smart:thingsmart-react-native-amap:4.5.0-rc.1'
+//    // 谷歌地图
+//    api 'com.thingclips.smart:thingsmart-react-native-googlemap:4.5.0-rc.1'
+//    api 'com.google.android.gms:play-services-maps:18.0.0'
+//
+//    // qq music (speaker products)
+//    // qq 音乐 （音箱产品）
+////    api project(':qqmusic')
+//    api("com.tencent.yunxiaowei.dmsdk:core:2.3.0") {
+//        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+//    }
+//    api("com.tencent.yunxiaowei.webviewsdk:webviewsdk:2.3.0") {
+//        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+//    }
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

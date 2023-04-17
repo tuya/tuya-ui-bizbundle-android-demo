@@ -1,6 +1,6 @@
 package com.tuya.smart.bizubundle.demo;
 
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 
 public class BizBundleFamilyServiceImpl extends AbsBizBundleFamilyService {
     private long mHomeId;

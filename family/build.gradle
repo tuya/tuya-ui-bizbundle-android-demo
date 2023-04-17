@@ -2,11 +2,10 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.3"
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -25,8 +24,8 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    api "com.tuya.smart:tuyasmart-bizbundle-family:${bizbundle_version}"
-    api "com.tuya.smart:tuyasmart:${sdk_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
 
     // You need to rely on the following map gallery to ensure that the geographic location settings under the family are available.
 //    api 'com.tuya.smart:tuyasmart-bizbundle-map_amap:3.25.2-4'

@@ -187,15 +187,24 @@
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="speech sdk"
+                android:visibility="gone"
                 android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/miniapp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginBottom="50dp"
                 android:gravity="center"
                 android:text="小程序SDK"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/third_service"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:text="高级功能"
                 android:textColor="@color/black" />
 
         </LinearLayout>

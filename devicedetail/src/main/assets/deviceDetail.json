@@ -13,6 +13,40 @@
       },
       {
         "cellType": "group_edit_devices"
+      },
+      {
+        "cellType": "iot_card_recharge"
+      },
+      {
+        "cellType": "scene_and_automation"
+      },
+      {
+        "cellType": "device_evaluation"
+      }
+    ]
+  },
+  {
+    "name": "recommendProductSection",
+    "header": {
+      "cellType": "recommend_product_empty"
+    },
+    "items": [
+      {
+        "cellType": "recommend_products"
+      }
+    ],
+    "margin": {
+      "top": 16
+    }
+  },
+  {
+    "name": "thirdPartyControlSection",
+    "header": {
+      "cellType": "section_third-party_control"
+    },
+    "items": [
+      {
+        "cellType": "third-party_control"
       }
     ]
   },
