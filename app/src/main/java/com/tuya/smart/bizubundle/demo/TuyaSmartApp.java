@@ -45,6 +45,7 @@ public class TuyaSmartApp extends Application {
                 Log.e("service not implement", serviceName);
             }
         });
+        ThingThemeInitializer.INSTANCE.init(context);
         ThingOptimusSdk.init(this);
 
         // register family service，mall bizbundle don't have to implement it.
