@@ -9,12 +9,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-
-import com.tuya.smart.api.service.MicroServiceManager;
-import com.tuya.smart.control.PluginControlService;
-import com.tuya.smart.control.plug.api.IPluginControlService;
-import com.tuya.smart.sdk.bean.DeviceBean;
-import com.tuya.smart.wrapper.api.TuyaWrapper;
+import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.control.PluginControlService;
+import com.thingclips.smart.control.plug.api.IPluginControlService;
+import com.thingclips.smart.sdk.bean.DeviceBean;
+import com.thingclips.smart.wrapper.api.ThingWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +32,7 @@ public class SimpleDevListAdapter extends RecyclerView.Adapter<SimpleDevListAdap
 
     public SimpleDevListAdapter(Context context) {
         this.context = context;
-        TuyaWrapper.registerService(IPluginControlService.class, new PluginControlService());
+        ThingWrapper.registerService(IPluginControlService.class, new PluginControlService());
         pluginControlService = MicroServiceManager.getInstance().findServiceByInterface(IPluginControlService.class.getName());
     }
 

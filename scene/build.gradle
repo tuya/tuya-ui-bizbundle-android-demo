@@ -24,14 +24,14 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    api ("com.tuya.smart:tuyasmart-bizbundle-scene:${bizbundle_version}")
+    api ("com.thingclips.smart:thingsmart-bizbundle-scene:${bizbundle_version}")
 
-//    api 'com.tuya.smart:tuyasmart-bizbundle-map_google:4.2.0-SNAPSHOT'
-//    api 'com.tuya.smart:tuyasmart-bizbundle-location_google:4.2.0-SNAPSHOT'
+    api "com.thingclips.smart:thingsmart-bizbundle-map_google:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-location_google:${bizbundle_version}"
 
-    api "com.tuya.smart:tuyasmart-bizbundle-map_amap:${bizbundle_version}"
-    api "com.tuya.smart:tuyasmart-bizbundle-location_amap:${bizbundle_version}"
+//    api "com.thingclips.smart:thingsmart-bizbundle-map_amap:${bizbundle_version}"
+//    api "com.thingclips.smart:thingsmart-bizbundle-location_amap:${bizbundle_version}"
 
-    api "com.tuya.smart:tuyasmart:${sdk_version}"
+    api "com.thingclips.smart:thingsmart:${sdk_version}"
 
 }

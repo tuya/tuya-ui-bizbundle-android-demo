@@ -6,11 +6,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.tuya.smart.api.MicroContext;
-import com.tuya.smart.api.router.UrlBuilder;
-import com.tuya.smart.api.router.UrlRouter;
-import com.tuya.smart.message.base.activity.message.MessageContainerActivity;
-import com.tuyasmart.stencil.utils.ActivityUtils;
+import com.thingclips.smart.api.MicroContext;
+import com.thingclips.smart.api.router.UrlBuilder;
+import com.thingclips.smart.api.router.UrlRouter;
+import com.thingclips.smart.message.base.activity.message.MessageContainerActivity;
+import com.thingclips.stencil.utils.ActivityUtils;
 
 public class MessageActivity extends AppCompatActivity implements View.OnClickListener {
 

@@ -1,0 +1,212 @@
+{
+  "archerGroup": [
+    {
+      "name": "headerSection",
+      "clazz": "com.thingclips.smart.device_detail.group.HeaderGroup"
+    },
+    {
+      "name": "recommendProductSection",
+      "clazz": "com.thingclips.smart.device_detail.group.RecommendProductSectionGroup"
+    },
+    {
+      "name": "thirdPartyControlSection",
+      "clazz": "com.thingclips.smart.device_detail.group.ThirdPartyControlSectionGroup"
+    },
+    {
+      "name": "offLineWarnSection",
+      "clazz": "com.thingclips.smart.device_detail.group.OffLineWarnSectionGroup"
+    }
+  ],
+  "archerCell": [
+    {
+      "name": "check_device_network",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.CheckDeviceNetworkArcherCell"
+    },
+    {
+      "name": "product_instruction",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.ProductInstructionArcherCell"
+    },
+    {
+      "name": "section_off_line_warn",
+      "type": 2,
+      "clazz": "com.thingclips.smart.device_detail.cell.OffLineWarnHeaderCell"
+    },
+    {
+      "name": "location_manage",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.LocationManageArcherCell"
+    },
+    {
+      "name": "group_edit_devices",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.GroupEditDeviceArcherCell"
+    },
+    {
+      "name": "iot_card_recharge",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.IOTCardRechargeArcherCell"
+    },
+    {
+      "name": "sub_device_migrate",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.SubDeviceMigrateArcherCell"
+    },
+    {
+      "name": "footer",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.FooterArcherCell"
+    },
+    {
+      "name": "device_evaluation",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.DeviceEvaluationArcherCell"
+    },
+    {
+      "name": "check_firmware_update",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.OtaCheckArcherCell"
+    },
+    {
+      "name": "bind_multi_control_link",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.MultiControlArcherCell"
+    },
+    {
+      "name": "recommend_products",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.RecommendProductArcherCell"
+    },
+    {
+      "name": "recommend_product_empty",
+      "type": 2,
+      "clazz": "com.thingclips.smart.device_detail.cell.RecommendProductEmptyArcherCell"
+    },
+    {
+      "name": "header",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.HeaderArcherCell"
+    },
+    {
+      "name": "section_other",
+      "type": 2,
+      "clazz": "com.thingclips.smart.device_detail.cell.SectionOtherCell"
+    },
+    {
+      "name": "off_line_warn",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.OffLineWarnArcherCell"
+    },
+    {
+      "name": "sync_control",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.SyncControlArcherCell"
+    },
+    {
+      "name": "group_create",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.GroupCreateArcherCell"
+    },
+    {
+      "name": "add_icon_to_home_screen",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.AddIconToHomeScreenArcherCell"
+    },
+    {
+      "name": "link_device",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.LinkDeviceArcherCell"
+    },
+    {
+      "name": "third-party_control",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.ThirdPartControlArcherCell"
+    },
+    {
+      "name": "show_infrared_gateway_sub_device",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.InfraredSubDeviceArcherCell"
+    },
+    {
+      "name": "connect_cloud_activation",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.ConnectCloudActivationArcherCell"
+    },
+    {
+      "name": "accessory_manage",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.AccessoriesManagerArcherCell"
+    },
+    {
+      "name": "help_and_feedback",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.HelpAndFeedbackArcherCell"
+    },
+    {
+      "name": "device_from",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.DeviceFromArcherCell"
+    },
+    {
+      "name": "panel_share_group_or_device",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.SharedArcherCell"
+    },
+    {
+      "name": "device_info",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.DeviceInfoArcherCell"
+    },
+    {
+      "name": "device_detail_empty",
+      "type": 2,
+      "clazz": "com.thingclips.smart.device_detail.cell.EmptyArcherCell"
+    },
+    {
+      "name": "net_setting",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.NetSettingArcherCell"
+    },
+    {
+      "name": "scene_and_automation",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.SceneAutomationArcherCell"
+    },
+    {
+      "name": "section_third-party_control",
+      "type": 2,
+      "clazz": "com.thingclips.smart.device_detail.cell.ThirdPartControlHeaderCell"
+    },
+    {
+      "name": "set_icon",
+      "type": 1,
+      "clazz": "com.thingclips.device.base.info.cell.DevEditIconCell"
+    },
+    {
+      "name": "set_name",
+      "type": 1,
+      "clazz": "com.thingclips.device.base.info.cell.DevEditNameCell"
+    },
+    {
+      "name": "set_position",
+      "type": 1,
+      "clazz": "com.thingclips.device.base.info.cell.DevEditPositionCell"
+    },
+    {
+      "name": "dev_icon",
+      "type": 1,
+      "clazz": "com.thingclips.device.base.info.cell.DeviceIconCell"
+    },
+    {
+      "name": "c_test_insert",
+      "type": 1,
+      "clazz": "com.thingclips.smart.bizbundle.devicedetail.demo.CTestInsertCell"
+    },
+    {
+      "name": "c_test_async_insert",
+      "type": 1,
+      "clazz": "com.thingclips.smart.bizbundle.devicedetail.demo.CTestAsyncInsertCell"
+    }
+  ]
+}

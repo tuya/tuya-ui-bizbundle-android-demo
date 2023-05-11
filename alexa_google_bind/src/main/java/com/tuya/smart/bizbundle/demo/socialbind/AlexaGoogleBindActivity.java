@@ -11,17 +11,17 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.tuya.smart.android.common.utils.L;
-import com.tuya.smart.api.MicroContext;
-import com.tuya.smart.api.router.UrlBuilder;
-import com.tuya.smart.api.router.UrlRouter;
-import com.tuya.smart.api.service.MicroServiceManager;
-import com.tuya.smart.bind.TuyaSocialLoginBindManager;
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.home.sdk.callback.ITuyaResultCallback;
-import com.tuya.smart.social.auth.manager.api.AuthorityBean;
-import com.tuya.smart.social.auth.manager.api.ResultCallback;
-import com.tuya.smart.social.auth.manager.api.SocialAuthManagerClient;
+import com.thingclips.smart.android.common.utils.L;
+import com.thingclips.smart.api.MicroContext;
+import com.thingclips.smart.api.router.UrlBuilder;
+import com.thingclips.smart.api.router.UrlRouter;
+import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.bind.ThingSocialLoginBindManager;
+import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.thingclips.smart.home.sdk.callback.IThingResultCallback;
+import com.thingclips.smart.social.auth.manager.api.AuthorityBean;
+import com.thingclips.smart.social.auth.manager.api.ResultCallback;
+import com.thingclips.smart.social.auth.manager.api.SocialAuthManagerClient;
 
 import java.util.ArrayList;
 
@@ -39,58 +39,47 @@ public class AlexaGoogleBindActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alexa_google_bind);
         initView();
-        findViewById(R.id.bt_alexa_bind).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AbsBizBundleFamilyService familyService = MicroServiceManager.getInstance().findServiceByInterface(AbsBizBundleFamilyService.class.getName());
-                long homeId = 0;
-                if (null != familyService) {
-                    homeId = familyService.getCurrentHomeId();
+        findViewById(R.id.bt_alexa_bind).setOnClickListener(v -> {
+            AbsBizBundleFamilyService familyService = MicroServiceManager.getInstance().findServiceByInterface(AbsBizBundleFamilyService.class.getName());
+            long homeId = 0;
+            if (null != familyService) {
+                homeId = familyService.getCurrentHomeId();
+            }
+
+            ThingSocialLoginBindManager.Companion.getInstance().alexaBind(AlexaGoogleBindActivity.this, String.valueOf(homeId), new IThingResultCallback<Boolean>() {
+                @Override
+                public void onSuccess(Boolean result) {
+                    L.d(TAG, "alexa bind onSuccess : " + result);
                 }
 
-                TuyaSocialLoginBindManager.Companion.getInstance().alexaBind(AlexaGoogleBindActivity.this, String.valueOf(homeId), new ITuyaResultCallback<Boolean>() {
-                    @Override
-                    public void onSuccess(Boolean result) {
-                        L.d(TAG, "alexa bind onSuccess : " + result);
-                    }
-
-                    @Override
-                    public void onError(String errorCode, String errorMessage) {
-                        L.d(TAG, "alexa bind onError : errorCode：" + errorCode + " errorMessage：" + errorMessage);
-                    }
-                });
-            }
+                @Override
+                public void onError(String errorCode, String errorMessage) {
+                    L.d(TAG, "alexa bind onError : errorCode：" + errorCode + " errorMessage：" + errorMessage);
+                }
+            });
         });
 
-        findViewById(R.id.bt_google_bind).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AbsBizBundleFamilyService familyService = MicroServiceManager.getInstance().findServiceByInterface(AbsBizBundleFamilyService.class.getName());
-                long homeId = 0;
-                if (null != familyService) {
-                    homeId = familyService.getCurrentHomeId();
+        findViewById(R.id.bt_google_bind).setOnClickListener(v -> {
+            AbsBizBundleFamilyService familyService = MicroServiceManager.getInstance().findServiceByInterface(AbsBizBundleFamilyService.class.getName());
+            long homeId = 0;
+            if (null != familyService) {
+                homeId = familyService.getCurrentHomeId();
+            }
+
+            ThingSocialLoginBindManager.Companion.getInstance().googleBind(AlexaGoogleBindActivity.this, String.valueOf(homeId), new IThingResultCallback<Boolean>() {
+                @Override
+                public void onSuccess(Boolean result) {
+                    L.d(TAG, "google bind onSuccess : " + result);
                 }
 
-                TuyaSocialLoginBindManager.Companion.getInstance().googleBind(AlexaGoogleBindActivity.this, String.valueOf(homeId), new ITuyaResultCallback<Boolean>() {
-                    @Override
-                    public void onSuccess(Boolean result) {
-                        L.d(TAG, "google bind onSuccess : " + result);
-                    }
-
-                    @Override
-                    public void onError(String errorCode, String errorMessage) {
-                        L.d(TAG, "google bind onError : errorCode：" + errorCode + " errorMessage：" + errorMessage);
-                    }
-                });
-            }
+                @Override
+                public void onError(String errorCode, String errorMessage) {
+                    L.d(TAG, "google bind onError : errorCode：" + errorCode + " errorMessage：" + errorMessage);
+                }
+            });
         });
 
-        findViewById(R.id.bt_get_bind_list).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getBindSkillList();
-            }
-        });
+        findViewById(R.id.bt_get_bind_list).setOnClickListener(v -> getBindSkillList());
     }
 
     private void initView() {
@@ -99,21 +88,18 @@ public class AlexaGoogleBindActivity extends AppCompatActivity {
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         bindAdapter = new BindAdapter();
         mRecyclerView.setAdapter(bindAdapter);
-        bindAdapter.setOnItemClickListener(new BindAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(AuthorityBean authorityBean, int var2) {
-                try {
-                    String route = "SocialAuthManagerAppAction";
-                    UrlBuilder mBuilder = UrlRouter.makeBuilder(AlexaGoogleBindActivity.this, route);
-                    Bundle newBundle = new Bundle();
-                    newBundle.putString(KEY_ACTION, GO_TO_DE_AUTHORIZA);
-                    newBundle.putParcelable(AUTHORITY_BEAN, authorityBean);
-                    mBuilder.setRequestCode(REQUEST_REFRESH_MANAGER_AUTHORIZATION);
-                    mBuilder.putExtras(newBundle);
-                    UrlRouter.execute(mBuilder);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        bindAdapter.setOnItemClickListener((authorityBean, var2) -> {
+            try {
+                String route = "SocialAuthManagerAppAction";
+                UrlBuilder mBuilder = UrlRouter.makeBuilder(AlexaGoogleBindActivity.this, route);
+                Bundle newBundle = new Bundle();
+                newBundle.putString(KEY_ACTION, GO_TO_DE_AUTHORIZA);
+                newBundle.putParcelable(AUTHORITY_BEAN, authorityBean);
+                mBuilder.setRequestCode(REQUEST_REFRESH_MANAGER_AUTHORIZATION);
+                mBuilder.putExtras(newBundle);
+                UrlRouter.execute(mBuilder);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         });
     }

@@ -7,9 +7,10 @@ import android.view.View;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.tuya.smart.api.router.UrlRouter;
-import com.tuya.smart.family.listener.HomeInviteListener;
-import com.tuya.smart.home.sdk.TuyaHomeSdk;
+import com.thingclips.smart.api.router.UrlRouter;
+import com.thingclips.smart.family.listener.HomeInviteListener;
+import com.thingclips.smart.home.sdk.ThingHomeSdk;
+
 
 public class FamilyManageActivity extends AppCompatActivity {
 
@@ -50,12 +51,12 @@ public class FamilyManageActivity extends AppCompatActivity {
     }
 
     private void initializeInvitationListener() {
-        TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(homeInviteListener);
+        ThingHomeSdk.getHomeManagerInstance().registerThingHomeChangeListener(homeInviteListener);
     }
 
     @Override
     protected void onDestroy() {
-        TuyaHomeSdk.getHomeManagerInstance().unRegisterTuyaHomeChangeListener(homeInviteListener);
+        ThingHomeSdk.getHomeManagerInstance().unRegisterThingHomeChangeListener(homeInviteListener);
         super.onDestroy();
     }
 }

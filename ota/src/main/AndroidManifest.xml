@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tuya.smart.bizbundle.ota.demo">
+    package="com.thingclips.smart.bizbundle.ota.demo">
 
     <application>
-        <activity android:name=".OtaActivity"></activity>
+        <activity android:name="com.thingclips.smart.bizbundle.ota.demo.OtaActivity"></activity>
     </application>
 
 </manifest>

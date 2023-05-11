@@ -14,7 +14,8 @@
         tools:replace="android:theme,android:supportsRtl,android:allowBackup">
 
         <activity android:name=".MainActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:exported="false">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
                 <!--  demo use only start  -->
@@ -39,10 +40,10 @@
 
 
         <meta-data
-            android:name="TUYA_SMART_APPKEY"
+            android:name="THING_SMART_APPKEY"
             android:value="${TUYA_SMART_APPKEY}" />
         <meta-data
-            android:name="TUYA_SMART_SECRET"
+            android:name="THING_SMART_SECRET"
             android:value="${TUYA_SMART_SECRET}" />
 
         <meta-data
@@ -51,8 +52,9 @@
 
         <!-- demo use only start -->
         <activity
-            android:name="com.tuya.smart.demo_login.base.activity.SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:name="com.thingclips.smart.demo_login.base.activity.SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

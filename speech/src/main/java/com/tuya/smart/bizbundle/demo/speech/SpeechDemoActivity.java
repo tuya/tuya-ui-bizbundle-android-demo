@@ -7,9 +7,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.tuya.smart.api.router.UrlRouter;
-import com.tuya.smart.api.service.MicroServiceManager;
-import com.tuya.smart.speech.api.AbsTuyaAssisantGuideService;
+import com.thingclips.smart.api.router.UrlRouter;
+import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.speech.api.AbsThingAssisantGuideService;
 
 /**
  * Dscription:
@@ -25,7 +25,7 @@ public class SpeechDemoActivity extends AppCompatActivity {
         TextView tvIsSportSpeech = findViewById(R.id.tv_is_sport_speech);
 
         //是否支持语音
-        AbsTuyaAssisantGuideService assistantGuideService = MicroServiceManager.getInstance().findServiceByInterface(AbsTuyaAssisantGuideService.class.getName());
+        AbsThingAssisantGuideService assistantGuideService = MicroServiceManager.getInstance().findServiceByInterface(AbsThingAssisantGuideService.class.getName());
         if (assistantGuideService != null) {
             boolean isSupportSpeech = assistantGuideService.isSupportAssisantSpeech();
             tvIsSportSpeech.setText("is sport speech: " + isSupportSpeech);
@@ -44,7 +44,7 @@ public class SpeechDemoActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        AbsTuyaAssisantGuideService assistantGuideService = MicroServiceManager.getInstance().findServiceByInterface(AbsTuyaAssisantGuideService.class.getName());
+        AbsThingAssisantGuideService assistantGuideService = MicroServiceManager.getInstance().findServiceByInterface(AbsThingAssisantGuideService.class.getName());
         if (assistantGuideService != null) {
             //弹出添加桌面小组件 弹窗
             assistantGuideService.checkAssisantGuideDialog(this);

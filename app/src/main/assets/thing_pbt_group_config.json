@@ -1,0 +1,27 @@
+[
+  {
+    "npmName": "MapKit",
+    "version": "3.0.5",
+    "PBTGroupName": "TUNIMapKit"
+  },
+  {
+    "npmName": "DeviceKit",
+    "version": "3.3.2",
+    "PBTGroupName": "TUNIDeviceKit"
+  },
+  {
+    "npmName": "BaseKit",
+    "version": "3.3.12",
+    "PBTGroupName": "TUNIBaseKit"
+  },
+  {
+    "npmName": "MediaKit",
+    "version": "3.0.3",
+    "PBTGroupName": "TUNIMediaKit"
+  },
+  {
+    "npmName": "BizKit",
+    "version": "3.2.9",
+    "PBTGroupName": "TUNIBizKit"
+  }
+]

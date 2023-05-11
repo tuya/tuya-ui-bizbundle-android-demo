@@ -6,36 +6,25 @@ buildscript {
         bizbundle_version = "4.2.0-32"
     }
     repositories {
-        maven {
-            url 'https://maven-other.tuya.com/repository/maven-releases/'
-        }
-
+        maven { url "https://maven-other.tuya.com/repository/maven-commercial-releases/" }
         google()
         mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.2'
-        classpath "com.tuya.smart:tuyasmart-theme-open-plugin:1.1.0"
+        classpath "com.thingclips.smart:thingsmart-theme-open-plugin:1.0.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:2.36"
-
-        classpath "com.google.dagger:hilt-android-gradle-plugin:2.36"
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
 allprojects {
     repositories {
-        maven { url 'https://maven-other.tuya.com/repository/maven-releases/' }
-        // 商业 SDK maven 源
         maven { url "https://maven-other.tuya.com/repository/maven-commercial-releases/" }
         google()
         mavenCentral()
 
         maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'http://central.maven.org/maven2/' }
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://jitpack.io" }
         maven { url 'https://developer.huawei.com/repo/' }

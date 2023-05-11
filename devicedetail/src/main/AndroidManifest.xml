@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tuya.smart.bizubundle.panelmore.demo">
+    package="com.thingclips.smart.bizubundle.devicedetail.demo">
     <application>
-        <activity android:name=".DeviceDetailActivity"></activity>
+        <activity android:name="com.thingclips.smart.bizbundle.devicedetail.demo.DeviceDetailActivity"></activity>
     </application>
 </manifest>

@@ -7,6 +7,13 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:text="打开扫一扫"
+        android:layout_marginTop="30dp"
+        android:onClick="actionScan"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:text="@string/start_device_active"
         android:onClick="actionConfig"

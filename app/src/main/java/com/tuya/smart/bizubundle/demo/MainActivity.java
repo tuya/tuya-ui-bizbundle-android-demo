@@ -8,21 +8,21 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.tuya.smart.android.common.utils.L;
-import com.tuya.smart.android.user.api.ILogoutCallback;
-import com.tuya.smart.api.service.MicroServiceManager;
-import com.tuya.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.tuya.smart.demo_login.base.utils.LoginHelper;
-import com.tuya.smart.home.sdk.TuyaHomeSdk;
-import com.tuya.smart.home.sdk.api.ITuyaHomeChangeListener;
-import com.tuya.smart.home.sdk.bean.HomeBean;
-import com.tuya.smart.home.sdk.callback.ITuyaGetHomeListCallback;
-import com.tuya.smart.home.sdk.callback.ITuyaHomeResultCallback;
-import com.tuya.smart.sdk.bean.DeviceBean;
-import com.tuya.smart.sdk.bean.GroupBean;
-import com.tuya.smart.utils.ProgressUtil;
-import com.tuya.smart.utils.ToastUtil;
-import com.tuya.smart.wrapper.api.TuyaWrapper;
+import com.thingclips.smart.android.common.utils.L;
+import com.thingclips.smart.android.user.api.ILogoutCallback;
+import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.demo_login.base.utils.LoginHelper;
+import com.thingclips.smart.home.sdk.ThingHomeSdk;
+import com.thingclips.smart.home.sdk.api.IThingHomeChangeListener;
+import com.thingclips.smart.home.sdk.bean.HomeBean;
+import com.thingclips.smart.home.sdk.callback.IThingGetHomeListCallback;
+import com.thingclips.smart.home.sdk.callback.IThingHomeResultCallback;
+import com.thingclips.smart.sdk.bean.DeviceBean;
+import com.thingclips.smart.sdk.bean.GroupBean;
+import com.thingclips.smart.utils.ProgressUtil;
+import com.thingclips.smart.utils.ToastUtil;
+import com.thingclips.smart.wrapper.api.ThingWrapper;
+import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mCurrentFamilyName;
     private RouterPresenter routePresenter;
-    private ITuyaHomeChangeListener mHomeChangeListener = new ITuyaHomeChangeListener() {
+    private IThingHomeChangeListener mHomeChangeListener = new IThingHomeChangeListener() {
         @Override
         public void onHomeAdded(long homeId) {
             requestHomeDetail(homeId);
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private void requestHomeDetail(long id) {
-        TuyaHomeSdk.newHomeInstance(id).getHomeDetail(new ITuyaHomeResultCallback() {
+        ThingHomeSdk.newHomeInstance(id).getHomeDetail(new IThingHomeResultCallback() {
             @Override
             public void onSuccess(HomeBean bean) {
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
         //此处只是演示代码，集成时请在登录成功后调用
         //This method must be called after successful login
-        TuyaWrapper.onLogin();
+        ThingWrapper.onLogin();
 
         // sample code
         mCurrentFamilyName = findViewById(R.id.current_family_name);
@@ -100,11 +100,11 @@ public class MainActivity extends AppCompatActivity {
         });
         ProgressUtil.showLoading(this, "Loading...");
         getHomeList();
-        TuyaHomeSdk.getHomeManagerInstance().registerTuyaHomeChangeListener(mHomeChangeListener);
+        ThingHomeSdk.getHomeManagerInstance().registerThingHomeChangeListener(mHomeChangeListener);
         findViewById(R.id.logout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TuyaHomeSdk.getUserInstance().logout(new ILogoutCallback() {
+                ThingHomeSdk.getUserInstance().logout(new ILogoutCallback() {
                     @Override
                     public void onSuccess() {
                         //演示代码
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
                         //退出成功后必须调用此方法
                         //This method must be called on exit.
-                        TuyaWrapper.onLogout(MainActivity.this);
+                        ThingWrapper.onLogout(MainActivity.this);
                     }
 
                     @Override
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getHomeList() {
-        TuyaHomeSdk.getHomeManagerInstance().queryHomeList(new ITuyaGetHomeListCallback() {
+        ThingHomeSdk.getHomeManagerInstance().queryHomeList(new IThingGetHomeListCallback() {
             @Override
             public void onSuccess(List<HomeBean> list) {
                 if (!list.isEmpty()) {
@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent();
-                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.ota.demo.OtaActivity");
+                i.setClassName(MainActivity.this, "com.thingclips.smart.bizbundle.ota.demo.OtaActivity");
                 startActivity(i);
             }
         });
@@ -268,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent();
-                i.setClassName(MainActivity.this, "com.tuya.groupmanager.GroupManagerActivity");
+                i.setClassName(MainActivity.this, "com.thingclips.groupmanager.GroupManagerActivity");
                 startActivity(i);
             }
         });
@@ -286,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent();
-                i.setClassName(MainActivity.this, "com.tuya.appsdk.sample.lightscene.LightSceneManagerActivity");
+                i.setClassName(MainActivity.this, "com.thingclips.appsdk.sample.lightscene.LightSceneManagerActivity");
                 startActivity(i);
             }
         });
@@ -315,13 +315,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        findViewById(R.id.third_service).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.thingclips.appsdk.sample.third.service.ThirdServiceManagerActivity");
+                startActivity(i);
+            }
+        });
+        findViewById(R.id.miniapp).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.thingclips.smart.bizbundle.miniapp.demo.ActMiniAppSample");
+                startActivity(i);
+            }
+        });
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        TuyaHomeSdk.getHomeManagerInstance().unRegisterTuyaHomeChangeListener(mHomeChangeListener);
-        TuyaHomeSdk.getHomeManagerInstance().onDestroy();
+        ThingHomeSdk.getHomeManagerInstance().unRegisterThingHomeChangeListener(mHomeChangeListener);
+        ThingHomeSdk.getHomeManagerInstance().onDestroy();
     }
 
     @Override
