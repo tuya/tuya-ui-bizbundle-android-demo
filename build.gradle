@@ -3,7 +3,7 @@ buildscript {
     ext {
         kotlin_version = '1.5.30'
         sdk_version = '4.0.0'
-        bizbundle_version = "4.2.0-22"
+        bizbundle_version = "4.2.0-32"
     }
     repositories {
         maven {
