@@ -34,7 +34,8 @@
     ],
     "PIPE_LINE_BUSINESS_com.thingclips.smart.initializer.custompipeline.UserAgreeScenarioType": [
       "com.thingclips.smart.jsbridge.PreInitWebPipeLine",
-      "com.thingclips.smart.dynamic.string.NetworkRequestPipeline"
+      "com.thingclips.smart.dynamic.string.NetworkRequestPipeline",
+      "com.gzl.smart.gzlminiapp.smart.init.GZLMiniAppPipeLine"
     ],
     "PIPE_LINE_APPLICATION_SYNC": [
       "com.thingclips.smart.theme.core.ThemeSyncPipeLine",
@@ -416,6 +417,9 @@
     "com.thingclips.smart.jsbridge.HyBridBrowserApp": [
       "hybrid_browser",
       "thingweb"
+    ],
+    "com.gzl.smart.gzlminiapp.smart.router.MiniAppRouter": [
+      "miniApp"
     ]
   },
   "serviceMap": {

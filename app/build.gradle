@@ -90,6 +90,8 @@ dependencies {
     implementation project(path: ':share')
     implementation project(path: ':control')
     implementation project(path: ':third_service')
+    implementation project(":miniapp")
+
 
     implementation "com.thingclips.smart:thingsmart-theme-open:1.0.0"
     implementation "com.thingclips.smart:thingsmart-commonbiz-relation-api:4.5.0-rc.1"

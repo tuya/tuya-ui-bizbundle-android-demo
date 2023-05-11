@@ -23,5 +23,10 @@
     "npmName": "BizKit",
     "version": "3.2.9",
     "PBTGroupName": "TUNIBizKit"
+  },
+  {
+    "npmName": "MiniKit",
+    "version": "3.1.0",
+    "PBTGroupName": "TUNIMiniKit"
   }
 ]
