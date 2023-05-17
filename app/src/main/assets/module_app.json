@@ -4,7 +4,8 @@
       "com.thingclips.smart.family.FamilyPipeLine",
       "com.thingclips.smart.health.HealthDataCenterPipeLine",
       "com.thingclips.smart.rnplugin.trctpublicblebeaconmanager.ThingBeaconFencePipeLine",
-      "com.thingclips.smart.bluemesh.MeshAppStartPipeLine"
+      "com.thingclips.smart.bluemesh.MeshAppStartPipeLine",
+      "com.gzl.smart.gzlminiapp.smart.init.GZLMiniAppHomeIdlePipeLine"
     ],
     "PIPE_LINE_BUSINESS_PIPELINE_APPLICATION_START": [
       "com.thingclips.smart.panel.RNStatePipeline",
@@ -420,6 +421,19 @@
     ],
     "com.gzl.smart.gzlminiapp.smart.router.MiniAppRouter": [
       "miniApp"
+    ],
+    "com.gzl.smart.gzlminiapp.smart.router.AddMiniAppRouter": [
+      "addMiniApp"
+    ],
+    "com.gzl.smart.gzlminiapp.smart.router.AddIDEMiniAppRouter": [
+      "addIDEMiniApp"
+    ],
+    "com.gzl.smart.gzlminiapp.smart.router.MiniWidgetRouter": [
+      "miniWidget",
+      "miniWidgetSheet"
+    ],
+    "com.gzl.smart.gzlminiapp.smart.router.DToolsDebugRouter": [
+      "miniapp_debug_entrance"
     ]
   },
   "serviceMap": {
@@ -438,9 +452,24 @@
     "com.thingclips.smart.scene.business.service.SceneConditionService": "com.thingclips.smart.scene.condition.service.SceneConditionServiceImpl",
     "com.thingclips.smart.sharemanager.api.AbsShareManager": "com.thingclips.smart.sharemanager.AbsShareManagerImpl",
     "com.thingclips.smart.ota.api.BleOtaService": "com.thingclips.smart.bleota.BleOtaServiceImpl",
+    "com.gzl.smart.gzlminiapp.core.api.miniapp.AbsMiniAppPluginService": "com.gzl.smart.gzlminiapp.core.service.MiniAppPluginServiceImpl",
+    "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppPreService": "com.gzl.smart.gzlminiapp.core.service.MiniAppPreServiceImpl",
+    "com.gzl.smart.gzlminiapp.smart_api.AbsMiniAppConfigInjectService": "com.gzl.smart.gzlminiapp.smart.init.GZLMiniAppAdapterInjectService",
+    "com.gzl.smart.gzlminiapp.core.api.miniapp.AbsMiniAppExtApiService": "com.gzl.smart.gzlminiapp.core.service.MiniAppExtApiServiceImpl",
+    "com.gzl.smart.gzlminiapp.open.api.AbsMiniWidgetService": "com.gzl.smart.gzlminiapp.widget.service.MiniWidgetServiceImpl",
+    "com.gzl.smart.gzlminiapp.core.api.miniapp.AbsMiniAppResourceService": "com.gzl.smart.gzlminiapp.core.service.MiniAppResourceServiceImpl",
+    "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppVersionService": "com.gzl.smart.gzlminiapp.core.service.MiniAppVersionServiceImpl",
+    "com.gzl.smart.gzlminiapp.core.api.utils.AbsMiniAppUtilService": "com.gzl.smart.gzlminiapp.core.service.MiniAppUtilServiceImpl",
+    "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppClearCacheService": "com.gzl.smart.gzlminiapp.core.service.MiniAppClearCacheServiceImpl",
     "com.thingclips.smart.thingtangramapi.TangramApiService": "com.thingclips.smart.android.tangram.TangramServiceImpl",
+    "com.gzl.smart.gzlminiapp.core.api.miniapp.AbsMiniAppExtInfoService": "com.gzl.smart.gzlminiapp.core.service.MiniAppExtInfoServiceImpl",
     "com.thingclips.smart.commonbiz.shortcut.api.AbsShortcutService": "com.thingclips.smart.commonbiz.shortcut.ShortcutServiceImpl",
+    "com.gzl.smart.gzlminiapp.core.api.difflayer.AbsMiniAppDiffLayerService": "com.gzl.smart.gzlminiapp.core.difflayer.MiniAppDiffLayerServiceImpl",
     "com.thingclips.smart.file.download.FileDownService": "com.thingclips.smart.file.download.FileDownServiceImpl",
+    "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppFragmentService": "com.gzl.smart.gzlminiapp.core.service.MiniAppFragmentServiceImpl",
+    "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppBasePluginService": "com.gzl.smart.gzlminiapp.core.service.MiniAppBasePluginServiceImpl",
+    "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppInterfaceService": "com.gzl.smart.gzlminiapp.core.service.MiniAppInterfaceServiceImpl",
+    "com.gzl.smart.gzlminiapp.core.api.bridge.AbsRNBridgeService": "com.gzl.smart.gzlminiapp.miniapp_rnbridge.RNBridgeProvider",
     "com.thingclips.smart.thingsmart_device_detail.api.IPluginInfraredSubDevDisplayService": "com.thingclips.smart.device_detail.PluginInfraredSubDevDisplayServiceImp",
     "com.thingclips.smart.netdiagnosis.api.NetDiagnosisService": "com.thingclips.smart.netdiagnosis.NetDiagnosisServiceImpl",
     "com.thingclips.smart.ipc.panel.api.AbsCameraBusinessService": "com.thingclips.smart.camera.base.business.CameraBusinessService",
