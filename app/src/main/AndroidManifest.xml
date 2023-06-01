@@ -13,9 +13,10 @@
         android:theme="@style/Base_BizBundle_Theme"
         tools:replace="android:theme,android:supportsRtl,android:allowBackup">
 
-        <activity android:name=".MainActivity"
-            android:launchMode="singleTask"
-            android:exported="false">
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:launchMode="singleTask">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
                 <!--  demo use only start  -->
@@ -38,6 +39,16 @@
             -->
         </activity-alias>
 
+        <activity-alias
+            android:name="com.tuya.smart.hometab.activity.main"
+            android:exported="true"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="com.thingclips.smart.action.router" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
 
         <meta-data
             android:name="THING_SMART_APPKEY"
@@ -53,8 +64,8 @@
         <!-- demo use only start -->
         <activity
             android:name="com.thingclips.smart.demo_login.base.activity.SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
