@@ -3,7 +3,7 @@ buildscript {
     ext {
         kotlin_version = '1.6.0'
         sdk_version = '5.0.0'
-        bizbundle_version = "4.8.0-4"
+        bizbundle_version = "4.8.0-6"
     }
     repositories {
         maven { url "https://maven-other.tuya.com/repository/maven-commercial-releases/" }
