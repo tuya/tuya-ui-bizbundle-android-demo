@@ -4,6 +4,10 @@
       "name": "com.thingclips.smart.plugin.tunidevicecontrolmanager.TUNIDeviceControlManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
+    "TUNIAIAssistantManager": {
+      "name": "com.thingclips.smart.plugin.tuniaiassistantmanager.TUNIAIAssistantManager",
+      "version": "1.0"
+    },
     "TUNIImagePickerManager": {
       "name": "com.thingclips.smart.plugin.tuniimagepickermanager.TUNIImagePickerManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
@@ -108,6 +112,10 @@
       "name": "com.thingclips.smart.plugin.tunigyroscopemanager.TUNIGyroscopeManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
+    "TUNIWebSocketManager": {
+      "name": "com.thingclips.smart.plugin.tuniwebsocketmanager.TUNIWebSocketManager",
+      "version": "1.0"
+    },
     "TUNIGZLTabBarManager": {
       "name": "com.thingclips.smart.plugin.tunigzltabbarmanager.TUNIGZLTabBarManager",
       "version": "3.0.0-rc.3"
@@ -142,7 +150,7 @@
     },
     "TUNILocationManager": {
       "name": "com.thingclips.smart.plugin.tunilocationmanager.TUNILocationManager",
-      "version": "2.0.2"
+      "version": "2.0.4"
     },
     "TUNIDLCameraManager": {
       "name": "com.thingclips.smart.plugin.tunidlcameramanager.TUNIDLCameraManager",
@@ -155,6 +163,10 @@
     "TUNIAudioManager": {
       "name": "com.thingclips.smart.plugin.tuniaudiomanager.TUNIAudioManager",
       "version": "1.1.5-anonymize.1"
+    },
+    "TUNIASRManager": {
+      "name": "com.thingclips.smart.plugin.tuniasrmanager.TUNIASRManager",
+      "version": "1.0.0-rc.40"
     },
     "TUNICloudStorageSignatureManager": {
       "name": "com.thingclips.smart.plugin.tunicloudstoragesignaturemanager.TUNICloudStorageSignatureManager",
@@ -170,7 +182,7 @@
     },
     "TUNIPhoneNetworkManager": {
       "name": "com.thingclips.smart.plugin.tuniphonenetworkmanager.TUNIPhoneNetworkManager",
-      "version": "1.3.0-anonymize.1"
+      "version": "1.3.0-anonymize.5"
     },
     "TUNIAppleHealthManager": {
       "name": "com.thingclips.smart.plugin.tuniapplehealthmanager.TUNIAppleHealthManager",
@@ -182,7 +194,7 @@
     },
     "TUNIInteractionManager": {
       "name": "com.thingclips.smart.plugin.tuniinteractionmanager.TUNIInteractionManager",
-      "version": "1.3.6-anonymize.5"
+      "version": "1.5.0-rc.3"
     },
     "TUNIGeofenceManager": {
       "name": "com.thingclips.smart.plugin.tunigeofencemanager.TUNIGeofenceManager",
@@ -212,6 +224,10 @@
       "name": "com.thingclips.smart.plugin.tunicompassmanager.TUNICompassManager",
       "version": "1.0.1-anonymize.1"
     },
+    "TUNIActivationManager": {
+      "name": "com.thingclips.smart.plugin.tuniactivationmanager.TUNIActivationManager",
+      "version": "1.0.2"
+    },
     "TUNIPhoneCallManager": {
       "name": "com.thingclips.smart.plugin.tuniphonecallmanager.TUNIPhoneCallManager",
       "version": "1.1.0-anonymize.1"
@@ -222,7 +238,7 @@
     },
     "TUNIDeviceSceneManager": {
       "name": "com.thingclips.smart.plugin.tunidevicescenemanager.TUNIDeviceSceneManager",
-      "version": "1.0.3"
+      "version": "1.1.0"
     },
     "TUNIDLWebViewManager": {
       "name": "com.thingclips.smart.plugin.tunidlwebviewmanager.TUNIDLWebViewManager",
@@ -258,7 +274,7 @@
     },
     "TUNIPayManager": {
       "name": "com.thingclips.smart.plugin.tunipaymanager.TUNIPayManager",
-      "version": "2.0.5"
+      "version": "2.0.8"
     },
     "TUNIDeviceDetailManager": {
       "name": "com.thingclips.smart.plugin.tunidevicedetailmanager.TUNIDeviceDetailManager",
@@ -274,7 +290,11 @@
     },
     "TUNIBluetoothManager": {
       "name": "com.thingclips.smart.plugin.tunibluetoothmanager.TUNIBluetoothManager",
-      "version": "1.6.8"
+      "version": "1.6.9"
+    },
+    "TUNIKeyboardManager": {
+      "name": "com.thingclips.smart.plugin.tunikeyboardmanager.TUNIKeyboardManager",
+      "version": "1.0"
     },
     "TUNIExtMiniAppInfoManager": {
       "name": "com.thingclips.smart.plugin.tuniextminiappinfomanager.TUNIExtMiniAppInfoManager",

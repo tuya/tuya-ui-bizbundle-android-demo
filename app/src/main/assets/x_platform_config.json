@@ -11,6 +11,7 @@
     "com.thingclips.smart.jsbridge.jscomponent.plugin.AppJSComponent",
     "com.thingclips.smart.theme.h5.ThemeJSComponent",
     "com.thingclips.smart.jsbridge.jscomponent.plugin.PageJSComponent",
+    "com.thingclips.smart.camera.jsbridge.IPCJSComponent",
     "com.thingclips.smart.jsbridge.jscomponent.plugin.ClipboardJSComponent",
     "com.thingclips.smart.jsbridge.jscomponent.plugin.UIKitJSComponent",
     "com.thingclips.smart.jsbridge.jscomponent.plugin.LifecycleJSComponent",
