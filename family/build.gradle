@@ -24,7 +24,7 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-family:5.2.0-16"
     api "com.thingclips.smart:thingsmart:${sdk_version}"
 
     // You need to rely on the following map gallery to ensure that the geographic location settings under the family are available.

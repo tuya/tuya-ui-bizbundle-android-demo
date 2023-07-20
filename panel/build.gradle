@@ -29,7 +29,7 @@ dependencies {
     //homesdk 基础能力
     api "com.thingclips.smart:thingsmart:${sdk_version}"
     //设备控制业务包
-    api "com.thingclips.smart:thingsmart-bizbundle-panel:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-panel:5.2.0-16"
     //基础扩展能力
     api ("com.thingclips.smart:thingsmart-bizbundle-basekit:${bizbundle_version}"){
         exclude group:"com.thingclips.smart",module:"thingplugin-annotation"
