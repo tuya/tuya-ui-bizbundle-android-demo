@@ -24,11 +24,11 @@ android {
 
 dependencies {
     api "com.thingclips.smart:thingsmart:${sdk_version}"
-    api ("com.thingclips.smart:thingsmart-bizbundle-device_activator:5.2.0-12")
+    api ("com.thingclips.smart:thingsmart-bizbundle-device_activator:${bizbundle_version}")
 
 //            {
 //        exclude group:"com.thingclips.smart",module:"thingsmart-thinghomesdk"
 //    }
     //扫码功能需要依赖
-    api "com.thingclips.smart:thingsmart-bizbundle-qrcode_mlkit:${bizbundle_version_4_8_0}"
+    api "com.thingclips.smart:thingsmart-bizbundle-qrcode_mlkit:${bizbundle_version}"
 }

@@ -15,11 +15,11 @@ import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.thingclips.smart.demo_login.base.utils.ToastUtil;
 import com.thingclips.smart.home.sdk.ThingHomeSdk;
 import com.thingclips.smart.home.sdk.bean.HomeBean;
 import com.thingclips.smart.home.sdk.callback.IThingGetHomeListCallback;
 import com.thingclips.smart.utils.ProgressUtil;
-import com.thingclips.smart.utils.ToastUtil;
 
 import java.util.List;
 

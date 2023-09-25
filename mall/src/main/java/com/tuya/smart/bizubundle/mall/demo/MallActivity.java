@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.thingclips.smart.api.MicroContext;
 import com.thingclips.smart.jsbridge.base.webview.WebViewActivity;
 import com.thingclips.smart.thingmall.api.IGetMallUrlCallback;
+import com.thingclips.smart.thingmall.api.IRequestMallEntranceCallback;
 import com.thingclips.smart.thingmall.api.ThingMallService;
 import com.thingclips.smart.utils.ToastUtil;
 
@@ -50,22 +51,11 @@ public class MallActivity extends AppCompatActivity {
             }
         });
         ThingMallService service = MicroContext.getServiceManager().findServiceByInterface(ThingMallService.class.getName());
-        ToastUtil.showToast(this, "mall enable is " + service.isSupportMall());
-        service.requestMallHome(new IGetMallUrlCallback() {
+        //
+        service.requestMallEntrance(new IRequestMallEntranceCallback() {
             @Override
-            public void onSuccess(String url) {
-                mUrlEdit.setText(url);
-            }
-
-            @Override
-            public void onError(String code, String error) {
-
-            }
-        });
-        service.requestMallUserCenter(new IGetMallUrlCallback() {
-            @Override
-            public void onSuccess(String url) {
-                Log.e("mall user center url ", url);
+            public void onSuccess(boolean success) {
+                mUrlEdit.setText(service.getMallHomeUrl());
             }
 
             @Override

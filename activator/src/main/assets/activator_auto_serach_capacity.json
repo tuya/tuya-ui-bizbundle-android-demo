@@ -1,0 +1,8 @@
+{
+  "searchTypeZigbee": false,
+  "searchTypeEZ": true,
+  "searchTypePegasus": false,
+  "searchTypeBle": false,
+  "searchTypeWired": false,
+  "searchTypeMatter": false
+}

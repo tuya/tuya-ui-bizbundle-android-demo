@@ -3,7 +3,7 @@
     package="com.tuya.smart.bizbundle.demo.family">
 
     <application>
-        <activity android:name=".FamilyManageActivity"></activity>
+        <activity android:name=".FamilyManageActivity"/>
     </application>
 
 </manifest>

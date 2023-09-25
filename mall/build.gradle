@@ -28,6 +28,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    api "com.thingclips.smart:thingsmart-bizbundle-mall:${bizbundle_version_4_8_0}"
+    api "com.thingclips.smart:thingsmart-bizbundle-mall:${bizbundle_version}"
     api "com.thingclips.smart:thingsmart:${sdk_version}"
 }

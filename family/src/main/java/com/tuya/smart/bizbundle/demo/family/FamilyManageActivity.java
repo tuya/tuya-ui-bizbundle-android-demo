@@ -8,7 +8,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.thingclips.smart.api.router.UrlRouter;
-import com.thingclips.smart.family.listener.HomeInviteListener;
+import com.thingclips.smart.family.main.listener.HomeInviteListener;
 import com.thingclips.smart.home.sdk.ThingHomeSdk;
 
 

@@ -3,10 +3,9 @@ apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdkVersion 33
-//    buildToolsVersion "33.0.1"
 
     defaultConfig {
-        applicationId "com.sdk.test1"
+        applicationId rootProject.ext.applicationId
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 1
@@ -34,7 +33,6 @@ android {
         pickFirst 'lib/*/libc++_shared.so'
         pickFirst 'lib/*/libyuv.so'
         pickFirst 'lib/*/libopenh264.so'
-
         pickFirst 'lib/*/libv8wrapper.so'
         pickFirst 'lib/*/libv8android.so'
     }
@@ -46,11 +44,9 @@ android {
         }
     }
 
-    android {
-        compileOptions {
-            sourceCompatibility 1.8
-            targetCompatibility 1.8
-        }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
     packagingOptions {
         exclude 'AndroidManifest.xml'
@@ -59,12 +55,6 @@ android {
         abortOnError false
     }
 
-}
-
-configurations.all {
-    exclude group:"com.thingclips.smart",module:"thingplugin-annotation"
-    exclude group:"com.thingclips.android.module",module:"thingmodule-annotation"
-    exclude group: "com.thingclips.smart" ,module: 'thingsmart-modularCampAnno'
 }
 
 
@@ -110,8 +100,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    annotationProcessor 'com.google.dagger:hilt-android-compiler:2.36'
-    implementation 'com.google.dagger:hilt-android:2.36'
+    annotationProcessor 'com.google.dagger:hilt-android-compiler:2.42'
+    implementation 'com.google.dagger:hilt-android:2.42'
 
 }
 

@@ -2,64 +2,56 @@
   "pipeLine": {
     "PIPE_LINE_TAB_LAUNCHER_STARTED": [
       "com.thingclips.smart.panel.RNStatePipeline",
-      "com.thingclips.smart.family.FamilyPipeLine",
-      "com.thingclips.smart.health.HealthDataCenterPipeLine",
-      "com.gzl.smart.gzlminiapp.smart.init.GZLMiniAppHomeIdlePipeLine",
-      "com.thingclips.smart.rnplugin.trctpublicblebeaconmanager.ThingBeaconFencePipeLine",
       "com.thingclips.smart.messagepush.MessagePushStartPipeLine",
+      "com.gzl.smart.gzlminiapp.smart.init.GZLMiniAppHomeIdlePipeLine",
+      "com.thingclips.smart.health.HealthDataCenterPipeLine",
+      "com.thingclips.smart.rnplugin.trctpublicblebeaconmanager.ThingBeaconFencePipeLine",
+      "com.thingclips.smart.family.FamilyPipeLine",
       "com.thingclips.smart.bluemesh.MeshAppStartPipeLine"
     ],
     "PIPE_LINE_BUSINESS_PIPELINE_APPLICATION_START": [
-      "com.thingclips.smart.uibizcomponents.UiBizComponentLaunchPipeline",
-      "com.thingclips.android.universal.stat.TUNIversalStatPipeLine",
       "com.thingclips.smart.native_uibizcomponents.NativeUiBizComponentLaunchPipeline",
       "com.thingclips.smart.activitypush.api.ActivityAdPushManagerPipeline",
+      "com.thingclips.smart.uibizcomponents.UiBizComponentLaunchPipeline",
+      "com.thingclips.android.universal.stat.TUNIversalStatPipeLine",
       "com.thingclips.smart.rnplugin.trctimageencryptuploadmanager.db.ThingP2PHistoryPipeLine",
-      "com.thingclips.smart.home.theme.HomeThemePipeline",
-      "com.thingclips.smart.paneloutside.RNVersionPipeline",
-      "com.thingclips.smart.pushcenter.PushCenterPipeLine",
-      "com.thingclips.smart.login.base.LoginPipeLine",
       "com.thingclips.smart.thingmall.AppStartPipeLine",
+      "com.thingclips.smart.paneloutside.RNVersionPipeline",
       "com.thingclips.smart.dynamic.string.DynamicStartPipeLine",
+      "com.thingclips.smart.pushcenter.PushCenterPipeLine",
       "com.thingclips.smart.theme.core.ThemeSyncPipeLine"
     ],
     "PIPE_LINE_BUSINESS_com.thingclips.smart.hometab.api.HomeCreatePipelineScenarioType": [
-      "com.thingclips.smart.commonbiz.family.FamilyManagerPipeline",
-      "com.thingclips.smart.panelcaller.family.ZigbeeInstallCodePanelInitializePipeline"
+      "com.thingclips.smart.scene.home.SceneHomePipeLine",
+      "com.thingclips.smart.panelcaller.family.ZigbeeInstallCodePanelInitializePipeline",
+      "com.thingclips.smart.commonbiz.family.FamilyManagerPipeline"
     ],
     "PIPE_LINE_BUSINESS_com.thingclips.smart.commonbiz.api.login.LoginPipelineScenarioType": [
       "com.thingclips.smart.commonbiz.family.FamilyLoginPipeline"
     ],
     "PIPE_LINE_BUSINESS_com.thingclips.smart.commonbiz.api.login.LogoutPipelineScenarioType": [
-      "com.thingclips.smart.commonbiz.family.FamilyLogoutPipeline",
+      "com.thingclips.smart.jsbridge.WebLogoutPipeline",
       "com.thingclips.smart.commonbiz.DeviceLogoutPipeLine",
-      "com.thingclips.smart.jsbridge.WebLogoutPipeline"
+      "com.thingclips.smart.commonbiz.family.FamilyLogoutPipeline"
     ],
     "PIPE_LINE_BUSINESS_com.thingclips.smart.initializer.custompipeline.UserAgreeScenarioType": [
-      "com.gzl.smart.gzlminiapp.smart.init.GZLMiniAppPipeLine",
       "com.thingclips.smart.jsbridge.PreInitWebPipeLine",
-      "com.thingclips.smart.dynamic.string.NetworkRequestPipeline"
+      "com.thingclips.smart.dynamic.string.NetworkRequestPipeline",
+      "com.gzl.smart.gzlminiapp.smart.init.GZLMiniAppPipeLine"
     ],
     "PIPE_LINE_APPLICATION_SYNC": [
       "com.thingclips.smart.theme.core.ThemeSyncPipeLine",
-      "com.thingclips.smart.home.theme.HomeThemePipeline",
-      "com.thingclips.smart.paneloutside.RNVersionPipeline",
-      "com.thingclips.smart.pushcenter.PushCenterPipeLine",
-      "com.thingclips.smart.login.base.LoginPipeLine",
       "com.thingclips.smart.thingmall.AppStartPipeLine",
-      "com.thingclips.smart.dynamic.string.DynamicStartPipeLine"
+      "com.thingclips.smart.paneloutside.RNVersionPipeline",
+      "com.thingclips.smart.dynamic.string.DynamicStartPipeLine",
+      "com.thingclips.smart.pushcenter.PushCenterPipeLine"
     ],
     "PIPE_LINE_APPLICATION_ASYNC": [
-      "com.thingclips.smart.uibizcomponents.UiBizComponentLaunchPipeline",
-      "com.thingclips.android.universal.stat.TUNIversalStatPipeLine",
       "com.thingclips.smart.native_uibizcomponents.NativeUiBizComponentLaunchPipeline",
       "com.thingclips.smart.activitypush.api.ActivityAdPushManagerPipeline",
+      "com.thingclips.smart.uibizcomponents.UiBizComponentLaunchPipeline",
+      "com.thingclips.android.universal.stat.TUNIversalStatPipeLine",
       "com.thingclips.smart.rnplugin.trctimageencryptuploadmanager.db.ThingP2PHistoryPipeLine"
-    ]
-  },
-  "pipeLineDeps": {
-    "com.thingclips.smart.theme.core.ThemeSyncPipeLine": [
-      "com.thingclips.smart.home.theme.HomeThemePipeline"
     ]
   },
   "moduleMap": {
@@ -78,24 +70,14 @@
       "createAutoWithCondition",
       "createAuto",
       "editSmartScene",
-      "createSmartScene"
-    ],
-    "com.thingclips.smart.camera.wifiswitch.WifiSwitchApp": [
-      "camera_wifi_switch"
-    ],
-    "com.thingclips.smart.login.ui.LoginModuleApp": [
-      "login",
-      "registernew",
-      "modifyPasswordVerify",
-      "modifyPasswordSet",
-      "forgotPassword",
-      "completeInformation",
-      "change_phone_email",
-      "changeAccountVerify",
-      "modifyPassword"
+      "createSmartScene",
+      "recommend_smart_detail"
     ],
     "com.thingclips.smart.mlkit.qrcode.MLKitModuleApp": [
       "scan_qrcode"
+    ],
+    "com.thingclips.smart.camera.wifiswitch.WifiSwitchApp": [
+      "camera_wifi_switch"
     ],
     "com.thingclips.smart.message.MessageApp": [
       "messageCenter",
@@ -126,33 +108,13 @@
     "com.thingclips.evaluation.EvaluationModuleApp": [
       "EvaluationDevice"
     ],
+    "com.gzl.smart.gzlminiapp.smart.router.DToolsDebugRouter": [
+      "miniapp_debug_entrance"
+    ],
     "com.thingclips.smart.camera.CameraApp": [
       "camera_action",
       "videoCall",
       "cameraPanel"
-    ],
-    "com.gzl.smart.gzlminiapp.smart.router.DToolsDebugRouter": [
-      "miniapp_debug_entrance"
-    ],
-    "com.thingclips.smart.login.base.LoginApp": [
-      "bind_cellphonestyle1",
-      "bind_email_style",
-      "change_password",
-      "login_registerstyle1",
-      "complete_user_information",
-      "login_exit_experience",
-      "route_logoff",
-      "activity_login",
-      "privacyPage",
-      "notReceiveCodepage",
-      "resetToHome",
-      "resetToLogin",
-      "userProtocalPage",
-      "thirdSdkPage",
-      "childPrivacyPage"
-    ],
-    "com.thingclips.smart.qrlogin.QrLoginApp": [
-      "login_qrlogin"
     ],
     "com.thingclips.smart.ipc.camera.doorbellpanel.DoorbellPanelApp": [
       "doorbell_camera_panel",
@@ -168,6 +130,23 @@
     ],
     "com.thingclips.smart.ipc.camera.rnpanel.RnPanelApp": [
       "rn_camera_panel"
+    ],
+    "com.thingclips.smart.family.FamilyManageApp": [
+      "familyAction",
+      "family_manage",
+      "add_family",
+      "complete_family",
+      "room_manage",
+      "family_setting",
+      "thingsh_family_setting",
+      "join_family",
+      "room_setting",
+      "thingsh_family_add_member_rn",
+      "thingsh_family_link_member_rn",
+      "member_info",
+      "rn_add_member",
+      "add_member",
+      "family_member"
     ],
     "com.thingclips.smart.ipc.station.StationApp": [
       "ipc_base_station",
@@ -203,6 +182,9 @@
     "com.thingclips.smart.rnplugin.trctlocalalarmmanager.alarm.LocalAlarmApp": [
       "rn_local_alarm"
     ],
+    "com.thingclips.smart.call.module.ThingCallModuleApp": [
+      "rtcCall"
+    ],
     "com.thingclips.smart.sim.IotCardApp": [
       "real_name_certification"
     ],
@@ -232,12 +214,6 @@
       "bleAlarmSetting",
       "meshAlarm"
     ],
-    "com.thingclips.smart.ipc.camera.clouddisk.CloudDiskApp": [
-      "camera_cloud_disk"
-    ],
-    "com.thingclips.smart.camera.blackpanel.BlackPanelApp": [
-      "camera_panel_2"
-    ],
     "com.thingclips.smart.activator.panel.search.ThingAutoScanApp": [
       "device_gw_sub_device_help_list",
       "device_only_search_config_gw_sub",
@@ -247,6 +223,12 @@
     "com.thingclips.smart.device.net.ui.NetPoolModuleApp": [
       "DeviceNetInfo"
     ],
+    "com.thingclips.smart.camera.blackpanel.BlackPanelApp": [
+      "camera_panel_2"
+    ],
+    "com.thingclips.smart.ipc.camera.clouddisk.CloudDiskApp": [
+      "camera_cloud_disk"
+    ],
     "com.thingclips.smart.activator.scan.qrcode.ScanApp": [
       "scan"
     ],
@@ -255,6 +237,9 @@
     ],
     "com.thingclips.smart.device.info.DeviceInfoModuleApp": [
       "device_info"
+    ],
+    "com.thingclips.smart.panelcaller.RNLinkRouterApp": [
+      "rnContainer"
     ],
     "com.thingclips.smart.ipc.ap.ApApp": [
       "camera_ap_panel"
@@ -299,14 +284,6 @@
       "map_geofence",
       "request_permission_activity"
     ],
-    "com.thingclips.smart.ipc.messagecenter.MessageCenterApp": [
-      "camera_video_panel",
-      "camera_audio_panel",
-      "camera_photo_panel",
-      "camera_message_panel",
-      "msg_media_play",
-      "camera_mjpeg_panel"
-    ],
     "com.thingclips.smart.group.GroupModuleApp": [
       "group",
       "zigbee_pair",
@@ -320,6 +297,14 @@
       "edit_general_group",
       "add_sigmesh_standard",
       "edit_sigmesh_standard"
+    ],
+    "com.thingclips.smart.ipc.messagecenter.MessageCenterApp": [
+      "camera_video_panel",
+      "camera_audio_panel",
+      "camera_photo_panel",
+      "camera_message_panel",
+      "msg_media_play",
+      "camera_mjpeg_panel"
     ],
     "com.thingclips.smart.gallery.GalleryPickerApp": [
       "gallerypicker"
@@ -340,6 +325,9 @@
     "com.thingclips.smart.ipc.camera.tocopanel.TocoPanelApp": [
       "toco_camera_panel"
     ],
+    "com.thingclips.smart.social.auth.manager.SocialAuthManagerApp": [
+      "SocialAuthManagerAppAction"
+    ],
     "com.thingclips.smart.feedback.FeedbackApp": [
       "helpAndFeedBack",
       "add_feedback",
@@ -351,23 +339,6 @@
       "inMigration",
       "inputCodeMigration",
       "GatewayMigration"
-    ],
-    "com.thingclips.smart.family.main.view.FamilyApp": [
-      "familyAction",
-      "family_manage",
-      "add_family",
-      "complete_family",
-      "room_manage",
-      "family_setting",
-      "thingsh_family_setting",
-      "join_family",
-      "room_setting",
-      "thingsh_family_add_member_rn",
-      "thingsh_family_link_member_rn",
-      "member_info",
-      "rn_add_member",
-      "add_member",
-      "family_member"
     ],
     "com.thingclips.device.base.info.DevBaseInfoModuleApp": [
       "dev_base_info",
@@ -383,20 +354,6 @@
     "com.thingclips.stencil.BrowserApp": [
       "browser"
     ],
-    "com.thingclips.smart.sharedevice.ShareDeviceApp": [
-      "dev_share_edit",
-      "group_share_edit",
-      "not_share_support_help",
-      "friend",
-      "share_link",
-      "thing_single_device_share",
-      "thing_single_group_share",
-      "thingsh_receive_share",
-      "JumpShareHous"
-    ],
-    "com.thingclips.smart.panel.RNModuleApp": [
-      "panel_rn"
-    ],
     "com.thingclips.smart.activator.home.entrance.ActivatorEntranceApp": [
       "config_device",
       "config_device_home",
@@ -408,6 +365,21 @@
       "device_gw_sub_config",
       "device_offline_reconnect"
     ],
+    "com.thingclips.smart.panel.RNModuleApp": [
+      "panel_rn"
+    ],
+    "com.thingclips.smart.sharedevice.ShareDeviceApp": [
+      "dev_share_edit",
+      "group_share_edit",
+      "not_share_support_help",
+      "friend",
+      "share_link",
+      "thing_single_device_share",
+      "thing_single_group_share",
+      "thingsh_receive_share",
+      "JumpShareHous",
+      "thing_device_share_list"
+    ],
     "com.thingclips.smart.thingsmart_videocutter.VideoCutterApp": [
       "videocutter"
     ],
@@ -417,12 +389,12 @@
     "com.thingclips.smart.china.share.ShareModuleApp": [
       "mall_action"
     ],
-    "com.thingclips.smart.ipc.recognition.FaceRecognitionApp": [
-      "camera_face_recognition"
-    ],
     "com.thingclips.smart.activator.matter.ui.ActivatorMatterUiApp": [
       "scan_matter_dev_active",
       "manual_input_matter_device_info"
+    ],
+    "com.thingclips.smart.ipc.recognition.FaceRecognitionApp": [
+      "camera_face_recognition"
     ],
     "com.thingclips.smart.control.ControlModuleApp": [
       "devLink",
@@ -448,21 +420,20 @@
   },
   "serviceMap": {
     "com.thingclips.smart.activator.device.list.plug.api.ThingPlugActivatorDeviceListService": "com.thingclips.smart.activator.device.list.ActivatorDeviceListServiceImpl",
-    "com.thingclips.smart.family.member.api.AbsFamilyMemberUseCaseApi": "com.thingclips.smart.family.member.domain.FamilyMemberUseCaseApiImpl",
-    "com.thingclips.smart.family.api.AbsFamilyBusinessService": "com.thingclips.smart.family.AbsFamilyBusinessServiceImpl",
-    "com.thingclips.thingsmart.rn_share_api.RNChinaShareService": "com.thingclips.smart.china.share.ChinaShareServiceImpl",
     "com.thingclips.stencil.location.LocationService": "com.thingclips.smart.location.LocationServiceImpl",
+    "com.thingclips.thingsmart.rn_share_api.RNChinaShareService": "com.thingclips.smart.china.share.ChinaShareServiceImpl",
+    "com.thingclips.smart.family.api.AbsFamilyBusinessService": "com.thingclips.smart.family.AbsFamilyBusinessServiceImpl",
     "com.thingclips.smart.device.evaluation.plug.api.AbsDeviceEvaluationService": "com.thingclips.evaluation.DeviceEvaluationService",
-    "com.thingclips.smart.timing.api.AbsCBTTimerSettingService": "com.thingclips.smart.timer.ui.service.CBTTimerSettingService",
     "com.thingclips.smart.scene.list.plug.api.home.DefaultPlugSceneHomeRouterService": "com.thingclips.smart.scene.home.aircraft.DefaultPlugSceneHomeRouterServiceImpl",
+    "com.thingclips.smart.timing.api.AbsCBTTimerSettingService": "com.thingclips.smart.timer.ui.service.CBTTimerSettingService",
     "com.thingclips.smart.activator.plug.mesosphere.AbsActivatorEntranceService": "com.thingclips.smart.activator.plug.mesosphere.os.ActivatorEntranceServiceImpl",
-    "com.thingclips.smart.commonbiz.api.login.AbsLoginEventService": "com.thingclips.smart.commonbiz.login.LoginEventServiceImpl",
     "com.thingclips.smart.migration.api.AbsMigrationGWService": "com.thingclips.smart.migration.MigrationGWService",
+    "com.thingclips.smart.commonbiz.api.login.AbsLoginEventService": "com.thingclips.smart.commonbiz.login.LoginEventServiceImpl",
     "com.thingclips.smart.scene.business.service.SceneConditionService": "com.thingclips.smart.scene.condition.service.SceneConditionServiceImpl",
     "com.thingclips.smart.sharemanager.api.AbsShareManager": "com.thingclips.smart.sharemanager.AbsShareManagerImpl",
     "com.thingclips.smart.ota.api.BleOtaService": "com.thingclips.smart.bleota.BleOtaServiceImpl",
-    "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppInterfaceService": "com.gzl.smart.gzlminiapp.core.service.MiniAppInterfaceServiceImpl",
     "com.thingclips.smart.thingtangramapi.TangramApiService": "com.thingclips.smart.android.tangram.TangramServiceImpl",
+    "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppInterfaceService": "com.gzl.smart.gzlminiapp.core.service.MiniAppInterfaceServiceImpl",
     "com.thingclips.smart.commonbiz.shortcut.api.AbsShortcutService": "com.thingclips.smart.commonbiz.shortcut.ShortcutServiceImpl",
     "com.thingclips.smart.file.download.FileDownService": "com.thingclips.smart.file.download.FileDownServiceImpl",
     "com.thingclips.smart.thingsmart_device_detail.api.IPluginInfraredSubDevDisplayService": "com.thingclips.smart.device_detail.PluginInfraredSubDevDisplayServiceImp",
@@ -470,26 +441,25 @@
     "com.thingclips.smart.ipc.panel.api.AbsCameraBusinessService": "com.thingclips.smart.camera.base.business.CameraBusinessService",
     "com.thingclips.smart.pushcenter.error.AbsErrorStatService": "com.thingclips.smart.pushcenter.stat.StatExceptionImpl",
     "com.thingclips.smart.thingmall.api.ThingMallService": "com.thingclips.smart.thingmall.ThingMallServiceImpl",
-    "com.thingclips.smart.panel.ota.service.AbsOtaCallerService": "com.thingclips.smart.panel.newota.OtaCallerService",
     "com.thingclips.smart.light.scene.api.AbsLightSceneExecuteService": "com.thingclips.smart.light.scene.core.LightSceneExecuteServiceImpl",
+    "com.thingclips.smart.panel.ota.service.AbsOtaCallerService": "com.thingclips.smart.panel.newota.OtaCallerService",
     "com.thingclips.smart.familylist.api.AbsFamilyListService": "com.thingclips.smart.familylist.ui.FamilyListServiceImpl",
-    "com.thingclips.smart.shortcuts.AbsShortcutsService": "com.thingclips.smart.shortcuts.ShortcutsService",
     "com.thingclips.smart.ipc.panel.api.AbsCameraSDcardService": "com.thingclips.smart.ipc.panelmore.CameraSdcardService",
-    "com.thingclips.smart.social.auth.manager.api.google.GoogleFlipService": "com.thingclips.smart.google_flip.GoogleFlipServiceImpl",
     "com.thingclips.smart.scene.business.aircraft.service.PlugHomeScenePedestalService": "com.thingclips.smart.scene.home.aircraft.PlugHomeScenePedestalServiceImpl",
+    "com.thingclips.smart.social.auth.manager.api.google.GoogleFlipService": "com.thingclips.smart.google_flip.GoogleFlipServiceImpl",
     "com.thingclips.smart.ipc.panel.api.AbsCameraOutsideService": "com.thingclips.smart.camera.biz.impl.CameraOutsideServiceImpl",
-    "com.thingclips.smart.audiospectrum.api.AbsAudioSpectrumService": "com.thingclips.smart.audiospectrum.AudioSpectrumService",
     "com.thingclips.device.base.info.api.AbsDevEditService": "com.thingclips.device.base.info.DevEditService",
+    "com.thingclips.smart.audiospectrum.api.AbsAudioSpectrumService": "com.thingclips.smart.audiospectrum.AudioSpectrumService",
     "com.thingclips.smart.timing.api.AbsCBTTimerService": "com.thingclips.smart.timer.ui.service.CBTTimerService",
     "com.thingclips.smart.panel.ota.AbsOtaUseCaseService": "com.thingclips.smart.ota.biz.OtaUseCaseService",
-    "com.thingclips.smart.ipc.panel.api.AbsCameraPushService": "com.thingclips.smart.camera.push.CameraPushServiceImpl",
-    "com.thingclips.smart.panelcaller.api.AbsPanelCallerExpandService": "com.thingclips.smart.panelcaller.PanelCallerExpandServiceImpl",
     "com.thingclips.smart.device.info.api.AbsDeviceInfoService": "com.thingclips.smart.device.info.DeviceInfoService",
+    "com.thingclips.smart.panelcaller.api.AbsPanelCallerExpandService": "com.thingclips.smart.panelcaller.PanelCallerExpandServiceImpl",
+    "com.thingclips.smart.ipc.panel.api.AbsCameraPushService": "com.thingclips.smart.camera.push.CameraPushServiceImpl",
     "com.thingclips.smart.gallerypick.api.AbsImagePreviewService": "com.thingclips.smart.gallery.preview.service.ImagePreviewServiceImpl",
     "com.thingclips.smart.network.error.api.AbsNetworkErrorHandlerService": "com.thingclips.smart.network.error.handler.NetworkErrorHandlerServiceImpl",
     "com.thingclips.thingsmart.rn_share_api.RNLocalShareService": "com.thingclips.smart.sharemanager.LocalShareServiceImpl",
-    "com.thingclips.smart.scene.list.plug.api.log.DefaultPlugSceneLogRouterService": "com.thingclips.smart.scene.record.aircaft.DefaultPlugSceneLogRouterServiceImpl",
     "com.thingclips.smart.country.select.api.service.CountrySelectService": "com.thingclips.smart.country.select.service.CountrySelectServiceImpl",
+    "com.thingclips.smart.scene.list.plug.api.log.DefaultPlugSceneLogRouterService": "com.thingclips.smart.scene.record.aircaft.DefaultPlugSceneLogRouterServiceImpl",
     "com.thingclips.smart.multimedia.qrcode.api.ScanQRCodeService": "com.thingclips.smart.mlkit.qrcode.ScanQRCodeServiceImpl",
     "com.thingclips.smart.ipc.panel.api.AbsCameraEventReportService": "com.thingclips.smart.camera.panelimpl.service.CameraEventReportService",
     "com.thingclips.smart.device.offlinereminder.usecase.api.service.AbsDevOfflineReminderService": "com.thingclips.smart.device.offlinereminder.usecase.service.DeviceOfflineReminderService",
@@ -500,10 +470,10 @@
     "com.thingclips.smart.camera.rctpackage.caller.api.CameraRCTPackageCallerService": "com.thingclips.smart.camera.rctpackage.caller.CameraRCTPackageCallerServiceImpl",
     "com.thingclips.smart.panelapi.AbsPanelReloadService": "com.thingclips.smart.panel.service.PanelReloadServiceImpl",
     "com.thingclips.smart.feedback.api.FeedbackService": "com.thingclips.smart.feedback.FeedbackServiceImpl",
+    "com.thingclips.smart.webcontainer_api.WebRouteInterceptorService": "com.gzl.smart.gzlminiapp.smart.interceptor.GZLH5ServiceInterceptor",
     "com.thingclips.smart.commonbiz.api.AbsDeviceService": "com.thingclips.smart.commonbiz.DeviceServiceImpl",
     "com.thingclips.android.dynamic_resource_api.AbsThingResourceService": "com.thingclips.smart.theme.dynamic.resource.ThingResourceServiceImpl",
     "com.thingclips.smart.device.remove.api.AbsDeviceRemoveService": "com.thingclips.smart.device.remove.service.DeviceRemoveService",
-    "com.thingclips.smart.login_finger_login_api.FingerService": "com.thingclips.smart.login_finger_login.service.FingerServiceImpl",
     "com.thingclips.smart.personalcenter.api.PersonalService": "com.thingclips.smart.personal.PersonalServiceImpl",
     "com.gzl.smart.gzlminiapp.core.api.miniapp.AbsMiniAppResourceService": "com.gzl.smart.gzlminiapp.core.service.MiniAppResourceServiceImpl",
     "com.thingclips.smart.scene.edit.plug.api.construct.DefaultPlugSceneConstructRouterService": "com.thingclips.smart.scene.construct.aircaft.DefaultPlugSceneConstructRouterServiceImpl",
@@ -511,23 +481,21 @@
     "com.thingclips.smart.scene.business.service.SceneRNRouterService": "com.thingclips.smart.scene.business.SceneRNRouterServiceImpl",
     "com.gzl.smart.gzlminiapp.core.api.miniapp.AbsMiniAppPluginService": "com.gzl.smart.gzlminiapp.core.service.MiniAppPluginServiceImpl",
     "com.thingclips.smart.clearcache.api.ClearCacheService": "com.thingclips.smart.personal.clearcache.ClearCacheServiceImpl",
-    "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppVersionService": "com.gzl.smart.gzlminiapp.core.service.MiniAppVersionServiceImpl",
     "com.gzl.smart.gzlminiapp.core.api.utils.AbsMiniAppUtilService": "com.gzl.smart.gzlminiapp.core.service.MiniAppUtilServiceImpl",
+    "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppVersionService": "com.gzl.smart.gzlminiapp.core.service.MiniAppVersionServiceImpl",
     "com.thingclips.smart.scene.business.service.SceneLogService": "com.thingclips.smart.scene.record.service.SceneLogServiceImpl",
-    "com.thingclips.smart.activator_skt_api.AbsActivatorCommonNetWork": "com.thingclips.smart.activator.common.info.ActivatorCommonInfo",
     "com.thingclips.smart.panelapi.AbsPanelLaunchOptionService": "com.thingclips.panel.launchoption.PanelLaunchOptionService",
     "com.thingclips.smart.sharedevice.api.AbsDeviceShareUseCaseService": "com.thingclips.smart.sharedevice.biz.DeviceShareUseCaseService",
-    "com.thingclips.smart.scene.business.service.SceneDeviceService": "com.thingclips.smart.scene.device.service.SceneDeviceServiceImpl",
     "com.thingclips.smart.scene.business.service.SceneHomeService": "com.thingclips.smart.scene.home.service.HomeServiceImpl",
-    "com.thingclips.smart.avs.api.AvsLoginService": "com.thingclips.smart.avs.login.AvsLoginServiceImpl",
+    "com.thingclips.smart.scene.business.service.SceneDeviceService": "com.thingclips.smart.scene.device.service.SceneDeviceServiceImpl",
     "com.thingclips.smart.activator.device.guide.plug.api.ActivatorDeviceGuideService": "com.thingclips.smart.activator.device.guide.impl.ActivatorDeviceGuideServiceImpl",
+    "com.thingclips.smart.avs.api.AvsLoginService": "com.thingclips.smart.avs.login.AvsLoginServiceImpl",
     "com.thingclips.smart.light.scene.plug.api.AbsLightScenePlugService": "com.thingclips.smart.light.scene.plug.LightScenePlugService",
     "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppClearCacheService": "com.gzl.smart.gzlminiapp.core.service.MiniAppClearCacheServiceImpl",
     "com.thingclips.stencil.location.AmapLocationService": "com.thingclips.chinalocation.AmapLocationServiceImpl",
-    "com.thingclips.smart.login.plug.api.AbsLoginPlugService": "com.thingclips.smart.login.ui.LoginPlugService",
     "com.thingclips.smart.theme.api.AbsThemeService": "com.thingclips.smart.theme.ThemeServiceImpl",
-    "com.thingclips.stencil.location.SystemLocationService": "com.thingclips.systemlocation.SystemLocationServiceImpl",
     "com.thingclips.smart.activator.home.entrance.plug.api.ActivatorHomeEntranceService": "com.thingclips.smart.activator.home.entrance.ActivatorHomeEntranceServiceImpl",
+    "com.thingclips.stencil.location.SystemLocationService": "com.thingclips.systemlocation.SystemLocationServiceImpl",
     "com.thingclips.smart.ipc.panel.api.AbsCameraPanelUiService": "com.thingclips.smart.ipc.camera.panel.ui.service.CameraPanelUiService",
     "com.thingclips.smart.gallerypick.api.AbsImagePickerService": "com.thingclips.smart.image.pick.service.ImagePickerServiceImpl",
     "com.thingclips.utilscore.pipeline.start.api.CustomPipelineStartService": "com.thingclips.smart.initializer.custompipeline.startPipelineServiceImpl",
@@ -535,37 +503,35 @@
     "com.thingclips.smart.activator.auto.scan.plug.api.ActivatorAutoScanService": "com.thingclips.smart.activator.auto.scan.ActivatorAutoScanServiceImpl",
     "com.thingclips.smart.sharedevice.api.AbsDeviceShareService": "com.thingclips.smart.sharedevice.DeviceShareService",
     "com.thingclips.smart.sim.api.AbsIotCardFlowService": "com.thingclips.smart.sim.IotCardFlowService",
-    "com.thingclips.smart.theme.dynamic.resource.api.AbsThemeDynamicResourceService": "com.thingclips.smart.theme.dynamic.resource.ThemeDynamicResourceServiceImpl",
     "com.thingclips.smart.light.scene.api.AbsLightSceneDataService": "com.thingclips.smart.light.scene.core.LightSceneDataServiceImpl",
+    "com.thingclips.smart.theme.dynamic.resource.api.AbsThemeDynamicResourceService": "com.thingclips.smart.theme.dynamic.resource.ThemeDynamicResourceServiceImpl",
     "com.thingclips.smart.scene.edit.plug.api.device.DefaultPlugSceneDeviceRouterService": "com.thingclips.smart.scene.device.aircaft.DefaultPlugSceneDeviceRouterServiceImpl",
     "com.thingclips.smart.personal.logout.api.AbsLogoutService": "com.thingclips.smart.personal.logout.LogoutServiceImpl",
-    "com.thingclips.smart.api.loginapi.LoginUserService": "com.thingclips.smart.login.base.service.LoginUserServiceImpl",
+    "com.thingclips.smart.panelapi.AbsRNContainerClearCacheService": "com.thingclips.smart.panel.service.RNContainerClearCacheServiceImp",
     "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppPreService": "com.gzl.smart.gzlminiapp.core.service.MiniAppPreServiceImpl",
     "com.thingclips.smart.share.api.AbsChinaShareService": "com.thingclips.smart.china.share.AbsChinaShareServiceImpl",
     "com.gzl.smart.gzlminiapp.core.api.miniapp.AbsMiniAppExtInfoService": "com.gzl.smart.gzlminiapp.core.service.MiniAppExtInfoServiceImpl",
     "com.thingclips.smart.messagepush.api.SportManagerService": "com.thingclips.smart.messagepush.sport.SportManagerServiceImpl",
-    "com.thingclips.smart.api.loginapi.SplashService": "com.thingclips.smart.splash.SplashServiceImpl",
-    "com.thingclips.smart.control.plug.api.IPluginControlService": "com.thingclips.smart.control.PluginControlService",
     "com.gzl.smart.gzlminiapp.open.api.AbsMiniAppService": "com.gzl.smart.gzlminiapp.core.service.GZLMiniAppServiceImpl",
+    "com.thingclips.smart.control.plug.api.IPluginControlService": "com.thingclips.smart.control.PluginControlService",
     "com.thingclips.smart.scene.business.service.PlugSceneRnService": "com.thingclips.smart.scene.business.PlugSceneRnServiceImpl",
     "com.thingclips.smart.panelcaller.family.api.AbsFamilyPanelCallerService": "com.thingclips.smart.panelcaller.family.FamilyPanelCallerImpl",
     "com.thingclips.smart.activator.activation.ui.plug.api.ActivatorActivationUIService": "com.thingclips.smart.activator.activation.ui.ActivatorActivationUIServiceImpl",
     "com.thingclips.smart.message.api.MessageService": "com.thingclips.smart.message.MessageServiceImpl",
     "com.thingclips.android.dynamic_resource_api.AbsTransformerManagerService": "com.thingclips.smart.dynamic.string.ViewAttributeTransformerServiceImpl",
-    "com.thingclips.smart.sensors.api.AbsSensorsService": "com.thingclips.smart.sensors.SensorsService",
-    "com.thingclips.smart.scene.business.api.IThingSceneBusinessService": "com.thingclips.smart.scene.business.ThingSceneBusinessManager",
     "com.thingclips.smart.dynamic.string.api.AbsLanguageDebugService": "com.thingclips.smart.dynamic.string.service.AbsLanguageDebugServiceImpl",
-    "com.thingclips.smart.api.loginapi.LoginService": "com.thingclips.smart.login.base.service.LoginServiceImpl",
+    "com.thingclips.smart.scene.business.api.IThingSceneBusinessService": "com.thingclips.smart.scene.business.ThingSceneBusinessManager",
+    "com.thingclips.smart.sensors.api.AbsSensorsService": "com.thingclips.smart.sensors.SensorsService",
     "com.thingclips.smart.scene.list.plug.api.recommend.DefaultPlugSceneRecommendRouterService": "com.thingclips.smart.scene.recommend.aircaft.DefaultPlugSceneRecommendRouterServiceImpl",
     "com.thingclips.smart.device.net.AbsNetSettingService": "com.thingclips.smart.device.net.usecase.service.DeviceNetSettingService",
-    "com.thingclips.smart.panelapi.AbsPanelService": "com.thingclips.smart.panel.service.PanelServiceImpl",
     "com.thingclips.smart.timer.sdk.AbsTimerService": "com.thingclips.smart.timer.sdk.ThingTimerService",
+    "com.thingclips.smart.panelapi.AbsPanelService": "com.thingclips.smart.panel.service.PanelServiceImpl",
     "com.thingclips.smart.sharedevice.api.AbsDeviceShareBusiness": "com.thingclips.smart.sharedevice.biz.DeviceShareBusinessImpl",
-    "com.thingclips.smart.family.domainapi.AbsFamilyUseCaseService": "com.thingclips.smart.family.domain.FamilyUseCaseService",
     "com.thingclips.smart.pushcenter.track.AbsTrackStatService": "com.thingclips.smart.pushcenter.stat.TrackStatImpl",
+    "com.thingclips.smart.social.auth.manager.api.AbsSocialAuthManager": "com.thingclips.smart.social.auth.manager.SocialAuthManagerService",
     "com.thingclips.smart.camera.cloud.purchase.AbsCameraCloudPurchaseService": "com.thingclips.smart.camera.cloud.purchase.CameraCloudPurchaseServiceImpl",
-    "com.thingclips.smart.api.loginapi.LoginPrivacyService": "com.thingclips.smart.login_privacy.service.LoginPrivacyServiceImpl",
     "com.thingclips.smart.activator.input.wifi.plug.api.ActivatorInputWifiService": "com.thingclips.smart.activator.input.wifi.ActivatorInputWifiServiceImpl",
+    "com.thingclips.smart.ipc.panel.api.recognition.AbsCameraBirdIdentityService": "com.thingclips.smart.camera.panelimpl.recognition.CameraBirdIdentityService",
     "com.gzl.smart.gzlminiapp.core.api.difflayer.AbsMiniAppDiffLayerService": "com.gzl.smart.gzlminiapp.core.difflayer.MiniAppDiffLayerServiceImpl",
     "com.thingclips.smart.scene.business.dpc.AbsSceneDashboardModelService": "com.thingclips.smart.scene.home.service.SceneDashboardModelService",
     "com.thingclips.stencil.location.GoogleLocationService": "com.thingclips.googlelocation.GoogleLocationServiceImpl",
@@ -580,35 +546,34 @@
     "com.thingclips.smart.sharedevice.api.AbsMatterDeviceShareService": "com.thingclips.smart.device.sharedevice.matter.MatterDeviceShareService",
     "com.thingclips.smart.activator.search.result.plug.api.ActivatorSearchResultService": "com.thingclips.smart.activator.search.result.service.ActivatorSearchResultServiceImpl",
     "com.thingclips.smart.panel.ota.service.AbsOTACheckService": "com.thingclips.smart.panel.newota.OTACheckService",
-    "com.thingclips.smart.activator.network.request.api.AbsActivatorNetworkRequest": "com.thingclips.smart.activator.network.request.ActivatorNetworkRequestServiceImpl",
     "com.thingclips.smart.map.AbsGoogleMapService": "com.thingclips.smart.map.google.GoogleMapService",
-    "com.thingclips.smart.alexa.authorize.api.AvsTokenService": "com.thingclips.smart.alexa.authoriza.AvsTokenServiceImpl",
     "com.thingclips.smart.commonbiz.relation.api.AbsRelationService": "com.thingclips.smart.commonbiz.relation.RelationServiceManager",
+    "com.thingclips.smart.alexa.authorize.api.AvsTokenService": "com.thingclips.smart.alexa.authoriza.AvsTokenServiceImpl",
     "com.thingclips.group_usecase_api.core.GroupCoreService": "com.thingclips.smart.group.usecase.GroupCoreServiceImpl",
     "com.gzl.smart.gzlminiapp.smart_api.AbsMiniAppConfigInjectService": "com.gzl.smart.gzlminiapp.smart.init.GZLMiniAppAdapterInjectService",
     "com.thingclips.smart.panelapi.AbsPanelLifecycleService": "com.thingclips.smart.panel.service.PanelLifecycleService",
     "com.thingclips.smart.social.auth.manager.api.alexa.AmazonLinkService": "com.thingclips.social.amazon.AmazonLinkServiceImpl",
     "com.thingclips.smart.ipc.panel.api.AbsCameraBizService": "com.thingclips.smart.camera.biz.impl.CameraBizServiceImpl",
     "com.thingclips.smart.scene.business.service.SceneRecommendService": "com.thingclips.smart.scene.recommend.service.SceneRecommendServiceImpl",
+    "com.thingclips.smart.scene.business.service.SceneRecommendExposureService": "com.thingclips.smart.scene.recommend.service.SceneRecommendExposureServiceImpl",
     "com.thingclips.smart.thingsmart_device_detail.api.IPluginDeviceThirdPartService": "com.thingclips.smart.device_detail.PluginDeviceThirdPartService",
-    "com.thingclips.smart.activator_skt_api.AbsActivatorCommonBiz": "com.thingclips.smart.activator.common.info.ActivatorCommonBiz",
-    "com.thingclips.smart.mesh.BlueMeshService": "com.thingclips.smart.bluemesh.BlueMeshServiceImpl",
     "com.thingclips.smart.uibizcomponents.core.api.AbsUiComponentsService": "com.thingclips.smart.uibizcomponents.UiComponentsServiceImpl",
+    "com.thingclips.smart.mesh.BlueMeshService": "com.thingclips.smart.bluemesh.BlueMeshServiceImpl",
     "com.thingclips.smart.activator.plug.mesosphere.ActivatorMesosphereService": "com.thingclips.smart.activator.plug.mesosphere.os.ActivatorMesosphereServiceImpl",
     "com.thingclips.share.api.ShareApi": "com.thingclips.smart.china.share.ShareApiImpl",
     "com.thingclips.smart.api.service.H5Service": "com.thingclips.smart.jsbridge.router.H5ServerImpl",
     "com.thingclips.device.tiny.business.plug.api.AbsDevTinyBusinessService": "com.thingclips.device.tiny.business.DevTinyBusinessService",
     "com.thingclips.smart.thingsmart_device_detail.api.IPluginDeviceDetailInfoService": "com.thingclips.smart.device_detail.PluginDeviceDetailInfoService",
-    "com.thingclips.smart.scene.business.service.RNRouterService": "com.thingclips.smart.scene.business.RNRouterServiceImpl",
     "com.thingclips.smart.map.AbsAmapService": "com.thingclips.smart.map.amap.AmapService",
+    "com.thingclips.smart.scene.business.service.RNRouterService": "com.thingclips.smart.scene.business.RNRouterServiceImpl",
     "com.thingclips.smart.personal.third.service.api.AbsPersonalThirdService": "com.thingclips.smart.personal_third_service.PersonalThirdServiceImpl",
     "com.thingclips.smart.timing.api.AbsDeviceTimerService": "com.thingclips.smart.timer.ui.DeviceTimerService",
     "com.thingclips.smart.activator.panel.search.plug.api.ActivatorPanelSearchService": "com.thingclips.smart.activator.panel.search.ActivatorPanelSearchServiceImpl",
-    "com.thingclips.smart.dp.extended.AbsExtendedDpService": "com.thingclips.smart.dp.extended.ExtendedDpServiceImpl",
+    "com.thingclips.smart.call.module.api.ThingCallModuleService": "com.thingclips.smart.call.module.ThingCallModuleServiceImpl",
     "com.thingclips.smart.scene.business.service.SceneActionService": "com.thingclips.smart.scene.action.service.SceneActionServiceImpl",
-    "com.thingclips.smart.ipc.panel.api.AbsCameraUiService": "com.thingclips.smart.ipc.panelmore.CameraUiService",
+    "com.thingclips.smart.dp.extended.AbsExtendedDpService": "com.thingclips.smart.dp.extended.ExtendedDpServiceImpl",
     "com.thingclips.smart.scene.business.aircraft.service.PlugEditScenePedestalService": "com.thingclips.smart.scene.construct.aircaft.PlugEditScenePedestalServiceImpl",
-    "com.thingclips.smart.api.loginapi.FlutterRouteService": "com.thingclips.smart.login.base.service.FlutterRouteServiceImpl",
+    "com.thingclips.smart.ipc.panel.api.AbsCameraUiService": "com.thingclips.smart.ipc.panelmore.CameraUiService",
     "com.thingclips.smart.ipc.panel.api.AbsCameraPanelService": "com.thingclips.smart.camera.panelimpl.panel.CameraPanelService",
     "com.thingclips.smart.manage_accessories_api.IPluginManageAccessoriesService": "com.thingclips.smart.manage_accessories.PluginManageAccessoriesService",
     "com.thingclips.smart.scene.business.service.SceneConstructService": "com.thingclips.smart.scene.construct.service.SceneConstructServiceImpl",
@@ -628,6 +593,30 @@
     ],
     "global_user_event": [
       {
+        "name": "com.thingclips.smart.activator.matter.ui.ActivatorMatterUiApp",
+        "thread": false
+      },
+      {
+        "name": "com.thingclips.smart.activator.panel.search.ThingAutoScanApp",
+        "thread": false
+      },
+      {
+        "name": "com.thingclips.smart.p2p.load.ThingP2PLoadManager",
+        "thread": false
+      },
+      {
+        "name": "com.thingclips.smart.thingmall.MallModuleApp",
+        "thread": false
+      },
+      {
+        "name": "com.thingclips.smart.jsbridge.HyBridBrowserApp",
+        "thread": false
+      },
+      {
+        "name": "com.thingclips.social.amazon.AmazonApp",
+        "thread": false
+      },
+      {
         "name": "com.thingclips.smart.camera.CameraApp",
         "thread": false
       },
@@ -636,47 +625,7 @@
         "thread": false
       },
       {
-        "name": "com.thingclips.smart.rnplugin.trcttransfermanager.ThingSweeperP2PManager",
-        "thread": false
-      },
-      {
-        "name": "com.thingclips.smart.activator.panel.search.ThingAutoScanApp",
-        "thread": false
-      },
-      {
-        "name": "com.thingclips.smart.family.main.view.FamilyApp",
-        "thread": false
-      },
-      {
-        "name": "com.thingclips.smart.jsbridge.HyBridBrowserApp",
-        "thread": false
-      },
-      {
-        "name": "com.thingclips.smart.thingmall.MallModuleApp",
-        "thread": false
-      },
-      {
-        "name": "com.thingclips.smart.bluemesh.BlueMeshApp",
-        "thread": false
-      },
-      {
-        "name": "com.thingclips.social.amazon.AmazonApp",
-        "thread": false
-      },
-      {
-        "name": "com.thingclips.smart.activator.matter.ui.ActivatorMatterUiApp",
-        "thread": false
-      },
-      {
-        "name": "com.thingclips.smart.splash.SplashApp",
-        "thread": false
-      },
-      {
-        "name": "com.thingclips.smart.p2p.load.ThingP2PLoadManager",
-        "thread": false
-      },
-      {
-        "name": "com.thingclips.sensor.SensorModuleApp",
+        "name": "com.thingclips.smart.scene.business.SceneModuleApp",
         "thread": false
       },
       {
@@ -684,7 +633,19 @@
         "thread": false
       },
       {
-        "name": "com.thingclips.smart.scene.business.SceneModuleApp",
+        "name": "com.thingclips.smart.rnplugin.trcttransfermanager.ThingSweeperP2PManager",
+        "thread": false
+      },
+      {
+        "name": "com.thingclips.smart.family.FamilyManageApp",
+        "thread": false
+      },
+      {
+        "name": "com.thingclips.smart.bluemesh.BlueMeshApp",
+        "thread": false
+      },
+      {
+        "name": "com.thingclips.sensor.SensorModuleApp",
         "thread": false
       }
     ],
@@ -696,6 +657,19 @@
     ]
   },
   "routeInterceptors": {
+    "com.gzl.smart.gzlminiapp.smart.interceptor.HelpCeneterInterceptor": [
+      "thingweb",
+      "hybrid_browser",
+      "browser"
+    ],
+    "com.thingclips.smart.plugin.tunivirtualexperiencemanager.PanelMoreInterceptor": [
+      "camera_panel_more",
+      "camera_old_panel_more",
+      "device_detail",
+      "panelMoreNew",
+      "panelMore",
+      "panelAction"
+    ],
     "com.thingclips.smart.anonymous.AnonymousRouterInterceptor": [
       "ty_add_scene",
       "ty_url_plugin_muti_route",
