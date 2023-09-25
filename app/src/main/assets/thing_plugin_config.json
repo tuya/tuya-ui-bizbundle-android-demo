@@ -10,7 +10,7 @@
     },
     "TUNIImagePickerManager": {
       "name": "com.thingclips.smart.plugin.tuniimagepickermanager.TUNIImagePickerManager",
-      "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
+      "version": "1.0.0"
     },
     "TUNIScrollManager": {
       "name": "com.thingclips.smart.plugin.tuniscrollmanager.TUNIScrollManager",
@@ -20,49 +20,37 @@
       "name": "com.thingclips.smart.plugin.tunihomedevicelistmanager.TUNIHomeDeviceListManager",
       "version": "1.0.4"
     },
+    "TUniCallManager": {
+      "name": "com.thingclips.smart.plugin.tunicallmanager.TUniCallManager",
+      "version": "1.0.2"
+    },
     "TUNILocalizationManager": {
       "name": "com.thingclips.smart.plugin.tunilocalizationmanager.TUNILocalizationManager",
       "version": "1.6.3"
-    },
-    "TUNINavigatorManager": {
-      "name": "com.thingclips.smart.plugin.tuninavigatormanager.TUNINavigatorManager",
-      "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
     "TUNIAppInfoManager": {
       "name": "com.thingclips.smart.plugin.tuniappinfomanager.TUNIAppInfoManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
-    "TUNITransferManager": {
-      "name": "com.thingclips.smart.plugin.tunitransfermanager.TUNITransferManager",
+    "TUNIVirtualExperienceManager": {
+      "name": "com.thingclips.smart.plugin.tunivirtualexperiencemanager.TUNIVirtualExperienceManager",
+      "version": "1.0"
+    },
+    "TUNINavigatorManager": {
+      "name": "com.thingclips.smart.plugin.tuninavigatormanager.TUNINavigatorManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
     "TUNIUserInfoManager": {
       "name": "com.thingclips.smart.plugin.tuniuserinfomanager.TUNIUserInfoManager",
       "version": "1.0"
     },
-    "TUNIWatchManager": {
-      "name": "com.thingclips.smart.plugin.tuniwatchmanager.TUNIWatchManager",
-      "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
-    },
-    "TUNIBLEPairingManager": {
-      "name": "com.thingclips.smart.plugin.tuniblepairingmanager.TUNIBLEPairingManager",
-      "version": "1.0"
-    },
     "TUNIDLMapManager": {
       "name": "com.thingclips.smart.plugin.tunidlmapmanager.TUNIDLMapManager",
       "version": "2.0.0-anonymize.1"
     },
-    "TUNIDLIPCManager": {
-      "name": "com.thingclips.smart.plugin.tunidlipcmanager.TUNIDLIPCManager",
-      "version": "3.0.0-rc.9"
-    },
     "TUNISiriManager": {
       "name": "com.thingclips.smart.plugin.tunisirimanager.TUNISiriManager",
       "version": "1.0.4"
-    },
-    "TUniAudioDetectManager": {
-      "name": "com.thingclips.smart.plugin.tuniaudiodetectmanager.TUniAudioDetectManager",
-      "version": "1.0.0-rc.28"
     },
     "TUNIAPIRequestManager": {
       "name": "com.thingclips.smart.plugin.tuniapirequestmanager.TUNIAPIRequestManager",
@@ -72,14 +60,6 @@
       "name": "com.thingclips.smart.plugin.tunirecordingmanager.TUNIRecordingManager",
       "version": "1.0.15-anonymize.1"
     },
-    "TUNIP2pFileManager": {
-      "name": "com.thingclips.smart.plugin.tunip2pfilemanager.TUNIP2pFileManager",
-      "version": "1.0.9"
-    },
-    "TUNIDeviceMotionManager": {
-      "name": "com.thingclips.smart.plugin.tunidevicemotionmanager.TUNIDeviceMotionManager",
-      "version": "1.0.1-anonymize.1"
-    },
     "TUNIPhoneClipboardManager": {
       "name": "com.thingclips.smart.plugin.tuniphoneclipboardmanager.TUNIPhoneClipboardManager",
       "version": "2.0.2"
@@ -88,9 +68,17 @@
       "name": "com.thingclips.smart.plugin.tuniphonescreenmanager.TUNIPhoneScreenManager",
       "version": "1.0"
     },
+    "TUNIDeviceMotionManager": {
+      "name": "com.thingclips.smart.plugin.tunidevicemotionmanager.TUNIDeviceMotionManager",
+      "version": "1.0.1-anonymize.1"
+    },
     "TUNIDiffLayerManager": {
       "name": "com.thingclips.smart.plugin.tunidifflayermanager.TUNIDiffLayerManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
+    },
+    "TUNIIAPManager": {
+      "name": "com.thingclips.smart.plugin.tuniiapmanager.TUNIIAPManager",
+      "version": "1.0.0"
     },
     "TUNIMiniProgramManager": {
       "name": "com.thingclips.smart.plugin.tuniminiprogrammanager.TUNIMiniProgramManager",
@@ -106,7 +94,7 @@
     },
     "TUNIAPMManager": {
       "name": "com.thingclips.smart.plugin.tuniapmmanager.TUNIAPMManager",
-      "version": "1.1.0-anonymize.1"
+      "version": ""
     },
     "TUNIGyroscopeManager": {
       "name": "com.thingclips.smart.plugin.tunigyroscopemanager.TUNIGyroscopeManager",
@@ -116,21 +104,17 @@
       "name": "com.thingclips.smart.plugin.tuniwebsocketmanager.TUNIWebSocketManager",
       "version": "1.0"
     },
-    "TUNIGZLTabBarManager": {
-      "name": "com.thingclips.smart.plugin.tunigzltabbarmanager.TUNIGZLTabBarManager",
-      "version": "3.0.0-rc.3"
-    },
     "TUNIPhoneVibrateManager": {
       "name": "com.thingclips.smart.plugin.tuniphonevibratemanager.TUNIPhoneVibrateManager",
       "version": "1.0.1-anonymize.2"
     },
+    "TUNIGZLTabBarManager": {
+      "name": "com.thingclips.smart.plugin.tunigzltabbarmanager.TUNIGZLTabBarManager",
+      "version": "3.0.0-rc.3"
+    },
     "TUNIAuthorizeManager": {
       "name": "com.thingclips.smart.plugin.tuniauthorizemanager.TUNIAuthorizeManager",
-      "version": "1.3.0"
-    },
-    "TUNIIPCCameraManager": {
-      "name": "com.thingclips.smart.plugin.tuniipccameramanager.TUNIIPCCameraManager",
-      "version": "1.2.0-anonymize.1"
+      "version": "1.3.4"
     },
     "TUNIDLVideoManager": {
       "name": "com.thingclips.smart.plugin.tunidlvideomanager.TUNIDLVideoManager",
@@ -140,25 +124,21 @@
       "name": "com.thingclips.smart.plugin.tuniutilsmanager.TUNIUtilsManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
-    "TUNIIPCDoorbellManager": {
-      "name": "com.thingclips.smart.plugin.tuniipcdoorbellmanager.TUNIIPCDoorbellManager",
-      "version": "1.0.1-anonymize.1"
+    "TUNILocationManager": {
+      "name": "com.thingclips.smart.plugin.tunilocationmanager.TUNILocationManager",
+      "version": "2.2.2"
     },
     "TUNIApDirectlyDeviceManager": {
       "name": "com.thingclips.smart.plugin.tuniapdirectlydevicemanager.TUNIApDirectlyDeviceManager",
       "version": "1.1.0-anonymize.1"
     },
-    "TUNILocationManager": {
-      "name": "com.thingclips.smart.plugin.tunilocationmanager.TUNILocationManager",
-      "version": "2.0.4"
-    },
     "TUNIDLCameraManager": {
       "name": "com.thingclips.smart.plugin.tunidlcameramanager.TUNIDLCameraManager",
       "version": "3.0.4"
     },
-    "TUNIScriptContextManager": {
-      "name": "com.thingclips.smart.plugin.tuniscriptcontextmanager.TUNIScriptContextManager",
-      "version": "1.0"
+    "TUNIWidgetManager": {
+      "name": "com.thingclips.smart.plugin.tuniwidgetmanager.TUNIWidgetManager",
+      "version": "1.0.4"
     },
     "TUNIAudioManager": {
       "name": "com.thingclips.smart.plugin.tuniaudiomanager.TUNIAudioManager",
@@ -168,25 +148,21 @@
       "name": "com.thingclips.smart.plugin.tuniasrmanager.TUNIASRManager",
       "version": "1.0.0-rc.40"
     },
-    "TUNICloudStorageSignatureManager": {
-      "name": "com.thingclips.smart.plugin.tunicloudstoragesignaturemanager.TUNICloudStorageSignatureManager",
-      "version": "1.0.0-anonymize.1"
+    "TUNIFontManager": {
+      "name": "com.thingclips.smart.plugin.tunifontmanager.TUNIFontManager",
+      "version": "1.0.2-anonymize.1"
     },
     "TUNINavigationBarManager": {
       "name": "com.thingclips.smart.plugin.tuninavigationbarmanager.TUNINavigationBarManager",
       "version": "1.0"
     },
-    "TUNIFontManager": {
-      "name": "com.thingclips.smart.plugin.tunifontmanager.TUNIFontManager",
-      "version": "1.0.2-anonymize.1"
-    },
     "TUNIPhoneNetworkManager": {
       "name": "com.thingclips.smart.plugin.tuniphonenetworkmanager.TUNIPhoneNetworkManager",
       "version": "1.3.0-anonymize.5"
     },
-    "TUNIAppleHealthManager": {
-      "name": "com.thingclips.smart.plugin.tuniapplehealthmanager.TUNIAppleHealthManager",
-      "version": "1.0.3-anonymize.1"
+    "TUNIGeofenceManager": {
+      "name": "com.thingclips.smart.plugin.tunigeofencemanager.TUNIGeofenceManager",
+      "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
     "TUNIBaseMiniProgramManager": {
       "name": "com.thingclips.smart.plugin.tunibaseminiprogrammanager.TUNIBaseMiniProgramManager",
@@ -195,10 +171,6 @@
     "TUNIInteractionManager": {
       "name": "com.thingclips.smart.plugin.tuniinteractionmanager.TUNIInteractionManager",
       "version": "1.5.0-rc.3"
-    },
-    "TUNIGeofenceManager": {
-      "name": "com.thingclips.smart.plugin.tunigeofencemanager.TUNIGeofenceManager",
-      "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
     "TUNILoginManager": {
       "name": "com.thingclips.smart.plugin.tuniloginmanager.TUNILoginManager",
@@ -216,17 +188,13 @@
       "name": "com.thingclips.smart.plugin.tunicountryselectmanager.TUNICountrySelectManager",
       "version": "1.0.0-anonymize.1"
     },
-    "TUNIIPCCameraSettingsManager": {
-      "name": "com.thingclips.smart.plugin.tuniipccamerasettingsmanager.TUNIIPCCameraSettingsManager",
-      "version": "1.1.1-anonymize.1"
+    "TUNILogManager": {
+      "name": "com.thingclips.smart.plugin.tunilogmanager.TUNILogManager",
+      "version": "1.0"
     },
     "TUNICompassManager": {
       "name": "com.thingclips.smart.plugin.tunicompassmanager.TUNICompassManager",
       "version": "1.0.1-anonymize.1"
-    },
-    "TUNIActivationManager": {
-      "name": "com.thingclips.smart.plugin.tuniactivationmanager.TUNIActivationManager",
-      "version": "1.0.2"
     },
     "TUNIPhoneCallManager": {
       "name": "com.thingclips.smart.plugin.tuniphonecallmanager.TUNIPhoneCallManager",
@@ -238,7 +206,7 @@
     },
     "TUNIDeviceSceneManager": {
       "name": "com.thingclips.smart.plugin.tunidevicescenemanager.TUNIDeviceSceneManager",
-      "version": "1.1.0"
+      "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
     "TUNIDLWebViewManager": {
       "name": "com.thingclips.smart.plugin.tunidlwebviewmanager.TUNIDLWebViewManager",
@@ -272,13 +240,13 @@
       "name": "com.thingclips.smart.plugin.tunistoragemanager.TUNIStorageManager",
       "version": "1.1.3-anonymize.2"
     },
-    "TUNIPayManager": {
-      "name": "com.thingclips.smart.plugin.tunipaymanager.TUNIPayManager",
-      "version": "2.0.8"
-    },
     "TUNIDeviceDetailManager": {
       "name": "com.thingclips.smart.plugin.tunidevicedetailmanager.TUNIDeviceDetailManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
+    },
+    "TUNIPayManager": {
+      "name": "com.thingclips.smart.plugin.tunipaymanager.TUNIPayManager",
+      "version": "2.0.8"
     },
     "TUNIThingControlManager": {
       "name": "com.thingclips.smart.plugin.tunithingcontrolmanager.TUNIThingControlManager",
@@ -296,12 +264,12 @@
       "name": "com.thingclips.smart.plugin.tunikeyboardmanager.TUNIKeyboardManager",
       "version": "1.0"
     },
-    "TUNIExtMiniAppInfoManager": {
-      "name": "com.thingclips.smart.plugin.tuniextminiappinfomanager.TUNIExtMiniAppInfoManager",
-      "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
-    },
     "TUNIHomeDataManager": {
       "name": "com.thingclips.smart.plugin.tunihomedatamanager.TUNIHomeDataManager",
+      "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
+    },
+    "TUNIExtMiniAppInfoManager": {
+      "name": "com.thingclips.smart.plugin.tuniextminiappinfomanager.TUNIExtMiniAppInfoManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
     "TUNIDownloadFileManager": {
@@ -310,7 +278,7 @@
     },
     "TUNISceneManager": {
       "name": "com.thingclips.smart.plugin.tuniscenemanager.TUNISceneManager",
-      "version": "1.1.6-anonymize.1"
+      "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
     "TUNIUploadFileManager": {
       "name": "com.thingclips.smart.plugin.tuniuploadfilemanager.TUNIUploadFileManager",
@@ -320,13 +288,13 @@
       "name": "com.thingclips.smart.plugin.tuniminihighwaymanager.TUNIMiniHighwayManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
     },
+    "TUNIGroupControlManager": {
+      "name": "com.thingclips.smart.plugin.tunigroupcontrolmanager.TUNIGroupControlManager",
+      "version": "2.0.3"
+    },
     "TUNIOpenPageManager": {
       "name": "com.thingclips.smart.plugin.tuniopenpagemanager.TUNIOpenPageManager",
       "version": "4.4.0-feature-anonymize-4.4.0-SNAPSHOT"
-    },
-    "TUNIGroupControlManager": {
-      "name": "com.thingclips.smart.plugin.tunigroupcontrolmanager.TUNIGroupControlManager",
-      "version": "2.0.1"
     },
     "TUNIScanCodeManager": {
       "name": "com.thingclips.smart.plugin.tuniscancodemanager.TUNIScanCodeManager",
@@ -334,7 +302,7 @@
     },
     "TUNIImageNetworkManager": {
       "name": "com.thingclips.smart.plugin.tuniimagenetworkmanager.TUNIImageNetworkManager",
-      "version": "1.0.2-anonymize.1"
+      "version": "1.1.2"
     }
   }
 }

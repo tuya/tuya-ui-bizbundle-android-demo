@@ -1,10 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+
     ext {
         kotlin_version = '1.6.0'
-        sdk_version = '5.1.0'
-        bizbundle_version_4_8_0 = "4.8.0-4"
-        bizbundle_version = "5.2.0-11"
+        sdk_version = '5.5.0'
+        bizbundle_version = "5.5.0-3"
+        applicationId = "com.sample.sdk"
     }
     repositories {
         maven { url "https://maven-other.tuya.com/repository/maven-commercial-releases/" }
@@ -12,14 +13,22 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.android.tools.build:gradle:7.4.2'
         classpath "com.thingclips.smart:thingsmart-theme-open-plugin:1.0.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.google.dagger:hilt-android-gradle-plugin:2.36"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.42"
     }
 }
 
 allprojects {
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+        exclude group: "com.thingclips.smart", module: "thingplugin-annotation"
+        exclude group: "com.thingclips.android.module", module: "thingmodule-annotation"
+        exclude group: "com.thingclips.smart", module: 'thingsmart-modularCampAnno'
+        exclude group: "com.thingclips.smart", module: "thingsmart-family-api"
+    }
+
     repositories {
         maven { url "https://maven-other.tuya.com/repository/maven-commercial-releases/" }
         google()
@@ -29,9 +38,6 @@ allprojects {
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://jitpack.io" }
         maven { url 'https://developer.huawei.com/repo/' }
-    }
-    configurations.all {
-        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
     }
 }
 
