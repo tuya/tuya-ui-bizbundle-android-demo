@@ -23,6 +23,7 @@
     <bool name="is_alexa_to_thingpp_support">true</bool>
 
     <string name="wxAppKey"></string>
+    <bool name="is_huawei_pkg">false</bool>
 
     <color name="status_bg_color">@color/thing_theme_color_b2</color>
     <color name="list_primary_color">@color/thing_theme_color_b6_n1</color>
