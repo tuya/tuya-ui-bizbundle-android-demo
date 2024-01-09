@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 android {
-    compileSdkVersion 29
+    compileSdk 29
     buildToolsVersion "29.0.3"
 
     defaultConfig {
@@ -30,9 +30,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:${biz_bom_version}")
     api "com.thingclips.smart:thingsmart:${sdk_version}"
-    // 群组依赖
-    api "com.thingclips.smart:thingsmart-bizbundle-groupmanager:${bizbundle_version}"
-    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
+    // group manager
+    api "com.thingclips.smart:thingsmart-bizbundle-groupmanager"
+    api "com.thingclips.smart:thingsmart-bizbundle-family"
 
 }

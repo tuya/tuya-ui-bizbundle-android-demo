@@ -2,6 +2,8 @@ package com.tuya.smart.bizubundle.demo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -11,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.thingclips.smart.android.common.utils.L;
 import com.thingclips.smart.android.user.api.ILogoutCallback;
 import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.api.start.PipeLineManager;
 import com.thingclips.smart.demo_login.base.utils.LoginHelper;
 import com.thingclips.smart.home.sdk.ThingHomeSdk;
 import com.thingclips.smart.home.sdk.api.IThingHomeChangeListener;
@@ -88,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         //此处只是演示代码，集成时请在登录成功后调用
         //This method must be called after successful login
         ThingWrapper.onLogin();
-
+        Log.i("SceneMainActivity", "onCreate");
         // sample code
         mCurrentFamilyName = findViewById(R.id.current_family_name);
         mCurrentFamilyName.setOnClickListener(new View.OnClickListener() {
@@ -251,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent();
-                i.setClassName(MainActivity.this, "com.tuya.smart.bizubundle.panelmore.demo.DeviceDetailActivity");
+                i.setClassName(MainActivity.this, "com.thingclips.smart.bizbundle.devicedetail.demo.DeviceDetailActivity");
                 startActivity(i);
             }
         });

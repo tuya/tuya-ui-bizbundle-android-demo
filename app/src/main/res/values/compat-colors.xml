@@ -13,6 +13,7 @@
     <bool name="is_need_blemesh_support">true</bool>
     <bool name="is_scan_support">true</bool>
     <bool name="is_support_google_iap">false</bool>>
+    <bool name="use_device_detail_mini_program">false</bool>>
 
     <!-- google授权绑定 -->
     <string name="google_flip_client_id"></string>
