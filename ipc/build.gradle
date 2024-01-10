@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdk 33
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 29
+        minSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
@@ -27,33 +27,34 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     api "com.thingclips.smart:thingsmart:${sdk_version}"
-    api "com.thingclips.smart:thingsmart-bizbundle-camera:${bizbundle_version}"
 
-    //使用RN 面板需要先集成设备控制业务包
+    api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:${biz_bom_version}")
+    api "com.thingclips.smart:thingsmart-bizbundle-camera"
 
-    //设备控制业务包
-    api "com.thingclips.smart:thingsmart-bizbundle-panel:${bizbundle_version}"
+    // 使用RN 面板需要先集成设备控制业务包
+
+    //设备控制业务包 RN容器
+    api "com.thingclips.smart:thingsmart-bizbundle-panel"
+    //基础扩展能力
+    api("com.thingclips.smart:thingsmart-bizbundle-basekit") {
+        exclude group: "com.thingclips.smart", module: "thingplugin-annotation"
+    }
+    //涂鸦业务扩展能力
+    api "com.thingclips.smart:thingsmart-bizbundle-bizkit"
+    //设备控制相关能力
+    api "com.thingclips.smart:thingsmart-bizbundle-devicekit"
 
     //强烈建议引入---start
     //家庭相关依赖
-    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
-    //基础扩展能力，对标微信大部分API
-    api ("com.thingclips.smart:thingsmart-bizbundle-basekit:${bizbundle_version}"){
-        exclude group:"com.thingclips.smart",module:"thingplugin-annotation"
-    }
-    //涂鸦业务护展能力
-    api "com.thingclips.smart:thingsmart-bizbundle-bizkit:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-family"
     //地園扩展能力
-    api "com.thingclips.smart:thingsmart-bizbundle-mapkit:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-mapkit"
     //多媒体扩展能力
-    api "com.thingclips.smart:thingsmart-bizbundle-mediakit:${bizbundle_version}"
-    //
-    api "com.thingclips.smart:thingsmart-bizbundle-devicekit:${bizbundle_version}"
-
+    api "com.thingclips.smart:thingsmart-bizbundle-mediakit"
 
     //按需依赖---start
     //IPC 面板相关依赖项
-    api "com.thingclips.smart:thingsmart-bizbundle-camera_panel:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-camera_panel"
 
     // 高德地图
     implementation 'com.amap.api:search:7.9.0'

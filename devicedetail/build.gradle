@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 33
+    compileSdk 33
 
     defaultConfig {
         minSdkVersion 19
@@ -39,8 +39,9 @@ configurations.all {
 }
 
 dependencies {
-    api "com.thingclips.smart:thingsmart-bizbundle-panelmore:${bizbundle_version}"
-    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
+    api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:${biz_bom_version}")
+    api "com.thingclips.smart:thingsmart-bizbundle-panelmore"
+    api "com.thingclips.smart:thingsmart-bizbundle-family"
     api "com.thingclips.smart:thingsmart:${sdk_version}"
 
 }

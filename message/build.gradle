@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdk 29
     buildToolsVersion "29.0.3"
 
 
@@ -30,6 +30,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api "com.thingclips.smart:thingsmart-bizbundle-message:${bizbundle_version}"
     api "com.thingclips.smart:thingsmart:${sdk_version}"
+
+    api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:${biz_bom_version}")
+    api "com.thingclips.smart:thingsmart-bizbundle-message"
 }

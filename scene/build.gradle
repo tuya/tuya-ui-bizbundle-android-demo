@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 31
+    compileSdk 31
 
     defaultConfig {
         minSdkVersion 19
@@ -23,13 +23,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    api ("com.thingclips.smart:thingsmart-bizbundle-scene:${bizbundle_version}")
+    api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:${biz_bom_version}")
+    api ("com.thingclips.smart:thingsmart-bizbundle-scene")
+    api "com.thingclips.smart:thingsmart-bizbundle-map_google"
+    api "com.thingclips.smart:thingsmart-bizbundle-location_google"
 
-    api "com.thingclips.smart:thingsmart-bizbundle-map_google:${bizbundle_version}"
-    api "com.thingclips.smart:thingsmart-bizbundle-location_google:${bizbundle_version}"
-
-//    api "com.thingclips.smart:thingsmart-bizbundle-map_amap:${bizbundle_version}"
-//    api "com.thingclips.smart:thingsmart-bizbundle-location_amap:${bizbundle_version}"
+//    api "com.thingclips.smart:thingsmart-bizbundle-map_amap"
+//    api "com.thingclips.smart:thingsmart-bizbundle-location_amap"
 
     api "com.thingclips.smart:thingsmart:${sdk_version}"
 

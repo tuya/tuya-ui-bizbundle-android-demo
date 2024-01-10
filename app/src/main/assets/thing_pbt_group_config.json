@@ -1,8 +1,13 @@
 [
   {
-    "npmName": "MediaKit",
-    "version": "3.0.4",
-    "PBTGroupName": "TUNIMediaKit"
+    "npmName": "DebuggerKit",
+    "version": "3.0.0",
+    "PBTGroupName": "TUNIDebuggerKit"
+  },
+  {
+    "npmName": "MiniKit",
+    "version": "3.8.3",
+    "PBTGroupName": "TUNIMiniKit"
   },
   {
     "npmName": "HomeKit",
@@ -10,28 +15,63 @@
     "PBTGroupName": "TUNIHomeKit"
   },
   {
-    "npmName": "DeviceKit",
-    "version": "4.0.8",
-    "PBTGroupName": "TUNIDeviceKit"
-  },
-  {
-    "npmName": "MapKit",
-    "version": "3.2.1",
-    "PBTGroupName": "TUNIMapKit"
-  },
-  {
-    "npmName": "BaseKit",
-    "version": "3.7.9",
-    "PBTGroupName": "TUNIBaseKit"
+    "npmName": "SweeperKit",
+    "version": "0.1.13",
+    "PBTGroupName": "TUNISweeperKit"
   },
   {
     "npmName": "BizKit",
-    "version": "3.9.9",
+    "version": "4.2.4",
     "PBTGroupName": "TUNIBizKit"
   },
   {
-    "npmName": "MiniKit",
-    "version": "3.5.4",
-    "PBTGroupName": "TUNIMiniKit"
+    "npmName": "IPCKit",
+    "version": "2.0.8",
+    "PBTGroupName": "TUNIIPCKit"
+  },
+  {
+    "npmName": "CategoryCommonBizKit",
+    "version": "1.0.5",
+    "PBTGroupName": "TUNICategoryCommonBizKit"
+  },
+  {
+    "npmName": "DeviceKit",
+    "version": "4.1.14",
+    "PBTGroupName": "TUNIDeviceKit"
+  },
+  {
+    "npmName": "BaseKit",
+    "version": "3.9.2",
+    "PBTGroupName": "TUNIBaseKit"
+  },
+  {
+    "npmName": "MediaKit",
+    "version": "3.2.0",
+    "PBTGroupName": "TUNIMediaKit"
+  },
+  {
+    "npmName": "P2PKit",
+    "version": "2.0.4",
+    "PBTGroupName": "TUNIP2PKit"
+  },
+  {
+    "npmName": "MapKit",
+    "version": "3.3.1",
+    "PBTGroupName": "TUNIMapKit"
+  },
+  {
+    "npmName": "PlayNetKit",
+    "version": "1.3.0-rc.22",
+    "PBTGroupName": "TUNIPlayNetKit"
+  },
+  {
+    "npmName": "WearKit",
+    "version": "0.0.4",
+    "PBTGroupName": "TUNIWearKit"
+  },
+  {
+    "npmName": "AudioKit",
+    "version": "1.0.0-rc.28",
+    "PBTGroupName": "TUNIAudioKit"
   }
 ]

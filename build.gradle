@@ -3,8 +3,8 @@ buildscript {
 
     ext {
         kotlin_version = '1.6.0'
-        sdk_version = '5.5.0'
-        bizbundle_version = "5.5.0-3"
+        sdk_version = '5.8.0'
+        biz_bom_version = "5.8.0"
         applicationId = "com.sample.sdk"
     }
     repositories {
@@ -14,20 +14,13 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.4.2'
-        classpath "com.thingclips.smart:thingsmart-theme-open-plugin:1.0.1"
+        classpath "com.thingclips.smart:thingsmart-theme-open-plugin:2.0.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:2.42"
     }
 }
 
 allprojects {
-    configurations.all {
-        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-        exclude group: "com.thingclips.smart", module: "thingplugin-annotation"
-        exclude group: "com.thingclips.android.module", module: "thingmodule-annotation"
-        exclude group: "com.thingclips.smart", module: 'thingsmart-modularCampAnno'
-        exclude group: "com.thingclips.smart", module: "thingsmart-family-api"
-    }
 
     repositories {
         maven { url "https://maven-other.tuya.com/repository/maven-commercial-releases/" }

@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdk 29
 
     defaultConfig {
         minSdkVersion 23
@@ -23,13 +23,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-
-    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
+    api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:${biz_bom_version}")
+    api "com.thingclips.smart:thingsmart-bizbundle-family"
     api "com.thingclips.smart:thingsmart:${sdk_version}"
-
-    // You need to rely on the following map gallery to ensure that the geographic location settings under the family are available.
-//    api 'com.tuya.smart:tuyasmart-bizbundle-map_amap:3.25.2-4'
-//    api 'com.tuya.smart:tuyasmart-bizbundle-location_amap:3.25.2-4'
-//    api 'com.tuya.smart:tuyasmart-bizbundle-map_google:3.25.2-4'
-//    api 'com.tuya.smart:tuyasmart-bizbundle-location_google:3.25.2-4'
 }

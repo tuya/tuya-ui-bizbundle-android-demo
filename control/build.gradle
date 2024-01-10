@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdk 29
     buildToolsVersion "29.0.3"
 
     defaultConfig {
@@ -32,9 +32,9 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
-    api "com.thingclips.smart:thingsmart-bizbundle-control:${bizbundle_version}"
-    api "com.thingclips.smart:thingsmart-bizbundle-family:${bizbundle_version}"
+    api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:${biz_bom_version}")
+    api "com.thingclips.smart:thingsmart-bizbundle-control"
+    api "com.thingclips.smart:thingsmart-bizbundle-family"
     api "com.thingclips.smart:thingsmart:${sdk_version}"
 
 }

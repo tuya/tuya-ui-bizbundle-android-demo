@@ -16,6 +16,7 @@ import com.thingclips.smart.api.service.ServiceEventListener;
 import com.thingclips.smart.home.sdk.ThingHomeSdk;
 import com.thingclips.smart.optimus.sdk.ThingOptimusSdk;
 import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.thingclips.smart.theme.ThingThemeInitializer;
 import com.thingclips.smart.wrapper.api.ThingWrapper;
 
 import dagger.hilt.android.HiltAndroidApp;
@@ -45,6 +46,7 @@ public class TuyaSmartApp extends Application {
                 Log.e("service not implement", serviceName);
             }
         });
+        ThingThemeInitializer.INSTANCE.init(this);
         ThingOptimusSdk.init(this);
 
         // register family service，mall bizbundle don't have to implement it.

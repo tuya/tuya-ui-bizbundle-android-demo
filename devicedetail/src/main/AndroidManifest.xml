@@ -2,6 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.thingclips.smart.bizubundle.devicedetail.demo">
     <application>
-        <activity android:name="com.thingclips.smart.bizbundle.devicedetail.demo.DeviceDetailActivity"></activity>
+        <activity android:name="com.thingclips.smart.bizbundle.devicedetail.demo.DeviceDetailActivity" />
     </application>
 </manifest>

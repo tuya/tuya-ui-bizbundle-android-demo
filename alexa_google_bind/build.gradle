@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdk 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
@@ -38,5 +38,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     api "com.thingclips.smart:thingsmart:${sdk_version}"
-    api "com.thingclips.smart:thingsmart-bizbundle-amazon_google_bind:${bizbundle_version}"
+    api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:${biz_bom_version}")
+    api "com.thingclips.smart:thingsmart-bizbundle-amazon_google_bind"
 }

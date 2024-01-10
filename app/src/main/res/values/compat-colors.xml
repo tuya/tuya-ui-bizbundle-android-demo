@@ -13,6 +13,7 @@
     <bool name="is_need_blemesh_support">true</bool>
     <bool name="is_scan_support">true</bool>
     <bool name="is_support_google_iap">false</bool>>
+    <bool name="use_device_detail_mini_program">false</bool>>
 
     <!-- google授权绑定 -->
     <string name="google_flip_client_id"></string>
@@ -22,6 +23,7 @@
     <bool name="is_alexa_to_thingpp_support">true</bool>
 
     <string name="wxAppKey"></string>
+    <bool name="is_huawei_pkg">false</bool>
 
     <color name="status_bg_color">@color/thing_theme_color_b2</color>
     <color name="list_primary_color">@color/thing_theme_color_b6_n1</color>
