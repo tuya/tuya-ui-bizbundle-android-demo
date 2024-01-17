@@ -664,6 +664,7 @@
     ]
   },
   "serviceMap": {
+    "com.thingclips.smart.camera.cloud.purchase.AbsCameraCloudPurchaseService": "com.thingclips.smart.camera.cloud.purchase.CameraCloudPurchaseServiceImpl",
     "com.thingclips.smart.scene.business.api.IThingSceneBusinessService": "com.thingclips.smart.scene.business.ThingSceneBusinessManager",
     "com.thingclips.smart.share.api.AbsChinaShareService": "com.thingclips.smart.china.share.AbsChinaShareServiceImpl",
     "com.thingclips.stencil.location.LocationService": "com.thingclips.smart.location.LocationServiceImpl",
