@@ -2,9 +2,9 @@
 buildscript {
 
     ext {
-        kotlin_version = '1.6.0'
+        kotlin_version = '1.7.20'
         sdk_version = '5.8.1'
-        biz_bom_version = "5.8.9"
+        biz_bom_version = "5.8.16"
         applicationId = "com.sample.sdk"
     }
     repositories {
@@ -16,7 +16,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:7.4.2'
         classpath "com.thingclips.smart:thingsmart-theme-open-plugin:2.0.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.google.dagger:hilt-android-gradle-plugin:2.42"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.43.2"
     }
 }
 
