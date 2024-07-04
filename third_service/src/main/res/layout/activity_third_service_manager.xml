@@ -16,4 +16,10 @@
         android:layout_height="wrap_content"
         android:text="@string/third_service_route_push_sms_service" />
 
+    <Button
+        android:id="@+id/btn_cloud_storage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/third_service_route_cloud_storage_service" />
+
 </LinearLayout>

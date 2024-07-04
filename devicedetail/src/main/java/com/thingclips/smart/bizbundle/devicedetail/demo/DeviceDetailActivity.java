@@ -22,6 +22,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.thingclips.smart.api.router.UrlBuilder;
 import com.thingclips.smart.api.router.UrlRouter;
 import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.bizbundle.initializer.BizBundleInitializer;
 import com.thingclips.smart.bizubundle.devicedetail.demo.R;
 import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.thingclips.smart.home.sdk.ThingHomeSdk;
@@ -34,7 +35,6 @@ import com.thingclips.smart.sdk.bean.DeviceBean;
 import com.thingclips.smart.sdk.bean.GroupBean;
 import com.thingclips.smart.thingsmart_device_detail.api.IPluginInfraredSubDevDisplayService;
 import com.thingclips.smart.utils.ProgressUtil;
-import com.thingclips.smart.wrapper.api.ThingWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,8 +54,8 @@ public class DeviceDetailActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel_more);
-        ThingWrapper.registerService(PanelMoreMenuService.class, new PanelMoreMenuServiceImpl());
-        ThingWrapper.registerService(PanelMoreItemClickService.class, new PanelMoreItemClickServiceImp());
+        BizBundleInitializer.registerService(PanelMoreMenuService.class, new PanelMoreMenuServiceImpl());
+        BizBundleInitializer.registerService(PanelMoreItemClickService.class, new PanelMoreItemClickServiceImp());
         edt = findViewById(R.id.edit_id);
         mAdapter = new SimpleDevListAdapter();
         initClick();

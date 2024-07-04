@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tab_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Home Tab"
+                android:gravity="bottom|center"
+                android:paddingBottom="2dp"
+                android:textSize="@dimen/thing_theme_dimen_t10"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Data Permission"
+                android:gravity="start|center"
+                android:textSize="@dimen/thing_theme_dimen_t8"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_open_auth"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Open Authorization"
+                android:gravity="start|center"
+                android:textSize="@dimen/thing_theme_dimen_t4"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/google_blue"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="2dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_open_auth_result"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="start|center"
+                android:layout_marginStart="@dimen/thing_dp_50"
+                android:textColor="@color/green"
+                android:textSize="@dimen/thing_theme_dimen_t2"
+                android:text="authorization opened"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_close_auth"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Close Authorization"
+                android:gravity="start|center"
+                android:textSize="@dimen/thing_theme_dimen_t4"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/google_blue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="2dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_close_auth_result"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="start|center"
+                android:layout_marginStart="@dimen/thing_dp_50"
+                android:textColor="@color/green"
+                android:textSize="@dimen/thing_theme_dimen_t4"
+                android:text="authorization closed"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="UI"
+                android:gravity="start|center"
+                android:textSize="@dimen/thing_theme_dimen_t8"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_tab_change"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Select Page"
+                android:gravity="start|center"
+                android:textSize="@dimen/thing_theme_dimen_t4"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/google_blue"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="2dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_banner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="BannerAd"
+                android:gravity="start|center"
+                android:textSize="@dimen/thing_theme_dimen_t4"
+                android:layout_marginTop="20dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/banner_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="2dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_splash"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="SplashAd"
+                android:gravity="start|center"
+                android:textSize="@dimen/thing_theme_dimen_t4"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/google_blue"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="2dp"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

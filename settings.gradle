@@ -1,4 +1,4 @@
-rootProject.name = "TuyaSamartBizubundle"
+rootProject.name = "TuyaSmartBizbundle"
 include ':app'
 
 include ':panel'
@@ -22,3 +22,4 @@ include ':share'
 include ':control'
 include ':third_service'
 include ':miniapp'
+include ':marketing'

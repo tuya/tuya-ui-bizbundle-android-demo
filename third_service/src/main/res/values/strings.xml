@@ -2,4 +2,5 @@
 <resources>
     <string name="third_service_route_push_sms_service">PUSH SMS</string>
     <string name="third_service_route_push_call_service">PUSH CALL</string>
+    <string name="third_service_route_cloud_storage_service">Cloud Storage</string>
 </resources>

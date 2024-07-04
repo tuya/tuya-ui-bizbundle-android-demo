@@ -8,8 +8,10 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.thingclips.smart.android.network.ThingSmartNetWork;
 import com.thingclips.smart.api.MicroContext;
 import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.thingclips.smart.home.sdk.OptimusManager;
 import com.thingclips.smart.jsbridge.base.webview.WebViewActivity;
 import com.thingclips.smart.personal.core.bean.ThirdIntegrationBean;
 import com.thingclips.smart.personal.third.service.api.AbsPersonalThirdService;
@@ -39,7 +41,15 @@ public class ThirdServiceManagerActivity extends AppCompatActivity {
                 routePushCallService();
             }
         });
+        findViewById(R.id.btn_cloud_storage).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                routeCloudStorageService();
+            }
+        });
     }
+
+
 
     private void routePushSmsService() {
         AbsBizBundleFamilyService familyService = MicroContext.getServiceManager()
@@ -102,6 +112,42 @@ public class ThirdServiceManagerActivity extends AppCompatActivity {
                             routeWebActivity(bean.getUrl());
                         } else {
                             Log.e(TAG, "not support PUSH_CALL_SERVICE");
+                        }
+                    }
+
+                    @Override
+                    public void onError(String errorCode, String errorMessage) {
+                        Log.e(TAG, "errorCode:" + errorCode + " errorMessage" + errorMessage);
+                    }
+                }
+        );
+    }
+
+    private void routeCloudStorageService() {
+        AbsBizBundleFamilyService familyService = MicroContext.getServiceManager()
+                .findServiceByInterface(AbsBizBundleFamilyService.class.getName());
+        if (familyService == null) {
+            Log.e(TAG, "AbsBizBundleFamilyService == null");
+            return;
+        }
+
+        AbsPersonalThirdService thirdService = MicroContext.getServiceManager()
+                .findServiceByInterface(AbsPersonalThirdService.class.getName());
+        if (thirdService == null) {
+            Log.e(TAG, "AbsPersonalThirdService == null");
+            return;
+        }
+
+        thirdService.requestPersonalThirdService(
+                familyService.getCurrentHomeId(),
+                PersonalThirdServiceType.PUSH_CLOUD_STORAGE,
+                new IPersonalThirdServiceCallback() {
+                    @Override
+                    public void onSuccess(ThirdIntegrationBean bean) {
+                        if (bean != null) {
+                            routeWebActivity(bean.getUrl());
+                        } else {
+                            Log.e(TAG, "not support PUSH_CLOUD_STORAGE");
                         }
                     }
 
