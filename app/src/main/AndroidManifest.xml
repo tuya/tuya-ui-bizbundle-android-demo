@@ -10,6 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
+        android:allowNativeHeapPointerTagging="false"
         android:theme="@style/Base_BizBundle_Theme"
         tools:replace="android:theme,android:supportsRtl,android:allowBackup">
 
@@ -60,6 +61,10 @@
         <meta-data
             android:name="PACKAGE_NAME"
             android:value="${PACKAGE_NAME}" />
+
+        <meta-data
+            android:name="APP_SCHEME_NAME"
+            android:value="${APP_SCHEME_NAME}" />
 
         <!-- demo use only start -->
         <activity

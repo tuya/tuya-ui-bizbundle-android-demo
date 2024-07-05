@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.thingclips.smart.api.service.MicroServiceManager;
+import com.thingclips.smart.bizbundle.initializer.BizBundleInitializer;
 import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.thingclips.smart.control.PluginControlService;
 import com.thingclips.smart.control.plug.api.IPluginControlService;
@@ -19,7 +20,6 @@ import com.thingclips.smart.home.sdk.ThingHomeSdk;
 import com.thingclips.smart.home.sdk.bean.HomeBean;
 import com.thingclips.smart.home.sdk.callback.IThingHomeResultCallback;
 import com.thingclips.smart.sdk.bean.DeviceBean;
-import com.thingclips.smart.wrapper.api.ThingWrapper;
 
 
 public class ControlDevListActivity extends AppCompatActivity {
@@ -32,7 +32,7 @@ public class ControlDevListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_control_dev_list);
-        ThingWrapper.registerService(IPluginControlService.class, new PluginControlService());
+        BizBundleInitializer.registerService(IPluginControlService.class, new PluginControlService());
         pluginControlService = MicroServiceManager.getInstance().findServiceByInterface(IPluginControlService.class.getName());
         initView();
         loadData();

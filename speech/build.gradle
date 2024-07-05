@@ -40,7 +40,7 @@ dependencies {
 
     api "com.thingclips.smart:thingsmart:${sdk_version}"
 
-    api "com.thingclips.smart:thingsmart-bizbundle-speech:${bizbundle_version}"
+    api "com.thingclips.smart:thingsmart-bizbundle-speech:${biz_bom_version}"
 
     //依赖设备 控制UI业务包
     api project(':panel')

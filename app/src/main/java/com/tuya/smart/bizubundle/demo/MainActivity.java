@@ -10,10 +10,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.thingclips.basic.split.LargeScreen;
 import com.thingclips.smart.android.common.utils.L;
 import com.thingclips.smart.android.user.api.ILogoutCallback;
 import com.thingclips.smart.api.service.MicroServiceManager;
-import com.thingclips.smart.api.start.PipeLineManager;
+import com.thingclips.smart.bizbundle.initializer.BizBundleInitializer;
 import com.thingclips.smart.demo_login.base.utils.LoginHelper;
 import com.thingclips.smart.home.sdk.ThingHomeSdk;
 import com.thingclips.smart.home.sdk.api.IThingHomeChangeListener;
@@ -24,7 +25,6 @@ import com.thingclips.smart.sdk.bean.DeviceBean;
 import com.thingclips.smart.sdk.bean.GroupBean;
 import com.thingclips.smart.utils.ProgressUtil;
 import com.thingclips.smart.utils.ToastUtil;
-import com.thingclips.smart.wrapper.api.ThingWrapper;
 import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 
 import java.util.List;
@@ -88,10 +88,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //此处只是演示代码，集成时请在登录成功后调用
+        //TODO 此处只是演示代码，集成时请在登录成功后调用
         //This method must be called after successful login
-        ThingWrapper.onLogin();
+        BizBundleInitializer.onLogin();
+
         Log.i("SceneMainActivity", "onCreate");
+        LargeScreen.INSTANCE.modeChanged(this);
         // sample code
         mCurrentFamilyName = findViewById(R.id.current_family_name);
         mCurrentFamilyName.setOnClickListener(new View.OnClickListener() {
@@ -117,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
                         //退出成功后必须调用此方法
                         //This method must be called on exit.
-                        ThingWrapper.onLogout(MainActivity.this);
+                        BizBundleInitializer.onLogout(MainActivity.this);
                     }
 
                     @Override
@@ -334,6 +336,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        findViewById(R.id.market_push).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.thingclips.smart.bizbundle.marketing.demo.MarketActivity");
+                startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -346,9 +356,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        if (schemeJump(intent)) {
-            return;
-        }
+        schemeJump(intent);
     }
 
     @Override

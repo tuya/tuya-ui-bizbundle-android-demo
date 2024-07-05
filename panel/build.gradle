@@ -50,6 +50,7 @@ dependencies {
     //多媒体扩展能力
     api "com.thingclips.smart:thingsmart-bizbundle-mediakit"
 
+    api "com.thingclips.smart:thingsmart-ipcsdk:${ipc_sdk_version}"
     //按需依赖---start
     //IPC 面板相关依赖项
     api "com.thingclips.smart:thingsmart-bizbundle-camera_panel"

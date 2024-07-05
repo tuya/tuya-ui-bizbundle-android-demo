@@ -2,4 +2,5 @@
 <resources>
     <string name="third_service_route_push_sms_service">短信通知</string>
     <string name="third_service_route_push_call_service">电话通知</string>
+    <string name="third_service_route_cloud_storage_service">云存订单</string>
 </resources>
