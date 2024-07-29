@@ -6,17 +6,19 @@ buildscript {
         hilt_version = '2.50'
         sdk_version = '5.14.0'
         ipc_sdk_version = '5.14.1'
-        biz_bom_version = "5.14.1"
+        biz_bom_version = "5.14.5"
         applicationId = "com.sample.sdk"
     }
     repositories {
+        mavenLocal()
         maven { url "https://maven-other.tuya.com/repository/maven-commercial-releases/" }
+
         google()
         mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.4.2'
-        classpath "com.thingclips.smart:thingsmart-theme-open-plugin:2.0.1"
+        classpath "com.thingclips.smart:thingsmart-theme-open-plugin:2.0.5"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
     }

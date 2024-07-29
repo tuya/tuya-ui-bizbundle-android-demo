@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/thing_theme_color_b1"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -44,7 +45,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="场景国外账号需要接入地图配置, 使用下面的方法设置地图activity和保存地图数据， 如果不设置默认走获取国内城市接口" />
+        android:text="场景国外账号需要接入地图配置, 使用下面的方法设置地图activity和保存地图数据， 如果不设置默认走获取国内城市接口"
+        android:textColor="@color/thing_theme_color_b1_n1" />
 
     <Button
         android:id="@+id/set_map"

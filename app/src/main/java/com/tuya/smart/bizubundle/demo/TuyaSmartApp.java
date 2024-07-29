@@ -2,21 +2,20 @@ package com.tuya.smart.bizubundle.demo;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.multidex.MultiDex;
 
+import com.thingclips.smart.android.common.utils.L;
 import com.thingclips.smart.api.MicroContext;
 import com.thingclips.smart.api.router.UrlBuilder;
-import com.thingclips.smart.api.router.UrlRouter;
 import com.thingclips.smart.api.service.RedirectService;
 import com.thingclips.smart.api.service.RouteEventListener;
 import com.thingclips.smart.api.service.ServiceEventListener;
 import com.thingclips.smart.bizbundle.initializer.BizBundleInitializer;
 import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
+import com.thingclips.smart.theme.core.extension.AppUiMode;
+import com.thingclips.smart.theme.util.NightModeUtil;
 
 import dagger.hilt.android.HiltAndroidApp;
 
@@ -60,7 +59,8 @@ public class TuyaSmartApp extends Application {
                 Log.e("service not implement", serviceName);
             }
         });
-
+        // 如果你的应用没有提供应用内切换主题模式的功能，那么就在启动时强制设置一个模式，就可以启用下面这段代码
+        // NightModeUtil.INSTANCE.setAppNightMode(AppUiMode.MODE_FOLLOW_SYSTEM);
 
         // register family service，mall bizbundle don't have to implement it.
         // 注册家庭服务，商城业务包可以不注册此服务
@@ -79,7 +79,7 @@ public class TuyaSmartApp extends Application {
                 //     interceptorCallback.interceptor("interceptor");
                 //     Log.e("interceptor", urlBuilder.params.toString());
                 // } else {
-                    interceptorCallback.onContinue(urlBuilder);
+                interceptorCallback.onContinue(urlBuilder);
                 // }
             }
         });
