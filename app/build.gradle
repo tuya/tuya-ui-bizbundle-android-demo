@@ -83,7 +83,7 @@ dependencies {
     implementation project(":miniapp")
     implementation project(":marketing")
 
-    implementation "com.thingclips.smart:thingsmart-theme-open:2.0.2"
+    implementation "com.thingclips.smart:thingsmart-theme-open:2.0.3"
     implementation "com.thingclips.smart:thingsmart-commonbiz-relation-api:4.5.0-rc.1"
 
     //demo use only start
@@ -107,7 +107,7 @@ dependencies {
 
 apply plugin: 'com.thingclips.open.theme'
 thingOpenTheme {
-    // 浅色模式配置, 目前不支持深色模式的配置
+    // 浅色模式配置
     lightTheme {
         color {
             // 背景色
@@ -130,6 +130,29 @@ thingOpenTheme {
         colorAlpha {
             // 弹窗蒙层透明度
             alertMaskAlpha 0.3
+        }
+    }
+    // 深⾊模式配置
+    blackTheme {
+        color{
+            // 背景⾊
+            backgroundColor "#000000"
+            // 主题⾊
+            themeColor "#FF5A28"
+            // 警告⾊
+            warningColor "#FF4444"
+            // 提示⾊
+            tipColor "#00CC99"
+            // 引导⾊
+            guideColor "#1989FA"
+            // tab选中背景⾊
+            tabBarSelectColor "#FF5A28"
+            // 导航栏背景⾊配置
+            navigationBarColor "#1A1A1A"
+        }
+        colorAlpha{
+            // 弹窗蒙层透明度
+            alertMaskAlpha 0.8
         }
     }
 }

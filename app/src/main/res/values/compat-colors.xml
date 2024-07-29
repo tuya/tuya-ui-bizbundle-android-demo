@@ -9,6 +9,8 @@
     <string name="amapKey"></string>
 
     <string name="ap_mode_ssid">SmartLife|SL</string>
+    <!--深色主题支持开关-->
+    <bool name="is_darkMode_support">true</bool>
     <bool name="is_need_ble_support">true</bool>
     <bool name="is_need_blemesh_support">true</bool>
     <bool name="is_scan_support">true</bool>

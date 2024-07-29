@@ -6,11 +6,11 @@
     <application
         android:name=".TuyaSmartApp"
         android:allowBackup="false"
+        android:allowNativeHeapPointerTagging="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
-        android:allowNativeHeapPointerTagging="false"
         android:theme="@style/Base_BizBundle_Theme"
         tools:replace="android:theme,android:supportsRtl,android:allowBackup">
 
@@ -26,6 +26,9 @@
             </intent-filter>
 
         </activity>
+        <activity
+            android:name=".ThemeActivity"
+            android:exported="false" />
 
         <activity-alias
             android:name="com.tuya.smart.hometab.activity.shortcut"

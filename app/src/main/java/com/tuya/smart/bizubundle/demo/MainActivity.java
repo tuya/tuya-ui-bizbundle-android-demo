@@ -1,8 +1,8 @@
 package com.tuya.smart.bizubundle.demo;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -15,6 +15,7 @@ import com.thingclips.smart.android.common.utils.L;
 import com.thingclips.smart.android.user.api.ILogoutCallback;
 import com.thingclips.smart.api.service.MicroServiceManager;
 import com.thingclips.smart.bizbundle.initializer.BizBundleInitializer;
+import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 import com.thingclips.smart.demo_login.base.utils.LoginHelper;
 import com.thingclips.smart.home.sdk.ThingHomeSdk;
 import com.thingclips.smart.home.sdk.api.IThingHomeChangeListener;
@@ -23,9 +24,9 @@ import com.thingclips.smart.home.sdk.callback.IThingGetHomeListCallback;
 import com.thingclips.smart.home.sdk.callback.IThingHomeResultCallback;
 import com.thingclips.smart.sdk.bean.DeviceBean;
 import com.thingclips.smart.sdk.bean.GroupBean;
+import com.thingclips.smart.theme.ThingTheme;
 import com.thingclips.smart.utils.ProgressUtil;
 import com.thingclips.smart.utils.ToastUtil;
-import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
 
 import java.util.List;
 
@@ -166,12 +167,77 @@ public class MainActivity extends AppCompatActivity {
         familyService.shiftCurrentFamily(homeBean.getHomeId(), homeBean.getName());
     }
 
+    private void setDarkMode() {
+        ThingTheme.INSTANCE.enableDarkMode();
+    }
+
+    private void setLightMode() {
+        ThingTheme.INSTANCE.enableNormalMode();
+    }
+
+    private void setSystemDefaultMode() {
+        ThingTheme.INSTANCE.enableFollowSystem();
+    }
+
+    private void showThemeSelectionDialog() {
+        // 选项内容
+        final String[] options = {"深色模式", "浅色模式", "跟随系统"};
+        // 当前选中的选项索引
+        final int[] selectedOptionIndex = {-1};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("选择主题模式");
+        builder.setSingleChoiceItems(options, selectedOptionIndex[0], (dialog, which) -> {
+            // 记录用户选择的选项索引
+            selectedOptionIndex[0] = which;
+        });
+        builder.setPositiveButton("确定", (dialog, which) -> {
+            // 根据用户选择的选项执行相应的操作
+            switch (selectedOptionIndex[0]) {
+                case 0:
+                    setDarkMode();
+                    break;
+                case 1:
+                    setLightMode();
+                    break;
+                case 2:
+                    setSystemDefaultMode();
+                    break;
+            }
+        });
+        builder.setNegativeButton("取消", (dialog, which) -> {
+            // 用户点击取消按钮后的处理逻辑
+            dialog.dismiss();
+        });
+        builder.show();
+    }
+
     private void openUIBizBundle() {
         AbsBizBundleFamilyService familyService = MicroServiceManager.getInstance().findServiceByInterface(AbsBizBundleFamilyService.class.getName());
         if (familyService.getCurrentHomeId() == 0) {
             ToastUtil.showToast(this, "homeId is must not 0");
             return;
         }
+        TextView tv = findViewById(R.id.theme_switch);
+        String text = tv.getText().toString();
+        tv.setText(text + "| appUiMode: " + ThingTheme.INSTANCE.getAppUiMode());
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 显示带有多个选项的弹窗
+                showThemeSelectionDialog();
+            }
+        });
+        tv.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                // 打开新界面
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, ThemeActivity.class.getName());
+                startActivity(i);
+                return true;
+            }
+        });
         findViewById(R.id.panel).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
