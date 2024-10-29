@@ -89,6 +89,15 @@
         "cellType": "check_firmware_update"
       },
       {
+        "cellType": "matter_bridge_service"
+      },
+      {
+        "cellType": "matter_service"
+      },
+      {
+        "cellType": "product_instruction"
+      },
+      {
         "cellType": "c_test_insert"
       },
       {
