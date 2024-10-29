@@ -199,6 +199,16 @@
       "clazz": "com.thingclips.device.base.info.cell.DeviceIconCell"
     },
     {
+      "name": "matter_bridge_service",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.MatterBridgeServiceCell"
+    },
+    {
+      "name": "matter_service",
+      "type": 1,
+      "clazz": "com.thingclips.smart.device_detail.cell.MatterServiceCell"
+    },
+    {
       "name": "c_test_insert",
       "type": 1,
       "clazz": "com.thingclips.smart.bizbundle.devicedetail.demo.CTestInsertCell"
