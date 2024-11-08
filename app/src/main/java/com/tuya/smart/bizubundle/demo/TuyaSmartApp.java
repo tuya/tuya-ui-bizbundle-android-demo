@@ -6,7 +6,6 @@ import android.util.Log;
 
 import androidx.multidex.MultiDex;
 
-import com.thingclips.smart.android.common.utils.L;
 import com.thingclips.smart.api.MicroContext;
 import com.thingclips.smart.api.router.UrlBuilder;
 import com.thingclips.smart.api.service.RedirectService;
@@ -14,8 +13,7 @@ import com.thingclips.smart.api.service.RouteEventListener;
 import com.thingclips.smart.api.service.ServiceEventListener;
 import com.thingclips.smart.bizbundle.initializer.BizBundleInitializer;
 import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
-import com.thingclips.smart.theme.core.extension.AppUiMode;
-import com.thingclips.smart.theme.util.NightModeUtil;
+import com.thingclips.smart.thingpackconfig.PackConfig;
 
 import dagger.hilt.android.HiltAndroidApp;
 
@@ -45,6 +43,8 @@ public class TuyaSmartApp extends Application {
 //        });
 //        ThingThemeInitializer.INSTANCE.init(this);
 //        ThingOptimusSdk.init(this);
+        PackConfig.addValueDelegate(AppConfig.class);
+
         // todo replace the above code with the following code
         // todo 用下面的代码替换上面的初始化代码
         BizBundleInitializer.init(this, new RouteEventListener() {
