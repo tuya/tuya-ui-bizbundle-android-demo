@@ -83,7 +83,7 @@ dependencies {
     implementation project(":miniapp")
     implementation project(":marketing")
 
-    implementation "com.thingclips.smart:thingsmart-theme-open:2.0.3"
+    implementation "com.thingclips.smart:thingsmart-theme-open:2.0.6"
     implementation "com.thingclips.smart:thingsmart-commonbiz-relation-api:4.5.0-rc.1"
 
     //demo use only start

@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
         }
         TextView tv = findViewById(R.id.theme_switch);
         String text = tv.getText().toString();
-        tv.setText(text + "| appUiMode: " + ThingTheme.INSTANCE.getAppUiMode());
+        tv.setText(text + "| appUiMode: " + ThingTheme.INSTANCE.getAppUiMode() + "| supportDarkMode: " + ThingTheme.INSTANCE.isSupportDarkMode());
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

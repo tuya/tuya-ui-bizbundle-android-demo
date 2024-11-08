@@ -39,6 +39,12 @@ allprojects {
     }
 
     configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+        resolutionStrategy.force 'com.squareup.okhttp3:okhttp-jvm:5.0.0-alpha.11'
+        resolutionStrategy.force 'com.squareup.okhttp3:okhttp-java-net-cookiejar:5.0.0-alpha.11'
+        resolutionStrategy.force 'com.squareup.okhttp3:okhttp-urlconnection:5.0.0-alpha.11'
+        resolutionStrategy.force 'com.squareup.okio:okio-jvm:3.2.0'
+        resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
         exclude group: "com.umeng.umsdk", module: 'huawei-basetb'
         exclude group: 'commons-io', module: 'commons-io'
         exclude group: 'org.apache.commons', module: 'commons-lang3'
