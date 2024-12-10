@@ -6,7 +6,7 @@ buildscript {
         hilt_version = '2.50'
         sdk_version = '5.17.0'
         ipc_sdk_version = '5.17.2'
-        biz_bom_version = "5.17.0"
+        biz_bom_version = "5.17.3"
         applicationId = "com.sample.sdk"
     }
     repositories {
