@@ -25,12 +25,15 @@ public class ActMiniAppSample extends Activity {
     }
 
     public void init(View view){
+    // 该初始化接口不要放在Application或者主Activity中初始化，否则会导致初始化失败
         ThingMiniAppClient
                 .initialClient()
                 .initialize();
     }
 
     public void openMiniAPP(View view){
+        // 如遇到SoLoader.init初始化报错导致小程序无法正常运行，可以在Application中调用SoLoader.init()方法进行初始化。
+        // 同时需要卸载旧App，重新打包安装。
         ThingMiniAppClient
                 .coreClient()
                 .openMiniAppByAppId(this, "tydxwunc8rjqvh4gaw", null, null);

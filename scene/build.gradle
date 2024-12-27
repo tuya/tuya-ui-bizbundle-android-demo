@@ -30,9 +30,12 @@ dependencies {
 //    api "com.thingclips.smart:thingsmart-bizbundle-location_google"
 
     // 国内包使用
-    api "com.thingclips.smart:thingsmart-bizbundle-map_amap"
-    api "com.thingclips.smart:thingsmart-bizbundle-location_amap"
-
+    api ("com.thingclips.smart:thingsmart-bizbundle-map_amap"){
+        exclude group: 'com.amap.api',module: 'navi-3dmap'
+    }
+    api ("com.thingclips.smart:thingsmart-bizbundle-location_amap"){
+        exclude group: 'com.amap.api',module: 'navi-3dmap'
+    }
     api "com.thingclips.smart:thingsmart:${sdk_version}"
 
 }
