@@ -21,6 +21,7 @@ android {
                 INTERNAL_HOST               : "${properties.getProperty("app_scheme")}".concat('.app.tuya.com'),
                 ALEXA_AUTH_INTERNAL_HOST    : "${properties.getProperty("app_scheme")}".concat('.applink.smart321.com'),
                 ALEXA_AUTH_INTERNAL_HOST_NEW: "${properties.getProperty("app_scheme")}".toLowerCase(Locale.ENGLISH).concat('.applink.smart321.com'),
+                ALEXA_AUTH_INTERNAL_HOST_NEWER:"${properties.getProperty("app_scheme")}".toLowerCase(Locale.ENGLISH).concat('.applink.smart321.com'),
                 PACKAGE_NAME                : applicationId
         ]
         ndk {
