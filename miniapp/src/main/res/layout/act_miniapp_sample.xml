@@ -21,6 +21,14 @@
         android:onClick="openMiniAPP"
         />
 
+    <Button
+        android:id="@+id/btn_open_miniapp_tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open miniapp tabs"
+        android:onClick="openMiniAPPTabs"
+        />
+
     <!-- 清除缓存 -->
     <Button
         android:id="@+id/btn_clea_miniapp_cache"
