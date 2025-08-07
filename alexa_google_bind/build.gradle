@@ -3,14 +3,15 @@ plugins {
 }
 
 android {
-    compileSdk 30
-    buildToolsVersion "30.0.3"
+    compileSdk 34
 
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+
+        namespace "com.tuya.smart.bizbundle.demo.socialbind"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

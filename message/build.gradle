@@ -1,8 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk 29
-    buildToolsVersion "29.0.3"
+    compileSdk 34
 
 
     defaultConfig {
@@ -10,6 +9,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        namespace "com.tuya.smart.bizbundle.message.demo"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'

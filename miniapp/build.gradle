@@ -7,6 +7,7 @@ android {
     defaultConfig {
         minSdkVersion 23
         targetSdkVersion 33
+        namespace "com.thingclips.smart.bizbundle.miniapp.demo"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

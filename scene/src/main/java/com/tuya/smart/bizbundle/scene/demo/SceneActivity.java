@@ -38,7 +38,7 @@ public class SceneActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scene);
         Toolbar toolbar = findViewById(R.id.toolbar_main);
-        toolbar.setTitle(R.string.app_name);
+        toolbar.setTitle(com.thingclips.sdk.user.R.string.app_name);
 
         mAddScene = findViewById(R.id.add_scene);
         mSetLocation = findViewById(R.id.set_location);

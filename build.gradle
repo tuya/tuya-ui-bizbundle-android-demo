@@ -4,9 +4,9 @@ buildscript {
     ext {
         kotlin_version = '1.8.20'
         hilt_version = '2.50'
-        sdk_version = '6.2.1'
-        ipc_sdk_version = '6.2.0'
-        biz_bom_version = "6.2.31"
+        sdk_version = '6.7.3'
+        ipc_sdk_version = '6.7.0'
+        biz_bom_version = "6.7.10"
         applicationId = "com.sample.sdk"
     }
     repositories {
@@ -17,7 +17,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'com.android.tools.build:gradle:8.8.0'
         classpath "com.thingclips.smart:thingsmart-theme-open-plugin:2.0.5"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"

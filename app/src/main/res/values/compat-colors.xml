@@ -19,6 +19,9 @@
     <bool name="is_show_alexa_oem_account">false</bool>
     <bool name="is_alexa_to_thingpp_support">true</bool>
 
+    <bool name="is_need_ble_support">true</bool>
+    <bool name="is_huawei_pkg">false</bool>
+
     <string name="wxAppKey"></string>
 
     <color name="status_bg_color">@color/thing_theme_color_b2</color>

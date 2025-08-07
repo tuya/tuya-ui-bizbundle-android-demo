@@ -142,7 +142,7 @@ public class DeviceDetailActivity extends Activity {
 
         bottomSheetDialog = new BottomSheetDialog(this);
         bottomSheetDialog.setContentView(view);
-        bottomSheetDialog.getWindow().findViewById(R.id.design_bottom_sheet).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        bottomSheetDialog.getWindow().findViewById(com.google.android.material.R.id.design_bottom_sheet).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         final BottomSheetBehavior dialogBehavior = BottomSheetBehavior.from((View) view.getParent());
         dialogBehavior.setPeekHeight(500);
         dialogBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
