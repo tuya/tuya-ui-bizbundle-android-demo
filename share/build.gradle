@@ -9,6 +9,7 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 33
+        namespace "com.tuya.smart.share"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -99,7 +99,7 @@ public class OtaActivity extends AppCompatActivity {
 
         bottomSheetDialog = new BottomSheetDialog(this);
         bottomSheetDialog.setContentView(view);
-        Objects.requireNonNull(bottomSheetDialog.getWindow()).findViewById(R.id.design_bottom_sheet).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Objects.requireNonNull(bottomSheetDialog.getWindow()).findViewById(com.google.android.material.R.id.design_bottom_sheet).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         final BottomSheetBehavior<View> dialogBehavior = BottomSheetBehavior.from((View) view.getParent());
         dialogBehavior.setPeekHeight(600);
         dialogBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {

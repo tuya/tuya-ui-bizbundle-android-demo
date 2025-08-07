@@ -2,12 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'dagger.hilt.android.plugin'
 
 android {
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId rootProject.ext.applicationId
+        namespace "com.tuya.smart.bizubundle.demo"
         minSdkVersion 23
-        targetSdkVersion 34
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -31,12 +32,30 @@ android {
     }
 
     packagingOptions {
-        pickFirst 'lib/*/liblog.so'
+        jniLibs.useLegacyPackaging=true
+        exclude "AndroidManifest.xml"
+        exclude "**/module-info.class"
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
+        exclude 'META-INF/android-offlinelog-api_release.kotlin_module'
+        exclude 'META-INF/android-offlinelog-upload_release.kotlin_module'
         pickFirst 'lib/*/libc++_shared.so'
-        pickFirst 'lib/*/libyuv.so'
-        pickFirst 'lib/*/libopenh264.so'
-        pickFirst 'lib/*/libv8wrapper.so'
+        pickFirst 'lib/*/libgnustl_shared.so'
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
         pickFirst 'lib/*/libv8android.so'
+        pickFirst 'lib/*/libv8wrapper.so'
+        pickFirst 'lib/*/libopenh264.so'
+        pickFirst 'lib/*/libyuv.so'
+        pickFirst 'lib/*/liblog.so'
+        pickFirst 'lib/*/libbytehook.so'
+        pickFirst 'lib/*/libxdl.so'
+        pickFirst 'lib/*/libsqlcipher.so'
     }
 
     buildTypes {
