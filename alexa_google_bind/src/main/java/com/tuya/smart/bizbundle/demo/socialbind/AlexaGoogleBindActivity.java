@@ -1,9 +1,7 @@
 package com.tuya.smart.bizbundle.demo.socialbind;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +20,7 @@ import com.thingclips.smart.home.sdk.callback.IThingResultCallback;
 import com.thingclips.smart.social.auth.manager.api.AuthorityBean;
 import com.thingclips.smart.social.auth.manager.api.ResultCallback;
 import com.thingclips.smart.social.auth.manager.api.SocialAuthManagerClient;
+import com.thingclips.smart.speech.skill.auth.manager.bean.AuthPlatFormsBean;
 
 import java.util.ArrayList;
 
@@ -91,10 +90,12 @@ public class AlexaGoogleBindActivity extends AppCompatActivity {
         bindAdapter.setOnItemClickListener((authorityBean, var2) -> {
             try {
                 String route = "SocialAuthManagerAppAction";
+                AuthPlatFormsBean authPlatFormsBean = new AuthPlatFormsBean();
+                authPlatFormsBean.setWidgetUrl(authorityBean.getWidgetUrl());
                 UrlBuilder mBuilder = UrlRouter.makeBuilder(AlexaGoogleBindActivity.this, route);
                 Bundle newBundle = new Bundle();
                 newBundle.putString(KEY_ACTION, GO_TO_DE_AUTHORIZA);
-                newBundle.putParcelable(AUTHORITY_BEAN, authorityBean);
+                newBundle.putParcelable(AUTHORITY_BEAN, authPlatFormsBean);
                 mBuilder.setRequestCode(REQUEST_REFRESH_MANAGER_AUTHORIZATION);
                 mBuilder.putExtras(newBundle);
                 UrlRouter.execute(mBuilder);
@@ -103,17 +104,6 @@ public class AlexaGoogleBindActivity extends AppCompatActivity {
             }
         });
     }
-
-    private void onItemClick(Context context, AuthorityBean authorityBean) {
-        UrlBuilder mBuilder = UrlRouter.makeBuilder(context, "SocialAuthManagerAppAction");
-        Bundle newBundle = new Bundle();
-        newBundle.putString("action", "gotoDeAuthorize");
-        newBundle.putParcelable("authority_bean", authorityBean);
-        mBuilder.setRequestCode(REQUEST_REFRESH_MANAGER_AUTHORIZATION);
-        mBuilder.putExtras(newBundle);
-        UrlRouter.execute(mBuilder);
-    }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
