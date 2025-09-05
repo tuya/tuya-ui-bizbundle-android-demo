@@ -109,7 +109,7 @@ dependencies {
     //demo use only start
     api "com.thingclips.smart:thingsmart:${sdk_version}"
 
-    implementation 'com.thingclips.smart:thingsmart-demo-login:4.5.2'
+    implementation 'com.thingclips.smart:thingsmart-demo-login:4.5.3'
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
