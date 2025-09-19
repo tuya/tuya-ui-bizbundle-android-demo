@@ -4,9 +4,9 @@ buildscript {
     ext {
         kotlin_version = '1.8.20'
         hilt_version = '2.50'
-        sdk_version = '6.7.3'
-        ipc_sdk_version = '6.7.0'
-        biz_bom_version = "6.7.10"
+        sdk_version = '6.7.7'
+        ipc_sdk_version = '6.7.2'
+        biz_bom_version = "6.7.22"
         applicationId = "com.sample.sdk"
     }
     repositories {
