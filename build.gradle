@@ -4,9 +4,9 @@ buildscript {
     ext {
         kotlin_version = '1.8.20'
         hilt_version = '2.50'
-        sdk_version = '6.7.7'
+        sdk_version = '6.7.9'
         ipc_sdk_version = '6.7.2'
-        biz_bom_version = "6.7.22"
+        biz_bom_version = "6.7.25"
         applicationId = "com.sample.sdk"
     }
     repositories {
@@ -46,8 +46,6 @@ allprojects {
         resolutionStrategy.force 'com.squareup.okio:okio-jvm:3.2.0'
         resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
         exclude group: "com.umeng.umsdk", module: 'huawei-basetb'
-        exclude group: 'commons-io', module: 'commons-io'
-        exclude group: 'org.apache.commons', module: 'commons-lang3'
     }
 }
 
