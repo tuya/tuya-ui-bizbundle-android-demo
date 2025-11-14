@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.thingclips.basic.split.LargeScreen;
 import com.thingclips.smart.android.common.utils.L;
 import com.thingclips.smart.android.user.api.ILogoutCallback;
+import com.thingclips.smart.api.router.UrlRouter;
 import com.thingclips.smart.api.service.MicroServiceManager;
 import com.thingclips.smart.bizbundle.initializer.BizBundleInitializer;
 import com.thingclips.smart.commonbiz.bizbundle.family.api.AbsBizBundleFamilyService;
@@ -228,6 +229,14 @@ public class MainActivity extends AppCompatActivity {
                 showThemeSelectionDialog();
             }
         });
+
+        findViewById(R.id.aibuds).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UrlRouter.execute(MainActivity.this, "thingSmart://miniApp?url=godzilla%3A%2F%2Ftyylldwlb8411tg8u2%2Fpages%2Fhome%2Findex");
+            }
+        });
+
         tv.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {

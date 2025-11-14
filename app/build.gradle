@@ -102,6 +102,7 @@ dependencies {
     implementation project(path: ':third_service')
     implementation project(":miniapp")
     implementation project(":marketing")
+    implementation project(":aibuds")
 
     implementation "com.thingclips.smart:thingsmart-theme-open:2.0.6"
     implementation "com.thingclips.smart:thingsmart-commonbiz-relation-api:4.5.0-rc.1"
@@ -123,6 +124,16 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     annotationProcessor "com.google.dagger:hilt-android-compiler:$hilt_version"
     implementation "com.google.dagger:hilt-android:$hilt_version"
+
+
+//    api enforcedPlatform("com.thingclips.smart:thingsmart-BizBundlesBom:${biz_bom_version}")
+//    api "com.thingclips.smart:thingsmart-bizbundle-ipckit"
+//    api "com.thingclips.smart:thingsmart-bizbundle-ai_agent"
+//    api "com.thingclips.smart:thingsmart-bizbundle-google_pay"
+//    api "com.thingclips.smart:thingsmart-bizbundle-p2pkit"
+//    api "com.thingclips.smart:thingsmart-bizbundle-setting"
+//    api "com.thingclips.smart:thingsmart-bizbundle-wearkit"
+//    api "com.thingclips.smart:thingsmart-bizbundle-aistreamkit"
 }
 
 apply plugin: 'com.thingclips.open.theme'
