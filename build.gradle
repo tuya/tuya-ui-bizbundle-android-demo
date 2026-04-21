@@ -2,11 +2,12 @@
 buildscript {
 
     ext {
-        kotlin_version = '1.8.20'
-        hilt_version = '2.50'
-        sdk_version = '6.11.1'
-        ipc_sdk_version = '6.11.1'
-        biz_bom_version = "6.11.0"
+// Thingclips 7.5.x artifacts in this repo are published with Kotlin 2.1 metadata.
+        kotlin_version = '2.1.0'
+        hilt_version = '2.58'
+        sdk_version = '7.5.1'
+        ipc_sdk_version = '7.5.1'
+        biz_bom_version = "7.5.4"
         applicationId = "com.sample.sdk"
     }
     repositories {
@@ -44,7 +45,10 @@ allprojects {
         resolutionStrategy.force 'com.squareup.okhttp3:okhttp-java-net-cookiejar:5.0.0-alpha.11'
         resolutionStrategy.force 'com.squareup.okhttp3:okhttp-urlconnection:5.0.0-alpha.11'
         resolutionStrategy.force 'com.squareup.okio:okio-jvm:3.2.0'
-        resolutionStrategy.force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.20'
+        resolutionStrategy.force "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+        resolutionStrategy.force "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+        resolutionStrategy.force "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+        resolutionStrategy.force "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
         exclude group: "com.umeng.umsdk", module: 'huawei-basetb'
     }
 }

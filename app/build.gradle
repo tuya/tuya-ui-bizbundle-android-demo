@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'dagger.hilt.android.plugin'
 
 android {
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         applicationId rootProject.ext.applicationId
         namespace "com.tuya.smart.bizubundle.demo"
         minSdkVersion 23
-        targetSdkVersion 35
+        targetSdkVersion 36
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -104,7 +104,7 @@ dependencies {
     implementation project(":marketing")
     implementation project(":aibuds")
 
-    implementation "com.thingclips.smart:thingsmart-theme-open:2.0.6"
+    implementation "com.thingclips.smart:thingsmart-theme-open:2.0.7"
     implementation "com.thingclips.smart:thingsmart-commonbiz-relation-api:4.5.0-rc.1"
 
     //demo use only start
