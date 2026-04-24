@@ -7,7 +7,6 @@
     <string name="qqMusicLocalPrivateKey"></string>
     <string name="google_maps_key"></string>
     <string name="amapKey"></string>
-    <bool name="is_huawei_pkg">false</bool>
     <bool name="is_support_google_iap">false</bool>>
     <bool name="use_device_detail_mini_program">false</bool>>
 
