@@ -5,9 +5,9 @@ buildscript {
         // Thingclips 7.5.x artifacts in this repo are published with Kotlin 2.1 metadata.
         kotlin_version = '2.1.0'
         hilt_version = '2.58'
-        sdk_version = '7.5.1'
-        ipc_sdk_version = '7.5.1'
-        biz_bom_version = "7.5.4"
+        sdk_version = '7.8.0'
+        ipc_sdk_version = '7.8.1'
+        biz_bom_version = "7.8.14"
         applicationId = "com.sample.sdk"
     }
     repositories {
