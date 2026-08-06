@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.tuya.smart.bizubundle.demo.language.BaseActivity;
+import com.tuya.smart.bizubundle.demo.language.LocaleHelper;
 
 import com.thingclips.basic.split.LargeScreen;
 import com.thingclips.smart.android.common.utils.L;
@@ -31,7 +32,7 @@ import com.thingclips.smart.utils.ToastUtil;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private TextView mCurrentFamilyName;
     private RouterPresenter routePresenter;
@@ -132,6 +133,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        findViewById(R.id.language).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showLanguageDialog();
+            }
+        });
     }
 
     private void getHomeList() {
@@ -211,6 +219,37 @@ public class MainActivity extends AppCompatActivity {
             dialog.dismiss();
         });
         builder.show();
+    }
+
+    private void showLanguageDialog() {
+        // [language code, display label]
+        final String[][] options = {
+                {LocaleHelper.LANG_ENGLISH, getString(R.string.language_en)},
+                {LocaleHelper.LANG_CHINESE, getString(R.string.language_zh)},
+                {LocaleHelper.LANG_SYSTEM, getString(R.string.language_system)}
+        };
+        String[] labels = new String[options.length];
+        for (int i = 0; i < options.length; i++) {
+            labels[i] = options[i][1];
+        }
+        int checkedItem = -1;
+        String current = LocaleHelper.getLanguage(this);
+        for (int i = 0; i < options.length; i++) {
+            if (options[i][0].equals(current)) {
+                checkedItem = i;
+                break;
+            }
+        }
+        new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.language_dialog_title))
+                .setSingleChoiceItems(labels, checkedItem, (dialog, which) -> {
+                    dialog.dismiss();
+                    // Persist + update app-level resources, then restart app
+                    LocaleHelper.switchLanguage(MainActivity.this, options[which][0]);
+                    LocaleHelper.restartApp(MainActivity.this);
+                })
+                .setNegativeButton(android.R.string.cancel, null)
+                .show();
     }
 
     private void openUIBizBundle() {

@@ -6,6 +6,8 @@ import android.util.Log;
 
 import androidx.multidex.MultiDex;
 
+import com.tuya.smart.bizubundle.demo.language.LocaleHelper;
+
 import com.thingclips.smart.api.MicroContext;
 import com.thingclips.smart.api.router.UrlBuilder;
 import com.thingclips.smart.api.service.RedirectService;
@@ -87,7 +89,8 @@ public class TuyaSmartApp extends Application {
 
     @Override
     protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
+        // Inject the persisted in-app language as early as possible
+        super.attachBaseContext(LocaleHelper.wrap(base));
         MultiDex.install(this);
     }
 

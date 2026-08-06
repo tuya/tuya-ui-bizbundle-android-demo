@@ -57,6 +57,14 @@
                 android:textColor="@color/thing_theme_open_color_head_line_text" />
 
             <TextView
+                android:id="@+id/language"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="@string/language_setting"
+                android:textColor="@color/thing_theme_open_color_head_line_text" />
+
+            <TextView
                 android:id="@+id/panel"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
