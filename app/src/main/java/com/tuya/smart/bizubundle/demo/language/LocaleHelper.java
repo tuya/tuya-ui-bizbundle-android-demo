@@ -1,35 +1,31 @@
 package com.tuya.smart.bizubundle.demo.language;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.os.Build;
-import android.os.LocaleList;
 
-import androidx.core.os.ConfigurationCompat;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 
 import java.util.Locale;
 
 /**
- * In-app language switching helper (Java port).
+ * In-app language switching helper.
  *
- * Mirrors the Tuya SDK's internal
- * {@code com.thingclips.smart.base.utils.ThingLanguageUtils#switchLanguage(Locale)}:
- * it switches the language by updating the Application resources' Configuration
- * locale and then calling updateConfiguration to refresh the resources.
+ * Uses the official AndroidX per-app language API
+ * {@link AppCompatDelegate#setApplicationLocales(LocaleListCompat)} (appcompat
+ * 1.6+, resolved to 1.6.1 in this project). It applies the locale to ALL
+ * activities — including SDK BizBundle pages in library modules — because
+ * AppCompatDelegate intercepts attachBaseContext app-wide. On Android 13 (API
+ * 33+) it goes through the system per-app language mechanism, so even plain
+ * (non-AppCompat) activities are covered.
  *
- * On top of that, two additions make it work reliably with androidx.appcompat
- * 1.2.x and across app restarts:
- *  - Persistence (SharedPreferences): the choice survives app restarts.
- *  - {@link #wrap(Context)}: called in attachBaseContext so every Activity loads
- *    with the persisted language.
+ * This replaces the earlier updateConfiguration + wrap + restart approach,
+ * which only updated the application resources and missed native BizBundle
+ * activities whose base context kept the system locale.
+ *
+ * The choice is persisted automatically by appcompat / the system, so it
+ * survives cold starts; read it back via {@link #getLanguage(Context)}.
  */
 public class LocaleHelper {
-
-    private static final String SP_NAME = "locale_sp";
-    private static final String KEY_LANGUAGE = "key_language";
 
     /** Empty string means "follow the system". */
     public static final String LANG_SYSTEM = "";
@@ -40,95 +36,36 @@ public class LocaleHelper {
     }
 
     /**
-     * Switch language: persists the choice and immediately updates app-level
-     * resources (same as ThingLanguageUtils.switchLanguage).
-     * The caller should then call {@link #restartApp(Context)} so the new locale
-     * fully takes effect across the whole app.
-     */
-    @SuppressWarnings("DEPRECATION")
-    public static void switchLanguage(Context context, String language) {
-        // 1. Persist the user's choice
-        saveLanguage(context, language);
-
-        // 2. Update Application resources immediately, exactly like
-        //    ThingLanguageUtils.switchLanguage:
-        //      config.locale = locale
-        //      resources.updateConfiguration(config, null)
-        Resources res = context.getApplicationContext().getResources();
-        Configuration config = new Configuration(res.getConfiguration());
-        applyLocale(config, resolveLocale(language));
-        res.updateConfiguration(config, res.getDisplayMetrics());
-    }
-
-    /**
-     * Relaunch the app so the switched language fully takes effect.
+     * Switch the app language app-wide. The current activity is recreated
+     * automatically with the new locale; every other activity (including SDK
+     * BizBundle pages) picks it up afterwards.
      *
-     * Mirrors the Tuya SDK's {@code ApplicationUtil.relaunchApp(true)}: re-launch
-     * the launcher activity with a clean task, then kill the current process so
-     * the app restarts fresh and TuyaSmartApp re-applies the persisted locale in
-     * attachBaseContext.
+     * @param language one of [LANG_ENGLISH], [LANG_CHINESE], [LANG_SYSTEM].
      */
-    public static void restartApp(Context context) {
-        Intent intent = context.getPackageManager()
-                .getLaunchIntentForPackage(context.getPackageName());
-        if (intent == null) {
-            return;
-        }
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                | Intent.FLAG_ACTIVITY_CLEAR_TOP
-                | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        context.startActivity(intent);
-        android.os.Process.killProcess(android.os.Process.myPid());
-        System.exit(0);
+    public static void switchLanguage(Context context, String language) {
+        LocaleListCompat locales = LANG_SYSTEM.equals(language)
+                ? LocaleListCompat.getEmptyLocaleList()           // follow system
+                : LocaleListCompat.forLanguageTags(language);
+        AppCompatDelegate.setApplicationLocales(locales);
     }
 
-    /**
-     * Wrap a Context with the persisted language, for use in the attachBaseContext
-     * of TuyaSmartApp / BaseActivity.
-     */
-    public static Context wrap(Context context) {
-        String language = getLanguage(context);
-        if (LANG_SYSTEM.equals(language)) {
-            return context; // Follow system: do not override
-        }
-        Configuration config = new Configuration(context.getResources().getConfiguration());
-        applyLocale(config, resolveLocale(language));
-        return context.createConfigurationContext(config);
-    }
-
-    /** Currently persisted language ("" means follow the system). */
+    /** Currently applied language ("" means follow the system). */
     public static String getLanguage(Context context) {
-        return context.getSharedPreferences(SP_NAME, Context.MODE_PRIVATE)
-                .getString(KEY_LANGUAGE, LANG_SYSTEM);
-    }
-
-    private static void saveLanguage(Context context, String language) {
-        SharedPreferences sp = context.getSharedPreferences(SP_NAME, Context.MODE_PRIVATE);
-        sp.edit().putString(KEY_LANGUAGE, language).apply();
-    }
-
-    private static Locale resolveLocale(String language) {
-        if (LANG_ENGLISH.equals(language)) {
-            return Locale.ENGLISH;
+        LocaleListCompat locales = AppCompatDelegate.getApplicationLocales();
+        if (locales.isEmpty()) {
+            return LANG_SYSTEM;
         }
-        if (LANG_CHINESE.equals(language)) {
-            return Locale.SIMPLIFIED_CHINESE;
+        Locale l = locales.get(0);
+        if (l == null) {
+            return LANG_SYSTEM;
         }
-        return systemLocale();
-    }
-
-    /** Real system locale, unaffected by the app's own override. */
-    private static Locale systemLocale() {
-        LocaleList list = ConfigurationCompat.getLocales(Resources.getSystem().getConfiguration());
-        Locale l = list.get(0);
-        return l != null ? l : Locale.getDefault();
-    }
-
-    private static void applyLocale(Configuration config, Locale locale) {
-        config.setLocale(locale);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            config.setLocales(new LocaleList(locale));
+        String lang = l.getLanguage();
+        if (LANG_CHINESE.equals(lang)) {
+            return LANG_CHINESE;
         }
-        config.setLayoutDirection(locale);
+        if (LANG_ENGLISH.equals(lang)) {
+            return LANG_ENGLISH;
+        }
+        return lang;
     }
 }

@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tuya.smart.bizubundle.demo.language.BaseActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.tuya.smart.bizubundle.demo.language.LocaleHelper;
 
 import com.thingclips.basic.split.LargeScreen;
@@ -32,7 +33,7 @@ import com.thingclips.smart.utils.ToastUtil;
 
 import java.util.List;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppCompatActivity {
 
     private TextView mCurrentFamilyName;
     private RouterPresenter routePresenter;
@@ -244,9 +245,8 @@ public class MainActivity extends BaseActivity {
                 .setTitle(getString(R.string.language_dialog_title))
                 .setSingleChoiceItems(labels, checkedItem, (dialog, which) -> {
                     dialog.dismiss();
-                    // Persist + update app-level resources, then restart app
+                    // Apply app-wide (recreates this activity; all BizBundle pages follow)
                     LocaleHelper.switchLanguage(MainActivity.this, options[which][0]);
-                    LocaleHelper.restartApp(MainActivity.this);
                 })
                 .setNegativeButton(android.R.string.cancel, null)
                 .show();
