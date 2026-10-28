@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_assistant_config_title">设置助手配置</string>
+    <string name="ai_assistant_config_hint">输入资源名称，不含 @drawable/ 或 @string/。留空使用 SDK 默认值；点击应用后立即生效，重启应用会恢复已应用的配置。</string>
+    <string name="ai_assistant_logo_hint">助手 Logo 图片资源名（可选）</string>
+    <string name="ai_assistant_chat_title_logo_light_hint">对话页顶部浅色模式 Logo（可选）</string>
+    <string name="ai_assistant_chat_title_logo_dark_hint">对话页顶部深色模式 Logo（可选）</string>
+    <string name="ai_assistant_plus_badge_light_hint">浅色 Plus 标识图片资源名（可选）</string>
+    <string name="ai_assistant_plus_badge_dark_hint">深色 Plus 标识图片资源名（可选）</string>
+    <string name="ai_assistant_plus_star_badge_hint">Plus 星标图片资源名（可选）</string>
+    <string name="ai_assistant_welcome_content_hint">欢迎文案字符串资源名（可选）</string>
+    <string name="ai_assistant_input_placeholder_hint">输入框提示语字符串资源名（可选）</string>
+    <string name="ai_assistant_plus_open">启用 Plus</string>
+    <string name="ai_assistant_aibar_enabled">启用 AIBar</string>
+    <string name="ai_assistant_aibar_type_hint">AIBar 样式：append 或 float（可选）</string>
+    <string name="ai_assistant_aibar_type_error">请输入 append 或 float</string>
+    <string name="ai_assistant_aibar_pid_blacklist_hint">AIBar PID 黑名单，逗号分隔（可选）</string>
+    <string name="ai_assistant_apply_config">应用配置</string>
+    <string name="ai_assistant_config_applied">配置已应用</string>
+    <string name="ai_assistant_page_title">打开对话页</string>
+    <string name="ai_assistant_page_hint">PID 留空直接打开对话页；填写 PID 后选择对应设备，并携带当前参数打开设备面板。</string>
+    <string name="ai_assistant_pid_hint">设备 PID（可选）</string>
+    <string name="ai_assistant_question_hint">问题内容（可选）</string>
+    <string name="ai_assistant_auto_send">打开后自动发送问题</string>
+    <string name="ai_assistant_question_required">自动发送时请输入问题</string>
+    <string name="open_ai_assistant">打开对话页或设备面板</string>
+    <string name="ai_assistant_service_unavailable">AI 助手服务不可用</string>
+    <string name="ai_assistant_home_unavailable">当前家庭不可用</string>
+    <string name="ai_assistant_no_matching_device">当前家庭没有匹配此 PID 的设备</string>
+    <string name="ai_assistant_choose_device">选择设备</string>
+    <string name="ai_assistant_device_load_failed">设备加载失败</string>
+    <string name="ai_assistant_panel_unavailable">设备面板服务不可用</string>
+    <string name="ai_assistant_demo_welcome_content_name">ai_assistant_demo_welcome_content</string>
+    <string name="ai_assistant_demo_welcome_content">欢迎使用 AI Assistant Demo</string>
+</resources>

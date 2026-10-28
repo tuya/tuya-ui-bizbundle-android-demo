@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_assistant_config_title">setAIRecomConfig</string>
+    <string name="ai_assistant_config_hint">Enter resource names without @drawable/ or @string/. Leave blank to use SDK defaults. Changes take effect when you apply and are restored on app launch.</string>
+    <string name="ai_assistant_logo_hint">Logo drawable name (optional)</string>
+    <string name="ai_assistant_chat_title_logo_light_hint">Chat title logo for light mode (optional)</string>
+    <string name="ai_assistant_chat_title_logo_dark_hint">Chat title logo for dark mode (optional)</string>
+    <string name="ai_assistant_plus_badge_light_hint">Light Plus badge drawable name (optional)</string>
+    <string name="ai_assistant_plus_badge_dark_hint">Dark Plus badge drawable name (optional)</string>
+    <string name="ai_assistant_plus_star_badge_hint">Plus star badge drawable name (optional)</string>
+    <string name="ai_assistant_welcome_content_hint">Welcome text string resource name (optional)</string>
+    <string name="ai_assistant_input_placeholder_hint">Input hint string resource name (optional)</string>
+    <string name="ai_assistant_plus_open">Enable Plus</string>
+    <string name="ai_assistant_aibar_enabled">Enable AIBar</string>
+    <string name="ai_assistant_aibar_type_hint">AIBar style: append or float (optional)</string>
+    <string name="ai_assistant_aibar_type_error">Use append or float</string>
+    <string name="ai_assistant_aibar_pid_blacklist_hint">AIBar PID blacklist, comma separated (optional)</string>
+    <string name="ai_assistant_apply_config">Apply configuration</string>
+    <string name="ai_assistant_config_applied">Configuration applied</string>
+    <string name="ai_assistant_page_title">goToAIRecomPage</string>
+    <string name="ai_assistant_page_hint">Leave PID blank to open chat. Enter a PID to choose a matching device and open its panel with the entered parameters.</string>
+    <string name="ai_assistant_pid_hint">Device PID (optional)</string>
+    <string name="ai_assistant_question_hint">Question (optional)</string>
+    <string name="ai_assistant_auto_send">Send question automatically</string>
+    <string name="ai_assistant_question_required">Enter a question to send</string>
+    <string name="open_ai_assistant">Open chat or device panel</string>
+    <string name="ai_assistant_service_unavailable">AI Assistant service unavailable</string>
+    <string name="ai_assistant_home_unavailable">Current home unavailable</string>
+    <string name="ai_assistant_no_matching_device">No device matches this PID</string>
+    <string name="ai_assistant_choose_device">Choose a device</string>
+    <string name="ai_assistant_device_load_failed">Failed to load devices</string>
+    <string name="ai_assistant_panel_unavailable">Device panel service unavailable</string>
+    <string name="ai_assistant_demo_logo_name">demo_ai_logo</string>
+    <string name="ai_assistant_demo_chat_title_logo_light_name">demo_chat_title_logo_light</string>
+    <string name="ai_assistant_demo_chat_title_logo_dark_name">demo_chat_title_logo_dark</string>
+    <string name="ai_assistant_demo_plus_badge_light_name">demo_plus_badge_light</string>
+    <string name="ai_assistant_demo_plus_badge_dark_name">demo_plus_badge_dark</string>
+    <string name="ai_assistant_demo_plus_star_badge_name">demo_plus_star_badge</string>
+    <string name="ai_assistant_demo_welcome_content_name">ai_assistant_demo_welcome_content</string>
+    <string name="ai_assistant_demo_welcome_content">Welcome to AI Assistant Demo</string>
+</resources>

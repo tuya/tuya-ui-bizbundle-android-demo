@@ -103,6 +103,7 @@ dependencies {
     implementation project(":miniapp")
     implementation project(":marketing")
     implementation project(":aibuds")
+    implementation project(path: ':aiassistant')
 
     implementation "com.thingclips.smart:thingsmart-theme-open:2.0.7"
     implementation "com.thingclips.smart:thingsmart-commonbiz-relation-api:4.5.0-rc.1"
