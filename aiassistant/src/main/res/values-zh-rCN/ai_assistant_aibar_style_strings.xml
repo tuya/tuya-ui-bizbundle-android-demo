@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_assistant_aibar_style_label">AIBar 样式</string>
+    <string name="ai_assistant_aibar_append">底部拼接（append）</string>
+    <string name="ai_assistant_aibar_float">悬浮（float）</string>
+</resources>

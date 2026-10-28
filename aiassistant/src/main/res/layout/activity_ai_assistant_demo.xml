@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_assistant_config_title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/ai_assistant_config_hint" />
+
+        <EditText
+            android:id="@+id/ai_assistant_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_logo_hint"
+            android:inputType="text"
+            android:text="@string/ai_assistant_demo_logo_name" />
+        <EditText
+            android:id="@+id/ai_assistant_chat_title_logo_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_chat_title_logo_light_hint"
+            android:inputType="text"
+            android:text="@string/ai_assistant_demo_chat_title_logo_light_name" />
+
+        <EditText
+            android:id="@+id/ai_assistant_chat_title_logo_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_chat_title_logo_dark_hint"
+            android:inputType="text"
+            android:text="@string/ai_assistant_demo_chat_title_logo_dark_name" />
+        <EditText
+            android:id="@+id/ai_assistant_plus_badge_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_plus_badge_light_hint"
+            android:inputType="text"
+            android:text="@string/ai_assistant_demo_plus_badge_light_name" />
+        <EditText
+            android:id="@+id/ai_assistant_plus_badge_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_plus_badge_dark_hint"
+            android:inputType="text"
+            android:text="@string/ai_assistant_demo_plus_badge_dark_name" />
+        <EditText
+            android:id="@+id/ai_assistant_plus_star_badge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_plus_star_badge_hint"
+            android:inputType="text"
+            android:text="@string/ai_assistant_demo_plus_star_badge_name" />
+        <EditText
+            android:id="@+id/ai_assistant_welcome_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_welcome_content_hint"
+            android:inputType="text"
+            android:text="@string/ai_assistant_demo_welcome_content_name" />
+        <EditText
+            android:id="@+id/ai_assistant_input_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_input_placeholder_hint"
+            android:inputType="text" />
+        <CheckBox
+            android:id="@+id/ai_assistant_plus_open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="@string/ai_assistant_plus_open" />
+
+        <CheckBox
+            android:id="@+id/ai_assistant_aibar_enabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/ai_assistant_aibar_enabled" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/ai_assistant_aibar_style_label" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/ai_assistant_aibar_append"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/ai_assistant_aibar_append" />
+
+            <RadioButton
+                android:id="@+id/ai_assistant_aibar_float"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/ai_assistant_aibar_float" />
+        </RadioGroup>
+        <EditText
+            android:id="@+id/ai_assistant_aibar_pid_blacklist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_aibar_pid_blacklist_hint"
+            android:inputType="text" />
+        <Button
+            android:id="@+id/apply_ai_assistant_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/ai_assistant_apply_config" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/ai_assistant_page_title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/ai_assistant_page_hint" />
+
+        <EditText
+            android:id="@+id/ai_assistant_pid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_pid_hint"
+            android:inputType="text" />
+        <Button
+            android:id="@+id/show_ai_assistant_devices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/ai_assistant_show_device_pids" />
+        <EditText
+            android:id="@+id/ai_assistant_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ai_assistant_question_hint"
+            android:inputType="textCapSentences|textMultiLine" />
+        <CheckBox
+            android:id="@+id/ai_assistant_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/ai_assistant_auto_send" />
+
+        <Button
+            android:id="@+id/open_ai_assistant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/open_ai_assistant" />
+    </LinearLayout>
+</ScrollView>

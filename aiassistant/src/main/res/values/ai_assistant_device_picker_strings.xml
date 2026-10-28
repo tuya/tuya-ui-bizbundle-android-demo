@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_assistant_show_device_pids">Choose a device and fill its PID</string>
+    <string name="ai_assistant_no_devices">No devices in the current home</string>
+</resources>

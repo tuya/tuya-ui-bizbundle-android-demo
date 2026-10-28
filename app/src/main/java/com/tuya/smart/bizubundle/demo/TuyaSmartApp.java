@@ -66,6 +66,15 @@ public class TuyaSmartApp extends Application {
         // 注册家庭服务，商城业务包可以不注册此服务
         BizBundleInitializer.registerService(AbsBizBundleFamilyService.class, new BizBundleFamilyServiceImpl());
 
+        try {
+            Class.forName("com.tuya.smart.bizbundle.aiassistant.demo.AiAssistantDemoConfig")
+                    .getMethod("applyOnStartup", Context.class).invoke(null, this);
+        } catch (ClassNotFoundException ignored) {
+            // The AI Assistant demo module is optional.
+        } catch (ReflectiveOperationException e) {
+            Log.e("TuyaSmartApp", "Failed to apply AI Assistant demo config", e);
+        }
+
         //Intercept existing routes and jump to custom implementation pages with parameters
         //拦截已存在的路由，通过参数跳转至自定义实现页面
         RedirectService service = MicroContext.getServiceManager().findServiceByInterface(RedirectService.class.getName());

@@ -49,6 +49,14 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/ai_assistant_entry"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="@string/ai_assistant_entry"
+                android:textColor="@color/thing_theme_open_color_head_line_text" />
+
+            <TextView
                 android:id="@+id/theme_switch"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"

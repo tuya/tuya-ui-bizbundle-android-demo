@@ -219,6 +219,14 @@ public class MainActivity extends AppCompatActivity {
             ToastUtil.showToast(this, "homeId is must not 0");
             return;
         }
+        findViewById(R.id.ai_assistant_entry).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                i.setClassName(MainActivity.this, "com.tuya.smart.bizbundle.aiassistant.demo.AiAssistantDemoActivity");
+                startActivity(i);
+            }
+        });
         TextView tv = findViewById(R.id.theme_switch);
         String text = tv.getText().toString();
         tv.setText(text + "| appUiMode: " + ThingTheme.INSTANCE.getAppUiMode() + "| supportDarkMode: " + ThingTheme.INSTANCE.isSupportDarkMode());

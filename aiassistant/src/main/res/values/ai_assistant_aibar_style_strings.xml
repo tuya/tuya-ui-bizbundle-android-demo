@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ai_assistant_aibar_style_label">AIBar style</string>
+    <string name="ai_assistant_aibar_append">Append</string>
+    <string name="ai_assistant_aibar_float">Float</string>
+</resources>
