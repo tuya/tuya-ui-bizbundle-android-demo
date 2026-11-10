@@ -88,3 +88,11 @@
 -dontwarn org.slf4j.impl.StaticLoggerBinder
 -dontwarn org.slf4j.impl.StaticMDCBinder
 -dontwarn org.slf4j.impl.StaticMarkerBinder
+
+-keepclassmembers class com.github.mikephil.charting.animation.ChartAnimator {
+    public void setPhaseX(float);
+    public void setPhaseY(float);
+}
+-keepclassmembers class com.github.mikephil.charting.jobs.AnimatedViewPortJob {
+    public void setPhase(float);
+}
